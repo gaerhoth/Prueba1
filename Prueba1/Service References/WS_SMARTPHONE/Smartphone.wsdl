@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Delegaciones">
+        <s:complexType />
+      </s:element>
+      <s:element name="DelegacionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DelegacionesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consejos">
+        <s:complexType />
+      </s:element>
+      <s:element name="ConsejosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsejosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Informacion">
+        <s:complexType />
+      </s:element>
+      <s:element name="InformacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InformacionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="DelegacionesSoapIn">
+    <wsdl:part name="parameters" element="tns:Delegaciones" />
+  </wsdl:message>
+  <wsdl:message name="DelegacionesSoapOut">
+    <wsdl:part name="parameters" element="tns:DelegacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsejosSoapIn">
+    <wsdl:part name="parameters" element="tns:Consejos" />
+  </wsdl:message>
+  <wsdl:message name="ConsejosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsejosResponse" />
+  </wsdl:message>
+  <wsdl:message name="InformacionSoapIn">
+    <wsdl:part name="parameters" element="tns:Informacion" />
+  </wsdl:message>
+  <wsdl:message name="InformacionSoapOut">
+    <wsdl:part name="parameters" element="tns:InformacionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SmartphoneSoap">
+    <wsdl:operation name="Delegaciones">
+      <wsdl:input message="tns:DelegacionesSoapIn" />
+      <wsdl:output message="tns:DelegacionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consejos">
+      <wsdl:input message="tns:ConsejosSoapIn" />
+      <wsdl:output message="tns:ConsejosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Informacion">
+      <wsdl:input message="tns:InformacionSoapIn" />
+      <wsdl:output message="tns:InformacionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SmartphoneSoap" type="tns:SmartphoneSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Delegaciones">
+      <soap:operation soapAction="http://tempuri.org/Delegaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consejos">
+      <soap:operation soapAction="http://tempuri.org/Consejos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Informacion">
+      <soap:operation soapAction="http://tempuri.org/Informacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SmartphoneSoap12" type="tns:SmartphoneSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Delegaciones">
+      <soap12:operation soapAction="http://tempuri.org/Delegaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consejos">
+      <soap12:operation soapAction="http://tempuri.org/Consejos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Informacion">
+      <soap12:operation soapAction="http://tempuri.org/Informacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Smartphone">
+    <wsdl:port name="SmartphoneSoap" binding="tns:SmartphoneSoap">
+      <soap:address location="http://www.fraternidad-prevencion.com/WebService/Smartphone.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SmartphoneSoap12" binding="tns:SmartphoneSoap12">
+      <soap12:address location="http://www.fraternidad-prevencion.com/WebService/Smartphone.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
