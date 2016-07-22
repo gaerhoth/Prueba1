@@ -1,0 +1,168 @@
+﻿<Page
+    x:Class="Prueba1.TEXTOLEGAL"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Prueba1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" ScrollViewer.HorizontalScrollMode="Auto">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height= "0.5*" />
+            <RowDefinition Height="7*"/>
+           
+        </Grid.RowDefinitions>
+
+        <Button Name="Atras" HorizontalAlignment="Left" Background="Transparent">
+            <Image x:Name="IMB" Source="ms-appx:///Assets/atras.png"></Image>
+        </Button>
+
+        <TextBlock Name="titulo" Text="Texto Legal" FontWeight="SemiBold"  Foreground="#FF01B0A8" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Row="1" Text="CONDICIONES DE USO Y POLÍTICA DE PRIVACIDAD DE LA APLICACIÓN MiSalud Fraterprevención®
+
+MEDIANTE LA DESCARGA, LA INSTALACIÓN Y/O EL USO DE LA APLICACIÓN EN SU TERMINAL MÓVIL USTED MANIFIESTA EXPRESAMENTE QUE ESTÁ DE ACUERDO, CUMPLE Y ACEPTA NUESTRAS CONDICIONES DE USO Y POLÍTICA DE PRIVACIDAD. SI NO COMPRENDE ESTE CONTRATO, O NO ACEPTA CUMPLIR CON ESTOS TÉRMINOS, NO PODRÁ UTILIZAR LOS SERVICIOS
+
+El presente documento tiene por objeto establecer las Condiciones Generales de Uso de la Aplicación MiSalud Fraterprevención® de la que es titular FRATERPREVENCIÓN, S.L., con domicilio en Madrid, Paseo de la Habana nº 136, y con CIF B84454172, y perteneciente al grupo de empresas de QUIRÓN SALUD.
+
+En adelante será referido como Fraterprevención.
+
+1. Descripción de la Aplicación MiSalud Fraterprevención®.
+
+Fraterprevención como una de las empresas líderes del sector de prevención de riesgos laborales y además ahora con el respaldo del grupo Quirónsalud, compañía líder en España en la prestación de servicios sanitarios, pone en su mano una herramienta donde consultar y visualizar el histórico de sus parámetros más destacados de Salud, pudiendo interactuar con ellos y actualizarlos en todo momento que desee.
+
+Era necesario, aprovechando la tecnología actual, poner a su disposición la visualización de los resultados de sus reconocimientos médicos, de una manera sencilla, intuitiva y visual: Nuestros hexágonos le ayudarán a interpretar cuál es el estado de su salud con un solo vistazo.
+
+Su salud es muy importante para nosotros, pero bajo ningún concepto, la app ni los servicios y productos ofrecidos en la misma, deberán ser calificados como productos sanitarios, ni individualmente por separado, ni en su conjunto. A tal efecto, el usuario declara que no percibirá ninguna de las manifestaciones o afirmaciones contenidas en la app como una emisión de diagnóstico, prevención, control, tratamiento o alivio de enfermedades y que, en ningún caso, la utilización de la app sustituirá la consulta a su médico especializado. En todo caso, se recomienda siempre la consulta a su médico.
+
+Si es usted mujer y estuviera embarazada o amamantando a su bebé, los valores considerados como normales en cualquier apartado de la app y más concretamente en los resultados analíticos, pueden ser diferentes en su estado y siempre deberá consultarlos con su médico.
+
+2. Licencia de Uso de la Aplicación.
+
+Fraterprevención es propietaria y titular en exclusiva de los derechos de Propiedad Intelectual e Industrial de la app o, en su defecto, tiene concedida una licencia en exclusiva sobre algún contenido de la misma (con carácter enunciativo, que no limitativo, del diseño gráfico, código fuente, logos, textos, gráficos, ilustraciones, fotografías, y demás elementos y factores que, en su conjunto, componen la app).
+
+En este sentido, Fraterprevención otorga al usuario (licenciatario) únicamente el derecho no exclusivo a utilizar la app conforme a los usos para los que la misma ha sido diseñada y, en particular, conforme a lo previsto en nuestras Condiciones de uso y, en defecto de norma expresa, en la ley aplicable. El usuario no adquirirá a través de la descarga, instalación y/o uso de la Aplicación ningún derecho de propiedad sobre la misma.
+
+Por tanto, la mera instalación de la app implica la aceptación por parte del usuario de las Condiciones de uso correspondientes a la app. En caso de discrepancias o no aceptación de cualquiera de los términos contenidos en la app, el usuario no deberá utilizarla y deberá proceder a su desinstalación de su dispositivo móvil.
+
+El usuario bajo su riesgo y responsabilidad, asume el compromiso de utilizar de forma correcta, adecuada y lícita la presente aplicación, así como su contenido, con total sujeción a las presentes condiciones generales, a la legislación vigente de aplicación, a la moral, a las buenas costumbres generalmente aceptadas, al orden público y, en general, usarla de forma adecuada y con la finalidad para la que ha sido puesta a disposición del usuario.
+
+De igual forma, el usuario podrá, en cualquier momento, desinstalar la app de su dispositivo o terminal móvil mediante las distintas opciones de configuración del mismo. Para poder cerrar la sesión en la aplicación, hay un apartado que se denomina Perfil, dentro de este se seleccionará la opción Cerrar sesión. Para desinstalar la aplicación, el usuario deberá seguir las instrucciones siguientes: Dispositivo móvil con sistema operativo iOS: En el escritorio mantener presionado sobre el logo de MiSalud Fraterprevención y aparecerá una cruz, mantener presionada la cruz y se desinstalará la aplicación. Dispositivo móvil con sistema operativo Android: en el apartado de gestor de aplicaciones se ha de seleccionar la aplicación MiSalud Fraterprevención y borrar.
+
+Fraterprevención se reserva expresamente la facultad de, en cualquier momento, retirar o denegar el acceso o uso de la aplicación a aquellos usuarios que incumplan con las presentes Condiciones Generales, asi como a aquellos usuarios que realicen un uso inadecuado del mismo. 
+
+La app podrá ser accesible fuera de España y utilizada en cualquier país o jurisdicción siempre y cuando su uso no sea contrario a las leyes o normativas locales vigentes en cada momento. Sin perjuicio de lo anterior, la app está diseñada para ser utilizada por cualquier persona física mayor de edad o, en caso de ser menor de edad, bajo la tutela de sus padres o representantes legales, que cumpla y acepte las presentes condiciones.
+
+
+
+3. Condiciones básicas.
+
+El usuario será el único responsable del uso que pueda dar a la app, por todo el contenido que reproduzca o imagen que capte a través de la app y por cualquier consecuencia que de ello se derive.
+
+La app, y las presentes condiciones, podrán ser modificadas en cualquier momento. La forma o naturaleza de la misma podrán cambiar de un momento a otro sin que Fraterprevención tengan la obligación de notificar con antelación tal cambio. Asimismo, Fraterprevención podrá interrumpir (de forma temporal o permanente) la utilización de la app (o cualquiera de las características de la misma) y, en estas circunstancias, Fraterprevención no tendrá ninguna obligación de notificar el hecho con antelación.
+
+La relación jurídica derivada del acceso y la utilización de la app, así como de los contenidos y servicios en ella incorporados, tiene una duración indefinida. Asimismo cualquiera de las partes podrá dar por terminada o suspender la presente relación contractual unilateralmente en cualquier momento y sin más causa que su voluntad en tal sentido. Sin perjuicio de lo anterior, dicha relación se tendrá por terminada con carácter inmediato cuando Fraterprevención publique unas nuevas condiciones generales. El acceso y utilización de la app implicará la plena adhesión y aceptación de las nuevas condiciones y, consecuentemente, el inicio de una nueva relación jurídica.
+
+Fraterprevención se reserva la facultad de modificar, en cualquier momento, y sin aviso previo, las presentes Condiciones Generales.
+
+4. Propiedad intelectual e industrial.
+
+Los derechos de propiedad intelectual e industrial sobre los contenidos en la App, las marcas, logos, y cualquier otro material susceptible de protección, corresponden en exclusiva a Fraterprevención o a terceros que hayan cedido sus derechos a Fraterprevención, salvo que en las mismas se indique titularidad distinta.
+
+La reproducción, distribución, comercialización o transformación no autorizadas de tales contenidos, marcas, logos, etc. constituye una infracción de los derechos de propiedad intelectual e industrial de Fraterprevención o del titular de los mismos, y podrá dar lugar al ejercicio de cuantas acciones judiciales o extrajudiciales pudiera corresponder en el ejercicio de sus derechos. Todo ello salvo que Fraterprevención, o el titular correspondiente, hayan concedido al usuario, previa solicitud, autorización expresa y por escrito y, por su parte, el usuario se haya comprometido a citar en un lugar claramente visible a la app como fuente titular del contenido.
+
+Con la aceptación de estas condiciones, el usuario manifiesta que los datos que pudiera aportar en la app son ciertos y veraces, que es titular de todos los derechos de imagen que, en su caso se pudieran facilitar, y que los ha captado de forma legal y cede los mismos para su uso conforme lo convenido en la app, sin que tenga derecho a reclamar ni solicitar compensación alguna por dicho concepto. 
+
+Fraterprevención se reserva la posibilidad de ejercer las acciones judiciales que correspondan contra los usuarios que violen o infrinjan los derechos de propiedad intelectual e industrial.
+
+5. Política de Privacidad y Protección de Datos.
+
+Con la aceptación de esta Política de Privacidad, el usuario presta su consentimiento expreso para el tratamiento de sus datos personales (principalmente, nombre, sexo, dirección de correo), así como de cualquier otro que facilite durante su relación con Fraterprevención.
+
+En este sentido, informamos al usuario que sus datos pasarán a formar parte de un fichero titularidad de Fraterprevención con la finalidad de identificarle, darle acceso y gestionar las distintas funcionalidades de la App.
+
+De acuerdo con lo establecido en la Ley Orgánica 15/1999, de 13 de diciembre de Protección de Datos de Carácter Personal y su Reglamento de desarrollo, Real Decreto 170/2007 de 21 de diciembre, queda informado y consiente expresamente que los datos personales facilitados a través de la App MiSalud Fraterprevención, incluidos los relativos a la salud, se incluyan en los ficheros, titularidad de las empresas del Grupo QUIRÓN SALUD (para la identificación de las empresas del grupo QUIRÓN SALUD puede acceder a través del siguiente link: www.quironsalud.es), debidamente Registrado ante la Agencia Española de Protección de Datos. Del mismo modo, en el caso de que el usuario actúe en representación de terceros, queda informado y consiente expresamente a que los datos de su representado, incluidos los datos de salud, sean incorporados a este mismo fichero titularidad de las empresas del Grupo QUIRÓN SALUD para cumplir con las mismas finalidades. En estos supuestos, el usuario deberá acreditar dicha condición de representante y se compromete a informar a su representado del contenido de la presente cláusula.
+
+AL DESCARGARSE, COMPLETAR Y ENVIAR CUALQUIER FORMULARIO INCORPORADO EN LA APP, EL USUARIO CONSIENTE Y AUTORIZA EXPRESAMENTE A QUE FRATERPREVENCIÓN RECOJA, TRATE AUTOMÁTICAMENTE O CEDA A MEROS EFECTOS PUBLICITARIOS ENTRE LAS EMPRESAS DEL GRUPO QUIRON SALUD, SEGÚN SEA EL CASO, LOS DATOS DE CARÁCTER PERSONAL QUE SE LE SOLICITAN DE CONFORMIDAD CON LAS FINALIDADES Y BAJO LAS CONDICIONES QUE EN CADA CASO SE DETALLEN (ENTRE OTRAS, GESTIÓN DE CONSULTAS, ENVÍO DE INFORMACIÓN PROMOCIONAL ACERCA DE PRODUCTOS Y SERVICIOS DE FRATERPREVENCIÓN O CUALQUIERA DE LAS EMPRESAS DEL GRUPO QUIRÓN SALUD A LA QUE PERTENECE LA PRIMERA, A TRAVÉS DE NEWSLETTERS U OTROS MEDIOS ELECTRÓNICOS, DOCUMENTACIÓN DE DIVERSA NATURALEZA QUE PUEDA RESULTAR DE INTERÉS O UTILIDAD AL USUARIO, ETC.), INCLUSO PARA AQUELLOS CASOS QUE SE ELIMINE LA APLICACIÓN DEL DISPOSITIVO MÓVIL.
+
+Los documentos o imágenes que el usuario incorpore en el apartado de la app Informes y Documentos únicamente quedarán guardados en local en el propio dispositivos del usuario, no enviándose ni tratándose en ningún caso esta información en los ficheros anteriormente mencionados de Fraterprevención.
+
+Cuando el usuario esté utilizando la App MiSalud Fraterprevención, será responsable de garantizar que la información que maneja no pueda ser vista por personas no autorizadas.
+
+Fraterprevención ha adoptado y adoptará todas las medidas técnicas y organizativas de seguridad que sean de obligación de conformidad con lo establecido por la legislación vigente y los estándares de calidad existentes en el sector, a fin de garantizar al máximo la seguridad y confidencialidad de las comunicaciones. No obstante lo anterior, el usuario reconoce y acepta que las medidas de seguridad en Internet no son inexpugnables. Las redes utilizadas en Internet no son seguras y cualquier comunicación enviada por este medio puede ser interceptada o modificada por personas no autorizadas. No obstante lo anterior, aunque Fraterprevención ha adoptado medidas de encriptación de datos, tanto cuando los datos viajan como cuando se encuentran en la propia App, advierte que el estado actual de la técnica no garantiza totalmente la no vulneración de los sistemas de seguridad o de la inviolabilidad de las comunicaciones cuando estos son transportados a través de cualesquiera redes de telecomunicación.
+
+El usuario se obliga a mantener indemne a Fraterprevención ante cualquier posible reclamación, multa o sanción que pueda venir obligada a soportar como consecuencia del incumplimiento por parte del usuario de la presente política de privacidad.
+
+En cualquier caso, el usuario tendrá derecho a ejercer los derechos de acceso, rectificación, cancelación u oposición, mediante comunicación escrita dirigida a Fraterprevención con domicilio en Paseo de la Habana, 136 28036 Madrid, o remitiendo un correo a la siguiente dirección: (atencionalcliente@fraterprevencion.com), acompañando de una copia de su DNI o documento legal que le identifique de forma inequívoca.
+
+Rogamos lea atentamente los textos legales antes de facilitar cualquier dato de carácter personal.
+
+6. Uso de Cookies
+
+Esta app utiliza cookies propias y de terceros para optimizar tu navegación, adaptarse a tus preferencias y realizar labores analíticas. La utilización de la app implica que el usuario acepta nuestra Política de Cookies.
+
+7. Acceso a la aplicación y contraseñas.
+
+Para el acceso y utilización servicios o contenidos de la app es necesario que el usuario se registre previamente.
+
+Los datos de los usuarios obtenidos a través de la suscripción o registro, están protegidos mediante contraseñas elegidas por ellos mismos. El usuario se compromete a mantener su contraseña en secreto y a protegerla de usos no autorizados por terceros. El usuario deberá notificar a las partes inmediatamente cualquier uso no consentido de su cuenta o cualquier violación de la seguridad relacionada con el servicio de la aplicación, de la que haya tenido conocimiento.
+
+Dichos nombres de usuario y contraseñas tienen el carácter de estrictamente personal, confidencial e intransferible. El usuario será responsable de mantener la confidencialidad de las mismas, no pudiendo divulgarlas a un tercero o cederlas. En consecuencia, el usuario acepta expresamente que Fraterprevención presuma, salvo comunicación previa de extravío o sustracción de las mismas, que los usos del servicio realizados utilizando las claves de identificación, son realizados por quien figura como usuario registrado. Si el usuario tiene indicios de que sus claves de acceso pueden ser conocidas, ya sea de modo fortuito o fraudulento, por terceras personas no autorizadas, deberá notificar este hecho a atencionalcliente@fraterprevencion.com En estos supuestos procederemos a cancelar sus claves y proporcionarle otras nuevas.
+
+Deberá proceder al cambio periódico de su contraseña en el momento en el que así le sea solicitado.
+
+En el caso de que el sistema detecte algún error de registro, será necesario acudir a algún centro de Fraterprevención para verificar la identidad del usuario, previa presentación de documento acreditativo de dicha identidad.
+
+Fraterprevención adopta las medidas técnicas y organizativas necesarias para garantizar la protección de los datos de carácter personal y evitar su alteración, pérdida, tratamiento y/o acceso no autorizado, habida cuenta del estado de la técnica, la naturaleza de los datos almacenados y los riesgos a que están expuestos, todo ello, conforme a lo establecido por la legislación española de Protección de Datos de Carácter Personal.
+
+Fraterprevención no se hace responsable frente a los usuarios, por la revelación de sus datos personales a terceros que no sea debida a causas directamente imputables a Fraterprevención, ni por el uso que de tales datos hagan terceros ajenos Fraterprevención o el grupo de empresas Quirón Salud.
+
+8. Uso correcto de la app.
+
+El usuario se compromete a utilizar la app, los contenidos y servicios de conformidad con la ley, las presentes Ccdiciones, las buenas costumbres y el orden público. Del mismo modo el usuario se obliga a no utilizar la app, sus contenidos o los servicios que se presten a través de ésta con fines o efectos ilícitos o contrarios al contenido de las presentes condiciones, lesivos de los intereses o derechos de terceros, o que de cualquier forma pueda dañar, inutilizar, hacer inaccesibles o deteriorar la app, sus contenidos o sus servicios o impedir un normal disfrute de la misma por otros usuarios.
+
+Asimismo, el usuario se compromete expresamente a no destruir, alterar, inutilizar o, de cualquier otra forma, dañar los datos, programas o documentos electrónicos que se encuentren en la App.
+
+El usuario se compromete a no obstaculizar el acceso de otros usuarios mediante el consumo masivo de los recursos informáticos a través de los cuales las partes prestan el servicio, así como realizar acciones que dañen, interrumpan o generen errores en dichos sistemas o servicios.
+
+El usuario se compromete a no introducir programas, virus, macros, applets, controles ActiveX o cualquier otro dispositivo lógico o secuencia de caracteres que causen o sean susceptibles de causar cualquier tipo de alteración en los sistemas informáticos de Fraterprevención o de terceros.
+
+9. Publicidad.
+
+Parte de la app puede albergar contenidos publicitarios o estar patrocinado. Los anunciantes y patrocinadores son los únicos responsables de asegurarse de que el material remitido para su inclusión en la aplicación cumple las leyes que en cada caso puedan ser de aplicación.
+
+Fraterprevención no será responsable de cualquier error, inexactitud o irregularidad que puedan incluir los contenidos publicitarios o de los patrocinadores. En todo caso, para interponer cualquier reclamación relacionada con los contenidos publicitarios insertados en esta aplicación, pueden dirigirse a la siguiente dirección de correo electrónico: (atencionalcliente@fraterprevencion.com)
+
+10. Enlaces de terceros.
+
+Las presentes condiciones se refieren únicamente a la app y sus contenidos, y no se aplica a los enlaces o a las páginas web de terceros accesibles a través de la App.
+
+Los destinos de dichos enlaces no están bajo el control de las partes, y, por tanto, éstas no serán responsables del contenido de ninguna de las páginas web de destino de un enlace, ni de ningún enlace incluido en una página web a la que se llegue desde la app, ni de ningún cambio o actualización de dichas páginas.
+
+Estos enlaces se proporcionan únicamente para informar al usuario sobre la existencia de otras fuentes de información sobre un tema concreto, y la inclusión de un enlace no implica la aprobación de la página web enlazada por parte de Fraterprevención.
+
+11. Pago.
+
+La descarga de la app, así como su utilización, serán de carácter gratuito, aunque eventualmente podrán existir compras integradas dentro de la aplicación que ofrezcan servicios adicionales. Igualmente el desarrollo de algunas campañas de salud y/o reconocimientos médicos privados, llevarán asociados un coste que tendrán que ser abonados bien por la empresa a la que pertenezca el usuario o bien por el usuario directamente.
+
+12. Limitación de responsabilidad.
+
+El usuario mantendrá enteramente indemne a Fraterprevención que no podrá ser considerada responsable por cualquier uso inadecuado de la app ni por los daños que estos puedan ocasionar en el usuario.
+
+El usuario declara que no percibirá ninguna de las manifestaciones o afirmaciones contenidas en la app como una emisión de diagnóstico, prevención, control, tratamiento o alivio de enfermedades.
+
+Los algoritmos que componen el software de la app están basados en experiencia clínica del equipo médico que ha intervenido en la creación de la app, así como de la información médica disponible en el ámbito científico. Por tanto, la información que transmita la app será de carácter meramente informativo y no deberá ser interpretada por el usuario, bajo ningún concepto, como un sustituto del consejo de un médico especialista.
+
+Fraterprevención no es responsable de la imposibilidad de acceso o deficiencias en el funcionamiento del Servicio por uso de dispositivos inadecuados, o por interrupciones de servicios de Internet derivadas de saturación de la red o cualquier otra razón.
+
+13. Jurisdicción y ley aplicable.
+
+En el supuesto de que surja cualquier conflicto o discrepancia en la interpretación o aplicación de las presentes condiciones o en la utilización de la Aplicación, los Juzgados y Tribunales que, en su caso, conocerán del asunto, serán los de la ciudad de Madrid con renuncia a otro fuero que les pudiera corresponder.
+
+Todo ello sin perjuicio de la facultad del usuario de acudir a la Junta Arbitral de Consumo de su demarcación." TextWrapping="Wrap"  HorizontalAlignment="Center" TextAlignment="Justify"></TextBlock>
+        
+    </Grid>
+</Page>

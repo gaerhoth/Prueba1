@@ -8,6 +8,44 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height= "1*" />
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Image  Name="Arriba" Grid.Row="0" Grid.ColumnSpan="2" Source="Assets/misaludarriba.png" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform" />
+
+        <Image Name="centro" Grid.Row="1" Grid.ColumnSpan="2" Source="Assets/1.png" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Uniform" ></Image>
+        
+        <Button Grid.Row="2" x:Name="BTN_NO" Margin="5,29,0,25" Width="170" Height="26" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button.Template>
+                <ControlTemplate>
+                    <Border CornerRadius="10" Background="Transparent" BorderBrush="red" BorderThickness="1"  >
+                        <TextBlock Text="Únete" Foreground="Red" 
+                                           HorizontalAlignment="Center"   VerticalAlignment="Center"                                       
+                                         ></TextBlock>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="2" x:Name="BTN_SI" Margin="5,29,0,25" Width="170" Height="26" Background="#FF01B0A8"  VerticalAlignment="Center" HorizontalAlignment="Center"  >
+            <Button.Template>
+                <ControlTemplate>
+                    <Border CornerRadius="10" Background="Transparent" BorderBrush="#FF01B0A8" BorderThickness="1">
+                        <TextBlock Text="Ya soy Usuario" Foreground="#FF01B0A8" 
+                                           HorizontalAlignment="Center"   VerticalAlignment="Center"                                       
+                                         ></TextBlock>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
 
     </Grid>
 </Page>

@@ -543,10 +543,83 @@
     <Compile Include="App.xaml.vb">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BBDD\AYUDA.vb" />
+    <Compile Include="BBDD\DESCARGA_DATOS.vb" />
+    <Compile Include="BBDD\TABLAS.vb" />
+    <Compile Include="BBDD\VAR_GLOBALES.vb" />
     <Compile Include="MainPage.xaml.vb">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="PAGINAS\ANALITICAS.xaml.vb">
+      <DependentUpon>ANALITICAS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\CENTROS.xaml.vb">
+      <DependentUpon>CENTROS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\CITAS.xaml.vb">
+      <DependentUpon>CITAS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\DET_HEXAGONO.xaml.vb">
+      <DependentUpon>DET_HEXAGONO.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\DOCUMENTOS.xaml.vb">
+      <DependentUpon>DOCUMENTOS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\ExtendedSplash.xaml.vb">
+      <DependentUpon>ExtendedSplash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\HOME.xaml.vb">
+      <DependentUpon>HOME.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\INFO.xaml.vb">
+      <DependentUpon>INFO.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\INSERTA_DATOS.xaml.vb">
+      <DependentUpon>INSERTA_DATOS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\LOGIN1.xaml.vb">
+      <DependentUpon>LOGIN1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\OBJ_CAMP.xaml.vb">
+      <DependentUpon>OBJ_CAMP.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\PERFIL.xaml.vb">
+      <DependentUpon>PERFIL.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\RECOMENDACIONES.xaml.vb">
+      <DependentUpon>RECOMENDACIONES.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\RECUPERARPASS.xaml.vb">
+      <DependentUpon>RECUPERARPASS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\TEXTOLEGAL.xaml.vb">
+      <DependentUpon>TEXTOLEGAL.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\TUTORIAL1.xaml.vb">
+      <DependentUpon>TUTORIAL1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\TUTORIAL2.xaml.vb">
+      <DependentUpon>TUTORIAL2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\TUTORIAL3.xaml.vb">
+      <DependentUpon>TUTORIAL3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\TUTORIAL4.xaml.vb">
+      <DependentUpon>TUTORIAL4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\TUTORIAL5.xaml.vb">
+      <DependentUpon>TUTORIAL5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\UNETE1.xaml.vb">
+      <DependentUpon>UNETE1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\UNETE2.xaml.vb">
+      <DependentUpon>UNETE2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\UNETE3.xaml.vb">
+      <DependentUpon>UNETE3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Service References\WS_SEGURIDAD\Reference.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -575,6 +648,26 @@
     <None Include="Prueba1_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\1.png" />
+    <Content Include="Assets\atras.png" />
+    <Content Include="Assets\Fondo.png" />
+    <Content Include="Assets\Fondo_verde.png" />
+    <Content Include="Assets\general_top_bar.png" />
+    <Content Include="Assets\misaludarriba.png" />
+    <Content Include="Assets\newuser_icon.png" />
+    <Content Include="Assets\Sing.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\welcome_cardio_image_1.png" />
+    <Content Include="Assets\welcome_cardio_image_2.png" />
+    <Content Include="Assets\welcome_cardio_image_3 - copia.png" />
+    <Content Include="Assets\welcome_cardio_image_3.png" />
+    <Content Include="Assets\welcome_step_four.png" />
+    <Content Include="Assets\welcome_step_one.png" />
+    <Content Include="Assets\welcome_step_three.png" />
+    <Content Include="Assets\welcome_step_two.png" />
     <Content Include="My Project\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -617,6 +710,98 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="PAGINAS\ANALITICAS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\CENTROS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\CITAS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\DET_HEXAGONO.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\DOCUMENTOS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\ExtendedSplash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\HOME.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\INFO.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\INSERTA_DATOS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\LOGIN1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\OBJ_CAMP.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\PERFIL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\RECOMENDACIONES.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\RECUPERARPASS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\TEXTOLEGAL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\TUTORIAL1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\TUTORIAL2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\TUTORIAL3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\TUTORIAL4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\TUTORIAL5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\UNETE1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\UNETE2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\UNETE3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -650,7 +835,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CONTROLES\" />
-    <Folder Include="PAGINAS\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -668,6 +852,11 @@
     <SDKReference Include="SQLite.UWP.2015, Version=3.13.0">
       <Name>SQLite for Universal Windows Platform</Name>
     </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\FraterPrevencionV2\bin\x86\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

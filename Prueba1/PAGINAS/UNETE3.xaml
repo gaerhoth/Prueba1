@@ -1,0 +1,87 @@
+﻿<Page
+    x:Class="Prueba1.UNETE3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Prueba1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height= "0.5*" />
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Button Name="Atras" HorizontalAlignment="Left" Background="Transparent">
+            <Image x:Name="IMB" Source="ms-appx:///Assets/atras.png"></Image>
+        </Button>
+
+        <TextBlock Name="titulo" Text="Registro" FontWeight="SemiBold"  Foreground="#FF01B0A8" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+
+        <Image Name="F_verde" Source="ms-appx:///Assets/Fondo_verde.png" Stretch="Fill" Grid.Row="1" />
+
+        <Button Grid.Row="2" x:Name="BTN_SIG"  Width="250" Height="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="55,33,55,17">
+            <Button.Template>
+                <ControlTemplate>
+                    <Border CornerRadius="10" Background="Transparent" BorderBrush="#FF01B0A8" BorderThickness="1"  >
+                        <TextBlock Text="Finalizar" Foreground="#FF01B0A8" 
+                                           HorizontalAlignment="Center"   VerticalAlignment="Center" FontWeight="SemiBold"                                       
+                                         ></TextBlock>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+
+        <Grid x:Name="GR2" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <!--<ColumnDefinition Width="1*" />-->
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height= "2.7*" />
+                <RowDefinition Height= "0.3*" />
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Image Name ="C1" Grid.Row="0"   Source="ms-appx:///Assets/Sing.png" Width="120" Height="120" HorizontalAlignment="Center" VerticalAlignment="Center"></Image>
+
+            <TextBlock Grid.Row="1"  Text="Rellena tus Datos" FontWeight="SemiBold" Foreground="#FF01B0A8" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+
+         
+
+            <Border Grid.Row="3"  BorderThickness="1" BorderBrush="Transparent" CornerRadius="15" Padding="2"
+        HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="35" Background="White">
+                <TextBox  Name="txtemail" BorderThickness="1" BorderBrush="Transparent" Margin="1,0" PlaceholderText="Email*" />
+            </Border>
+
+            <Border Grid.Row="4" BorderThickness="1" BorderBrush="Transparent" CornerRadius="15" Padding="2"
+        HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="35" Background="White">
+                <TextBox Name="txttelefono" BorderThickness="1" BorderBrush="Transparent" Margin="1,0" PlaceholderText="Teléfono" />
+            </Border>
+
+            
+            
+            <TextBlock Grid.Row="7" Grid.ColumnSpan="2" Text="* Campos obligatorios" Foreground="White" FontWeight="SemiBold" VerticalAlignment="Bottom" Margin="55,0,0,0"></TextBlock>
+
+
+
+
+
+        </Grid>
+
+
+    </Grid>
+</Page>

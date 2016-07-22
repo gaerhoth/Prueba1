@@ -1,0 +1,87 @@
+﻿<Page
+    x:Class="Prueba1.TUTORIAL2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Prueba1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height= "0.5*" />
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Name="titulo" Text="Algunos datos sobre ti" FontWeight="SemiBold"  Foreground="#FF01B0A8" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+
+      
+        
+        
+        <Button Grid.Row="2" x:Name="BTN_SIG"  Width="250" Height="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="55,33,55,17">
+            <Button.Template>
+                <ControlTemplate>
+                    <Border CornerRadius="15" Background="Transparent" BorderBrush="#FF01B0A8" BorderThickness="1"  >
+                        <TextBlock Text="Siguiente Paso" Foreground="#FF01B0A8" 
+                                           HorizontalAlignment="Center"   VerticalAlignment="Center" FontWeight="SemiBold"                                       
+                                         ></TextBlock>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <Grid x:Name="GR2" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height= "2.*" />
+                <RowDefinition Height= "0.5*" />
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Image Name="C" Grid.Row="0" Grid.ColumnSpan="3" Source="ms-appx:///Assets/general_top_bar.png" Stretch="Fill" ></Image>
+            <Image Name="C1" Grid.Row="0" Grid.ColumnSpan="3" Source="ms-appx:///Assets/newuser_icon.png" HorizontalAlignment="Center" VerticalAlignment="Center" Width="70" Height="70" Stretch="Uniform" />
+            <Image Name="C2" Grid.Row="0" Grid.ColumnSpan="3" Source="ms-appx:///Assets/welcome_step_one.png" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="70" Height="15" Margin="0,5" Stretch="Uniform" />
+            
+
+            <Border Grid.Row="1" Grid.ColumnSpan="3" BorderThickness="1" BorderBrush="Transparent"  Padding="2"
+             VerticalAlignment="Center"  Background="DarkGray">
+                <TextBlock  Margin="5,0" Text="METABOLISMO" Foreground="White" FontWeight="SemiBold"  />
+            </Border>
+            <TextBlock Text="Kg" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,8,0"></TextBlock>
+            <TextBlock Text="cm" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,8,0"></TextBlock>
+            <ToggleSwitch x:Name="DIABETES" Grid.Row="4" HorizontalAlignment="Center"    VerticalAlignment="Top" OffContent="" OnContent="" Grid.ColumnSpan="2" Margin="19,17.667,-29,0" Grid.Column="1"  />
+            <TextBox Name="TXTKG" Grid.Row="2" Grid.Column="1" BorderBrush="Transparent" PlaceholderText="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0,0"></TextBox>
+            <TextBox Name="TXTCM"  Grid.Row="3" BorderBrush="Transparent" Grid.Column="1" PlaceholderText="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0,0"></TextBox>
+            <!--<TextBlock Grid.Row="1" Grid.ColumnSpan="3" Text="METABOLISMO" Margin="5,0,0,0" VerticalAlignment="Center" ></TextBlock>-->
+
+            <Border Grid.Row="4"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" >
+                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0"  PlaceholderText="DIABETES" />
+            </Border>
+
+            <Border Grid.Row="3"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White">
+                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" PlaceholderText="ALTURA" />
+            </Border>
+            <Border Grid.Row="2"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White">
+                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" PlaceholderText="PESO" />
+            </Border>
+            <Line Grid.Row="2" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  > </Line>
+            <Line Grid.Row="3" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"></Line>
+            <Line Grid.Row="4" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1"  X1="500"></Line>
+        </Grid>
+      
+    </Grid>
+</Page>

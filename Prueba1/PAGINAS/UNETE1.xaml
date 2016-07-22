@@ -1,0 +1,81 @@
+﻿<Page
+    x:Class="Prueba1.UNETE1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Prueba1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height= "1*" />
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+
+        <Image Name="CABE" Grid.Row="0" Source="ms-appx:///Assets/misaludarriba.png" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform"></Image>
+        <Image Name="F_verde" Source="ms-appx:///Assets/Fondo_verde.png" Stretch="Fill" Grid.Row="1" />
+
+        <TextBlock Grid.Row="2" x:Name="USU" HorizontalAlignment="Center" TextWrapping="Wrap" Text="¿Ya eres Usuario?" VerticalAlignment="Top" Margin="130,8,134,0" Width="96" FontSize="12" Foreground="Black"/>
+        <Button Grid.Row="2" x:Name="BTN_GO"  Width="250" Height="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="55,33,55,17">
+            <Button.Template>
+                <ControlTemplate>
+                    <Border CornerRadius="15" Background="Transparent" BorderBrush="#FF01B0A8" BorderThickness="1"  >
+                        <TextBlock Text="Entrar" Foreground="#FF01B0A8" 
+                                           HorizontalAlignment="Center"   VerticalAlignment="Center"                                       
+                                         ></TextBlock>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <Grid x:Name="GR2" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height= "4*" />
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="Regístrate" Foreground="#FFFCFCFC"></TextBlock>
+            
+            
+            <!--<TextBox  Name="txtDni" Grid.Row="2" Width="250" Height="30"   VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"   PlaceholderText="DNI/NIE" />-->
+
+            <Border Grid.Row="2"  BorderThickness="1" BorderBrush="Transparent" CornerRadius="15" Padding="2"
+        HorizontalAlignment="Center" VerticalAlignment="Center"  Width="250" Height="35" Background="White">
+                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="1,0" PlaceholderText="DNI/NIE" />
+            </Border>
+
+
+
+
+            <Button Grid.Row="4" x:Name="BTN_REG"  Width="250" Height="30" VerticalAlignment="Center" HorizontalAlignment="center" >
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border CornerRadius="15" Background="Transparent" BorderBrush="white" BorderThickness="1"  >
+                            <TextBlock Text="Regístrate" Foreground="White" 
+                                           HorizontalAlignment="Center"   VerticalAlignment="Center"                                       
+                                         ></TextBlock>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <TextBlock  Grid.Row="3" Width="auto" Height="auto"   x:Name="Texto1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Tu Dni/Nie es importante. Te lo pedimos para asegurarnos de tu identidad y así poder mostrarte tus datos de salud con todas las garantías de seguridad y confidencialidad." FontSize="12" TextWrapping="Wrap" Foreground="White"  />
+        </Grid>
+
+    </Grid>
+</Page>

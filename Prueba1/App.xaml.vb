@@ -17,9 +17,15 @@ Imports Windows.UI.Xaml.Data
 Imports Windows.UI.Xaml.Input
 Imports Windows.UI.Xaml.Media
 Imports Windows.UI.Xaml.Navigation
+Imports Prueba1.TABLAS
+Imports Prueba1.DESCARGA_DATOS
+Imports Prueba1.VAR_GLOBALES
 ''' <summary>
 ''' Proporciona un comportamiento específico de la aplicación para complementar la clase Application predeterminada.
 ''' </summary>
+''' 
+
+
 NotInheritable Class App
     Inherits Application
 
@@ -29,6 +35,7 @@ NotInheritable Class App
     ''' resultados de la búsqueda, etc.
     ''' </summary>
     ''' <param name="e">Información detallada acerca de la solicitud y el proceso de inicio.</param>
+
     Protected Overrides Sub OnLaunched(e As Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)
 #If DEBUG Then
         ' Mostrar información de generación de perfiles de gráficos durante la depuración.
@@ -64,18 +71,65 @@ NotInheritable Class App
                 rootFrame.Navigate(GetType(MainPage), e.Arguments)
             End If
 
-            CreaBBDD()
+            '  CreaBBDD()
 
             ' Asegurarse de que la ventana actual está activa.
             Window.Current.Activate()
         End If
     End Sub
-    Public Sub CreaBBDD()
-        Dim Ruta As String
-        Dim conn As SQLite.Net.SQLiteConnection
+    Public Async Sub CreaBBDD()
 
-        Ruta = Path.Combine(ApplicationData.Current.LocalFolder.Path, "misalud.sqlite")
+        'Await WaitAsynchronouslyAsync()
+
+        'Await DESCARGA_MAESTROS()
+
+        Dim Ruta As String
+
+
+        Ruta = Conexion()
+        conn = New SQLite.Net.SQLiteConnection(New SQLite.Net.Platform.WinRT.SQLitePlatformWinRT, Ruta)
+
+        conn.CreateTable(Of TUSUARIO)()
+        conn.CreateTable(Of TTIPOAGUA)()
+        conn.CreateTable(Of TTIPOALCOHOL)()
+        conn.CreateTable(Of TTIPOALIMENTA)()
+        conn.CreateTable(Of TTIPOCAFE)()
+        conn.CreateTable(Of TTIPOEJER)()
+        conn.CreateTable(Of TTIPOSUENO)()
+        conn.CreateTable(Of TTIPOTABACO)()
+
+        conn.CreateTable(Of TCOLOR)()
+        conn.CreateTable(Of TUNIDADES)()
+        conn.CreateTable(Of TTIPOAVISO)()
+        conn.CreateTable(Of RECOMENDACIONES)()
+        conn.CreateTable(Of TTIPOCITA)()
+
+
+        conn.CreateTable(Of TCALACTIVIDAD)()
+        conn.CreateTable(Of TCALCARDIO)()
+        conn.CreateTable(Of TCALHABITOS)()
+        conn.CreateTable(Of TCALMETAS)()
+        conn.CreateTable(Of TCALPULMONAR)()
+        conn.CreateTable(Of TCALSENTIDOS)()
+
+        conn.CreateTable(Of TRESACTIVIDAD)()
+        conn.CreateTable(Of TRESCARDIO)()
+        conn.CreateTable(Of TRESHABITOS)()
+        conn.CreateTable(Of TRESMETAS)()
+        conn.CreateTable(Of TRESPULMONAR)()
+        conn.CreateTable(Of TRESSENTIDOS)()
+        conn.CreateTable(Of TRESANALI)()
+
+
+
+        Await DESCARGA_MAESTROS()
+
+
     End Sub
+
+    Public Function Conexion() As String
+        Return Path.Combine(ApplicationData.Current.LocalFolder.Path, "misalud.sqlite")
+    End Function
     ''' <summary>
     ''' Se invoca cuando la aplicación la inicia normalmente el usuario final. Se usarán otros puntos
     ''' </summary>
@@ -97,5 +151,53 @@ NotInheritable Class App
         ' TODO: Guardar el estado de la aplicación y detener toda actividad en segundo plano
         deferral.Complete()
     End Sub
+
+
+
+
+    'Protected Overrides Sub OnLaunched(args As Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)
+
+    '    ' Para usar el SplashScreen personalizado                   (07/Ene/13)
+    '    If args.PreviousExecutionState <> ApplicationExecutionState.Running Then
+    '        Dim loadState As Boolean = (args.PreviousExecutionState = ApplicationExecutionState.Terminated)
+    '        Dim extendedSplash As ExtendedSplash = New ExtendedSplash(args.SplashScreen, loadState)
+    '        Window.Current.Content = extendedSplash
+
+    '        ' ExtendedSplash will activate the window when its initial content has been painted.
+
+    '        ' Salir
+    '        Exit Sub
+    '    End If
+
+
+    '    Dim rootFrame As Frame = TryCast(Window.Current.Content, Frame)
+
+    '    ' Do not repeat app initialization when the Window already has content,
+    '    ' just ensure that the window is active
+
+    '    If rootFrame Is Nothing Then
+    '        ' Create a Frame to act as the navigation context and navigate to the first page
+    '        rootFrame = New Frame()
+    '        If args.PreviousExecutionState = ApplicationExecutionState.Terminated Then
+    '            ' TODO: Load state from previously suspended application
+    '        End If
+    '        ' Place the frame in the current Window
+    '        Window.Current.Content = rootFrame
+    '    End If
+    '    If rootFrame.Content Is Nothing Then
+    '        ' When the navigation stack isn't restored navigate to the first page,
+    '        ' configuring the new page by passing required information as a navigation
+    '        ' parameter
+    '        If Not rootFrame.Navigate(GetType(MainPage), args.Arguments) Then
+    '            Throw New Exception("Failed to create initial page")
+    '        End If
+    '    End If
+
+    '    ' Ensure the current window is active
+    '    Window.Current.Activate()
+    'End Sub
+
+
+
 
 End Class
