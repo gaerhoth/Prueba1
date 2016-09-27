@@ -1,0 +1,105 @@
+﻿<Page
+    x:Class="Prueba1.DISEÑOS2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Prueba1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:DesignInControl="using:Prueba1.DesignInControl">
+
+    <Grid Background="#FFE0DADA"  Height="520" Width="320">
+        <Border BorderBrush="Transparent" BorderThickness="0"  Height="200"  VerticalAlignment="Center" HorizontalAlignment="Center" Width="200">
+            
+            <Button x:Name="BTN_GR" RenderTransformOrigin="0.5,0.5" BorderBrush="Black" Foreground="#FF041420" VerticalAlignment="center" HorizontalAlignment="Center"  Width="130.667" Height="148.333"  UseLayoutRounding="False" d:LayoutRounding="Auto"  Margin="14.258,-4.895,8.075,-5.438"  >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+
+                <Button.Background>
+                    <LinearGradientBrush x:Name="L" EndPoint="0.795,-0.054" StartPoint="0.243,-0.057">
+                        <LinearGradientBrush.RelativeTransform>
+
+                            <CompositeTransform CenterY="0.5" CenterX="0.5" TranslateX="0.029" TranslateY="-0.05" Rotation="120"/>
+                        </LinearGradientBrush.RelativeTransform>
+
+                        <GradientStop Color="#FF9107" Offset="0"  />
+                        <GradientStop Color="#FFE75B1F" Offset="0.20" />
+                        <GradientStop Color="#FFE5A911" Offset="1" />
+
+                    </LinearGradientBrush>
+                </Button.Background>
+
+
+                <Button.Template>
+                    <ControlTemplate>
+
+                        <Grid Width="Auto" Height="Auto" x:Name="Grid">
+                            <Path Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}" Height="auto"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M60,0 L100,20 100,55 60,75 20,55 20,20 60,0 z"/>
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  x:Name="TextBlock"  Text="" TextWrapping="Wrap"  FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}" Width="16"/>
+
+                            <DesignInControl:CircularProgressBar HorizontalAlignment="Center" VerticalAlignment="Center" SegmentColor="Gray" StrokeThickness="1" Percentage="100" RenderTransformOrigin="0.5,0.5">
+                                <DesignInControl:CircularProgressBar.RenderTransform>
+                                    <CompositeTransform Rotation="-90"/>
+                                </DesignInControl:CircularProgressBar.RenderTransform>
+                            </DesignInControl:CircularProgressBar>
+
+                            <DesignInControl:CircularProgressBar HorizontalAlignment="Center" VerticalAlignment="Center" Percentage="{Binding Value, ElementName=slider}" SegmentColor="White" StrokeThickness="1"   RenderTransformOrigin="0.5,0.5">
+                                <DesignInControl:CircularProgressBar.RenderTransform>
+                                    <CompositeTransform Rotation="90"/>
+                                </DesignInControl:CircularProgressBar.RenderTransform>
+                            </DesignInControl:CircularProgressBar>
+
+                            <TextBox Text="{Binding Value, ElementName=slider}"  Background="Transparent"  Margin="31,64,35.667,52.333" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                                <TextBox.RenderTransform>
+                                    <CompositeTransform Rotation="90"/>
+                                </TextBox.RenderTransform>
+
+
+                            </TextBox>
+                            <TextBox Text="%" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Right" Margin="0,88,35.667,28.333"  VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                                <TextBox.RenderTransform>
+                                    <CompositeTransform Rotation="90"/>
+                                </TextBox.RenderTransform>
+                            </TextBox>
+
+                            <Slider x:Name="slider" Maximum="100" Value="0"/>
+
+                            <Border BorderThickness="1" BorderBrush="Black" CornerRadius="10" Padding="2" 
+        						HorizontalAlignment="Center" VerticalAlignment="top"    Background="White" Margin="-21,64,74.667,0" RenderTransformOrigin="0.5,0.5" Width="40" >
+                                <Border.RenderTransform>
+                                    <CompositeTransform Rotation="90"/>
+                                </Border.RenderTransform>
+                                <TextBlock Margin="4,0" Text="0%" TextAlignment="Center" FontSize="10.667" Width="30"/>
+                                                            </Border>
+                            <Border BorderThickness="1" BorderBrush="Black" CornerRadius="15" Padding="2" 
+        						HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="gray" Margin="-51,0,104.667,63.333" RenderTransformOrigin="0.5,0.5" Width="77" >
+                                <Border.RenderTransform>
+                                    <CompositeTransform Rotation="90"/>
+                                </Border.RenderTransform>
+                                <TextBlock Margin="4,0" Text="VER MAS" TextAlignment="Center" FontSize="10.667" Width="50"/>
+                            </Border>
+
+                            <Border BorderThickness="1" BorderBrush="Transparent" CornerRadius="15" Padding="2" 
+        						HorizontalAlignment="Center" VerticalAlignment="top"  Background="Transparent"  RenderTransformOrigin="0.5,0.5" Width="77" Margin="106,65,-52.333,0" >
+                                <Border.RenderTransform>
+                                    <CompositeTransform Rotation="90"/>
+                                </Border.RenderTransform>
+                                <TextBlock x:Name="NOM_HEX" Margin="4,0" Text="VER MAS" TextAlignment="Center" FontSize="10.667" Width="50"/>
+                            </Border>
+
+
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+            
+        </Border>
+    </Grid>
+</Page>

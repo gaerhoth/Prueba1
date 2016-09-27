@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="Prueba1.LOADING"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Prueba1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" >
+
+    <Page.Resources>
+        <SolidColorBrush Color="#FFE0DADA" Opacity=".3" x:Key="fondo"/>
+    </Page.Resources>
+
+    <Grid Background="{StaticResource fondo}">
+        <!--Opacity="0.25"-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height= "0.5*" />
+            <RowDefinition Height= "1*" />
+            <RowDefinition Height= "0.5*" />
+
+
+        </Grid.RowDefinitions>
+
+        <Button x:Name="LOADI" RenderTransformOrigin="0.5,0.5" BorderBrush="Black" Foreground="#FF041420" VerticalAlignment="Center"  HorizontalAlignment="center"  Width="223.5"  UseLayoutRounding="False" d:LayoutRounding="Auto" Height="263" Grid.Row="1"   >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform x:Name="giro" Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+
+            <Button.Background>
+                <LinearGradientBrush x:Name="LSENTIDOS" EndPoint="0.795,-0.054" StartPoint="0.243,-0.057">
+
+                    <!--<GradientStop Color="#A50101" Offset="0.10"/>
+                    <GradientStop Color="#D0021B" Offset="0.20"/>
+                    <GradientStop Color="#FF4C00" Offset="0.30"/>
+                    <GradientStop Color="#FF9107" Offset="0.40"/>
+                    <GradientStop Color="#FFCC06" Offset="0.50"/>
+                    -->
+                    <!--<GradientStop Color="#FF605F60" Offset="1"/>-->
+                    <!--
+                    <GradientStop Color="#FFE805" Offset="0.60"/>
+                    <GradientStop Color="#FFF43B" Offset="0.70"/>
+                    <GradientStop Color="#E2E805" Offset="0.80"/>
+                    <GradientStop Color="#ABDC05" Offset="0.90"/>
+                    <GradientStop Color="#22BA00" Offset="1"/>-->
+                </LinearGradientBrush>
+            </Button.Background>
+
+
+            <Button.Template>
+                <ControlTemplate x:Name="CT">
+
+                    <Grid Width="Auto" Height="Auto" x:Name="Grid">
+                        <Path Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}" Height="auto"  HorizontalAlignment="Center" VerticalAlignment="Stretch"  Width="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M60,0 L100,20 100,55 60,75 20,55 20,20 60,0 z"/>
+
+
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
+
+        <TextBlock x:Name="Carga"  VerticalAlignment="Center"  Grid.Row="1" HorizontalAlignment="Center"  Text="...CARGANDO..."   TextWrapping="Wrap"  FontSize="30"  Width="205"  />
+
+        
+    </Grid>
+
+</Page>

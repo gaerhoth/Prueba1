@@ -5,8 +5,17 @@
 ''' </summary>
 Public NotInheritable Class TUTORIAL1
     Inherits Page
+    Public M_Parametros As Object
 
     Private Sub BTN_SIG_Click(sender As Object, e As RoutedEventArgs) Handles BTN_SIG.Click
-        Me.Frame.Navigate(GetType(TUTORIAL2))
+        Me.Frame.Navigate(GetType(TUTORIAL2), M_Parametros)
+    End Sub
+
+
+    Protected Overrides Sub OnNavigatedTo(e As NavigationEventArgs)
+        MyBase.OnNavigatedTo(e)
+
+        M_Parametros = e.Parameter.ToString
+
     End Sub
 End Class

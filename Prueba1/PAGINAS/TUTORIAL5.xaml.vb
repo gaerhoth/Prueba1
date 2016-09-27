@@ -7,6 +7,6 @@ Public NotInheritable Class TUTORIAL5
     Inherits Page
 
     Private Sub BTN_SIG_Click(sender As Object, e As RoutedEventArgs) Handles BTN_SIG.Click
-        Me.Frame.Navigate(GetType(HOME))
+        Me.Frame.Navigate(GetType(LOGIN1))
     End Sub
 End Class

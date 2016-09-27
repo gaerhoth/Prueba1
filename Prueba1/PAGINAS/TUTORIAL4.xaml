@@ -5,7 +5,8 @@
     xmlns:local="using:Prueba1"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" >
+    <!--Height="540" Width="320"-->
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
@@ -18,10 +19,12 @@
         </Grid.RowDefinitions>
         <TextBlock Name="titulo" Text="Algunos datos sobre ti" FontWeight="SemiBold"  Foreground="#FF01B0A8" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
 
+        <Button Name="Atras" HorizontalAlignment="Left" Background="Transparent">
+            <Image x:Name="IMB" Source="ms-appx:///Assets/atras.png"></Image>
+        </Button>
 
 
-
-        <Button Grid.Row="2" x:Name="BTN_SIG"  Width="250" Height="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="55,33,55,17">
+        <Button Grid.Row="2" x:Name="BTN_SIG"  Width="250" Height="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
             <Button.Template>
                 <ControlTemplate>
                     <Border CornerRadius="15" Background="Transparent" BorderBrush="#FF01B0A8" BorderThickness="1"  >
@@ -36,13 +39,15 @@
 
         <Grid x:Name="GR2" Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*" />
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="0.3*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height= "2.*" />
+                <RowDefinition Height= "2*" />
                 <RowDefinition Height= "0.5*" />
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
@@ -58,18 +63,82 @@
              VerticalAlignment="Center"  Background="DarkGray">
                 <TextBlock  Margin="5,0" Text="HÁBITOS" Foreground="White" FontWeight="SemiBold"  />
             </Border>
-            <TextBlock Text="cm" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,8,0"></TextBlock>
 
 
-            <TextBox Name="TXTPERO" Grid.Row="2" Grid.Column="1" BorderBrush="Transparent" PlaceholderText="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0,0"></TextBox>
+            <!--<Button Name="B1"  Grid.Row="2" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent">
+                <Image Name="B1I" Source="ms-appx:///Assets/general_expand_icon.png" Stretch="None"></Image>
+            </Button>-->
+
+
 
             <Border Grid.Row="2"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
-        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White">
-                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" PlaceholderText="PÉRIMETRO ABDOMINAL" />
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
+                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="TABACO" />
+            </Border>
+            <Line Grid.Row="2" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+            <!--<Button Name="B2"  Grid.Row="3" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent">
+                <Image Name="B2I" Source="ms-appx:///Assets/general_expand_icon.png" Stretch="None"></Image>
+            </Button>-->
+            <Line Grid.Row="2" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+            <Border Grid.Row="3"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+            	HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
+                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="ALCOHOL" />
+            </Border>
+            <!--<Button Name="B3"  Grid.Row="4" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent">
+                <Image Name="B3I" Source="ms-appx:///Assets/general_expand_icon.png" Stretch="None"></Image>
+            </Button>-->
+
+
+            <Border Grid.Row="4"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
+                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="CAFÉ" />
             </Border>
             <Line Grid.Row="2" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
 
 
+
+            <Border Grid.Row="5"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
+                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="ALIMENTACION" />
+            </Border>
+            <Line Grid.Row="2" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+
+            <!--<Button Name="B4"  Grid.Row="5" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent">
+                <Image Name="B4I" Source="ms-appx:///Assets/general_expand_icon.png" Stretch="None"></Image>
+            </Button>-->
+
+
+            <Border Grid.Row="6"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
+                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="EJERCÍCIO" />
+            </Border>
+            <Line Grid.Row="2" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+            <!--<Button Name="B5"  Grid.Row="6" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent">
+                <Image Name="B5I" Source="ms-appx:///Assets/general_expand_icon.png" Stretch="None"></Image>
+            </Button>-->
+
+
+            <Border Grid.Row="7"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
+                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="SUEÑO" />
+            </Border>
+            <Line Grid.Row="2" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+            <!--<Button Name="B6"  Grid.Row="7" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent">
+                <Image Name="B6I" Source="ms-appx:///Assets/general_expand_icon.png" Stretch="None"></Image>
+            </Button>-->
+
+            <!--<TextBox Name="TXTTAB" Grid.Row="2" Grid.Column="1" PlaceholderText="TABACO" VerticalAlignment="Center" BorderBrush="Transparent" TextWrapping="Wrap"></TextBox>
+            <TextBox Name="TXTALC" Grid.Row="3" Grid.Column="1" PlaceholderText="ALCOHOL" VerticalAlignment="Center" BorderBrush="Transparent" TextWrapping="Wrap"></TextBox>
+            <TextBox Name="TXTTCAF" Grid.Row="4" Grid.Column="1" PlaceholderText="CAFÉ" VerticalAlignment="Center" BorderBrush="Transparent" TextWrapping="Wrap"></TextBox>-->
+            <!--<TextBox Name="TXTALM" Grid.Row="5" Grid.Column="1" PlaceholderText="ALIMENTACION" VerticalAlignment="Center" BorderBrush="Transparent" TextWrapping="Wrap"></TextBox>-->
+            <!--<TextBox Name="TXTEJE" Grid.Row="6" Grid.Column="1" PlaceholderText="EJERCÍCIO" VerticalAlignment="Center" BorderBrush="Transparent" TextWrapping="Wrap"></TextBox>-->
+            <!--<TextBox Name="TXTSUE" Grid.Row="7" Grid.Column="1" PlaceholderText="SUEÑO" VerticalAlignment="Center" BorderBrush="Transparent" TextWrapping="Wrap"></TextBox>-->
+            <ComboBox Name="CMB_TABACO" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" PlaceholderText="TABACO" BorderBrush="Transparent" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Stretch"></ComboBox>
+            <ComboBox Name="CMB_ALC" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" PlaceholderText="ALCOHOL" BorderBrush="Transparent" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Stretch"></ComboBox>
+            <ComboBox Name="CMB_CAFE" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" PlaceholderText="CAFÉ" BorderBrush="Transparent" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Stretch"></ComboBox>
+            <ComboBox Name="CMB_ALM" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" PlaceholderText="ALIMENTACIÓN" BorderBrush="Transparent" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Stretch"></ComboBox>
+            <ComboBox Name="CMB_SUENO" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" PlaceholderText="SUEÑO" BorderBrush="Transparent" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Stretch"></ComboBox>
+            <ComboBox Name="CMB_EJERCI" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" PlaceholderText="EJERCÍCIO" BorderBrush="Transparent" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Stretch"></ComboBox>
 
         </Grid>
     </Grid>

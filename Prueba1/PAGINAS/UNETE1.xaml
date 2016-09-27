@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <!--Height="540" Width="320"-->
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Grid.ColumnDefinitions>
@@ -22,8 +22,8 @@
         <Image Name="CABE" Grid.Row="0" Source="ms-appx:///Assets/misaludarriba.png" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform"></Image>
         <Image Name="F_verde" Source="ms-appx:///Assets/Fondo_verde.png" Stretch="Fill" Grid.Row="1" />
 
-        <TextBlock Grid.Row="2" x:Name="USU" HorizontalAlignment="Center" TextWrapping="Wrap" Text="¿Ya eres Usuario?" VerticalAlignment="Top" Margin="130,8,134,0" Width="96" FontSize="12" Foreground="Black"/>
-        <Button Grid.Row="2" x:Name="BTN_GO"  Width="250" Height="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="55,33,55,17">
+        <TextBlock Grid.Row="2" x:Name="USU" HorizontalAlignment="Center" TextWrapping="Wrap" Text="¿Ya eres Usuario?" VerticalAlignment="Top"  Width="96" FontSize="12" Foreground="Black"/>
+        <Button Grid.Row="2" x:Name="BTN_GO"  Width="250" Height="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
             <Button.Template>
                 <ControlTemplate>
                     <Border CornerRadius="15" Background="Transparent" BorderBrush="#FF01B0A8" BorderThickness="1"  >
@@ -56,7 +56,7 @@
 
             <Border Grid.Row="2"  BorderThickness="1" BorderBrush="Transparent" CornerRadius="15" Padding="2"
         HorizontalAlignment="Center" VerticalAlignment="Center"  Width="250" Height="35" Background="White">
-                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="1,0" PlaceholderText="DNI/NIE" />
+                <TextBox x:Name="txt1"  BorderThickness="0" BorderBrush="Transparent"  Margin="1,0"  PlaceholderText="DNI/NIE" />
             </Border>
 
 

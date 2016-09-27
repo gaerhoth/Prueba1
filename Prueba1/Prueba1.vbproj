@@ -99,13 +99,20 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <None Include="My Project\ServiceReferences.Designer.ClientConfig" />
     <None Include="project.json" />
-    <None Include="Service References\WS_SEGURIDAD\Prueba1.WS_SEGURIDAD.DesencriptarPasswordResponse.datasource">
+    <None Include="Service References\WS_SEGURIDAD_MANTENIMIENTO\Prueba1.WS_SEGURIDAD_MANTENIMIENTO.DesencriptarPasswordResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_SEGURIDAD\Prueba1.WS_SEGURIDAD.EncriptarPasswordResponse.datasource">
+    <None Include="Service References\WS_SEGURIDAD_MANTENIMIENTO\Prueba1.WS_SEGURIDAD_MANTENIMIENTO.EncriptarPasswordResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_SEGURIDAD\WS_Seguridad.wsdl" />
+    <None Include="Service References\WS_SEGURIDAD_MANTENIMIENTO\WS_Seguridad.wsdl" />
+    <None Include="Service References\WS_SEGURIDAD_PRODUCCION\Prueba1.WS_SEGURIDAD_PRODUCCION.DesencriptarPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_SEGURIDAD_PRODUCCION\Prueba1.WS_SEGURIDAD_PRODUCCION.EncriptarPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_SEGURIDAD_PRODUCCION\WS_SEGURIDAD.wsdl" />
     <None Include="Service References\WS_SMARTPHONE\Prueba1.WS_SMARTPHONE.ConsejosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -116,428 +123,444 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\WS_SMARTPHONE\Smartphone.wsdl" />
-    <None Include="Service References\WS_SPFM\Prueba1.WS_SPFM.ArrayOfXElement.datasource">
+    <None Include="Service References\WS_SPFM_MANTENIMIENTO\Prueba1.WS_SPFM_MANTENIMIENTO.ArrayOfXElement.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_SPFM\Prueba1.WS_SPFM.dameDatosPeticionResponse.datasource">
+    <None Include="Service References\WS_SPFM_MANTENIMIENTO\Prueba1.WS_SPFM_MANTENIMIENTO.dameDatosPeticionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_SPFM\Prueba1.WS_SPFM.dameDirectorGeneralProvinciaResponse.datasource">
+    <None Include="Service References\WS_SPFM_MANTENIMIENTO\Prueba1.WS_SPFM_MANTENIMIENTO.dameDirectorGeneralProvinciaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_SPFM\Prueba1.WS_SPFM.damePoblacionProvinciaResponse.datasource">
+    <None Include="Service References\WS_SPFM_MANTENIMIENTO\Prueba1.WS_SPFM_MANTENIMIENTO.damePoblacionProvinciaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_SPFM\Prueba1.WS_SPFM.insertarTipoUsuarioResponse.datasource">
+    <None Include="Service References\WS_SPFM_MANTENIMIENTO\Prueba1.WS_SPFM_MANTENIMIENTO.insertarTipoUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_SPFM\ws_spfm.wsdl" />
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarAvisosResponse.datasource">
+    <None Include="Service References\WS_SPFM_MANTENIMIENTO\WS_SPFM.wsdl" />
+    <None Include="Service References\WS_SPFM_PRODUCCION\Prueba1.WS_SPFM_PRODUCCION.ArrayOfXElement.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarCalActividadesResponse.datasource">
+    <None Include="Service References\WS_SPFM_PRODUCCION\Prueba1.WS_SPFM_PRODUCCION.dameDatosPeticionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarCalCardiosResponse.datasource">
+    <None Include="Service References\WS_SPFM_PRODUCCION\Prueba1.WS_SPFM_PRODUCCION.dameDirectorGeneralProvinciaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarCalHabitosResponse.datasource">
+    <None Include="Service References\WS_SPFM_PRODUCCION\Prueba1.WS_SPFM_PRODUCCION.damePoblacionProvinciaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarCalMetasResponse.datasource">
+    <None Include="Service References\WS_SPFM_PRODUCCION\Prueba1.WS_SPFM_PRODUCCION.insertarTipoUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarCalPulmonaresResponse.datasource">
+    <None Include="Service References\WS_SPFM_PRODUCCION\WS_SPFM.wsdl" />
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarAvisosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarCalSentidosResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarCalActividadesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarCambiosPendientesResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarCalCardiosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarCitasResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarCalHabitosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarDocumentosResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarCalMetasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarIndCambioTrabajResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarCalPulmonaresResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarObjetivoTrabajResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarCalSentidosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarResActividadesResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarCambiosPendientesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarResAnaliticasResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarCitasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarResCardiosResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarDocumentosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarResHabitosResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarIndCambioTrabajResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarResMetasResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarObjetivoTrabajResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarResPulmonaresResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarResActividadesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarResSentidosResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarResAnaliticasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarSentidosResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarResCardiosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ActualizarTrabajadorResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarResHabitosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ACT_CORREOSResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarResMetasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.AltaCitaSpfmResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarResPulmonaresResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.AvisoLeidoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarResSentidosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.BajacitaResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarSentidosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.BorrarObjetivoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ActualizarTrabajadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.BorrarRelcoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ACT_CORREOSResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.BorrarTipoObjetivoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.AltaCitaSpfmResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.Buscar_ALL_MResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.AvisoLeidoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.CopiaVueloResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.BajacitaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameAlergiaResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.BorrarObjetivoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameAvisoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.BorrarRelcoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameCalActividadesResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.BorrarTipoObjetivoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameCalCardiosResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.Buscar_ALL_MResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameCalHabitosResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.CopiaVueloResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameCalMetasResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameAlergiaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameCalPulmonaresResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameAvisoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameCalSentidosResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameCalActividadesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameCambiosPendientesResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameCalCardiosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameCampañaResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameCalHabitosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameCitaResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameCalMetasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameCodigosObjetivosResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameCalPulmonaresResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameColorResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameCalSentidosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameDatosUsuarioResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameCambiosPendientesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameDocumentosResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameCampañaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameEncuestaTrabajadorResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameCitaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameFechasCentroResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameCodigosObjetivosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameGrupoRecomendacionResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameColorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameHorasDiponiblesResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameDatosUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameIdiomaResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameDocumentosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameIDResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameEncuestaTrabajadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameMailUsuarioResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameFechasCentroResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameMinutosDiponiblesResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameGrupoRecomendacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameObjetivoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameHorasDiponiblesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameObjetivosCORREOSResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameIdiomaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameObjetivoTrabajResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameIDResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DamePasswordResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameMailUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DamePreguntasRespuestasResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameMinutosDiponiblesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DamePruebaResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameObjetivoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DamePruebasHexagonoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameObjetivosCORREOSResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameRecomendacionResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameObjetivoTrabajResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameRelcoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DamePasswordResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameResActividadesResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DamePreguntasRespuestasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameResAnaliticasResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DamePruebaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameResCardiosResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DamePruebasHexagonoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameResHabitosResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameRecomendacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameResMetasResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameRelcoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameResPulmonaresResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameResActividadesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameResSentidosResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameResAnaliticasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameTiposAguaResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameResCardiosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameTiposAlcoholResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameResHabitosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameTiposAlerResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameResMetasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameTiposAlimentaResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameResPulmonaresResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameTiposAvisoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameResSentidosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameTiposCafeResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameTiposAguaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameTiposCitaResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameTiposAlcoholResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameTiposEjerResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameTiposAlerResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameTiposMaestrosResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameTiposAlimentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameTiposObjetivoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameTiposAvisoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameTiposPruebaResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameTiposCafeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameTiposRecomendacionResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameTiposCitaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameTiposSuenoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameTiposEjerResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameTiposTabacoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameTiposMaestrosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameTrabajadorResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameTiposObjetivoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameUnidadesResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameTiposPruebaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DameValorObjetivoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameTiposRecomendacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DAME_DATOS_CITA_TRABAJADORResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameTiposSuenoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.DCResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameTiposTabacoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ElimianDatoTResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameTrabajadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.ELIMINAR_TUSUARIOResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameUnidadesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.GdocResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DameValorObjetivoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.GeneraPasswordResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DAME_DATOS_CITA_TRABAJADORResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.GrabarPreguntasResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.DCResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarActividadResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ElimianDatoTResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarAlerResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.ELIMINAR_TUSUARIOResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarAvisoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.GdocResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarCalActividadResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.GeneraPasswordResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarCalSentidoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.GrabarPreguntasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarCampañaCorreosResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarActividadResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarCampañaObjetivoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarAlerResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarCampañaTrabajadorResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarAvisoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarCardioResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarCalActividadResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarMetaResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarCalSentidoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarObjetivoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarCampañaCorreosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarObjetivoTrabajResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarCampañaObjetivoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarPruebaResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarCampañaTrabajadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarPulmonarResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarCardioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarRecomendacionResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarMetaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarResAnaliResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarObjetivoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarResCardioResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarObjetivoTrabajResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarResHabitoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarPruebaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarResMetaResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarPulmonarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarResPulmonarResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarRecomendacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarTipoEjerResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarResAnaliResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarTrabajadorResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarResCardioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarValorObjetivoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarResHabitoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertarVisCorrResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarResMetaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertaSentidosResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarResPulmonarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertaValorObjetivoResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarTipoEjerResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.InsertaValorObjetivoTensionesResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarTrabajadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.IRAResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarValorObjetivoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.IRCResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertarVisCorrResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.IRHResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertaSentidosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.IRMResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertaValorObjetivoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.IRPResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.InsertaValorObjetivoTensionesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.IRSResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.IRAResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.MailBienvenidaResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.IRCResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.MailCitaCentroResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.IRHResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.MailErrorResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.IRMResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.MailErrorSoporteResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.IRPResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.MailRecuperacionResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.IRSResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.RecuperarContraseñaResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.MailBienvenidaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.Relacion_FRAGUAResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.MailCitaCentroResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.RESETAR_USUARIOResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.MailErrorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\Prueba1.WS_WAH.TratarSangreCorreosResponse.datasource">
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.MailErrorSoporteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WS_WAH\WS_WAH.wsdl" />
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.MailRecuperacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.RecuperarContraseñaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.Relacion_FRAGUAResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.RESETAR_USUARIOResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_WAH_PRODUCCION\Prueba1.WS_WAH_PRODUCCION.TratarSangreCorreosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_WAH_PRODUCCION\WS_WAH.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.vb">
@@ -545,14 +568,41 @@
     </Compile>
     <Compile Include="BBDD\AYUDA.vb" />
     <Compile Include="BBDD\DESCARGA_DATOS.vb" />
+    <Compile Include="BBDD\ModHelp.vb" />
     <Compile Include="BBDD\TABLAS.vb" />
     <Compile Include="BBDD\VAR_GLOBALES.vb" />
+    <Compile Include="CONTROLES\CircularProgressBar.xaml.vb">
+      <DependentUpon>CircularProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLES\RelativeAnimatingContentControl.vb" />
+    <Compile Include="GridView\GridVW.xaml.vb">
+      <DependentUpon>GridVW.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Pruebas.vb" />
+    <Compile Include="PAGINAS\DET_CENTRO.xaml.vb">
+      <DependentUpon>DET_CENTRO.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\DET_PRUEBA.xaml.vb">
+      <DependentUpon>DET_PRUEBA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\DISEÑOS\DISEÑOS2.xaml.vb">
+      <DependentUpon>DISEÑOS2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\DISEÑOS\DISEÑOS3.xaml.vb">
+      <DependentUpon>DISEÑOS3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\LOADING.xaml.vb">
+      <DependentUpon>LOADING.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.vb">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="PAGINAS\ANALITICAS.xaml.vb">
       <DependentUpon>ANALITICAS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\AVISOS.xaml.vb">
+      <DependentUpon>AVISOS.xaml</DependentUpon>
     </Compile>
     <Compile Include="PAGINAS\CENTROS.xaml.vb">
       <DependentUpon>CENTROS.xaml</DependentUpon>
@@ -562,6 +612,9 @@
     </Compile>
     <Compile Include="PAGINAS\DET_HEXAGONO.xaml.vb">
       <DependentUpon>DET_HEXAGONO.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\DISEÑOS\DISEÑOSxaml.xaml.vb">
+      <DependentUpon>DISEÑOSxaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="PAGINAS\DOCUMENTOS.xaml.vb">
       <DependentUpon>DOCUMENTOS.xaml</DependentUpon>
@@ -581,11 +634,17 @@
     <Compile Include="PAGINAS\LOGIN1.xaml.vb">
       <DependentUpon>LOGIN1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PAGINAS\LST_CENTROS.xaml.vb">
+      <DependentUpon>LST_CENTROS.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PAGINAS\OBJ_CAMP.xaml.vb">
       <DependentUpon>OBJ_CAMP.xaml</DependentUpon>
     </Compile>
     <Compile Include="PAGINAS\PERFIL.xaml.vb">
       <DependentUpon>PERFIL.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\QR.xaml.vb">
+      <DependentUpon>QR.xaml</DependentUpon>
     </Compile>
     <Compile Include="PAGINAS\RECOMENDACIONES.xaml.vb">
       <DependentUpon>RECOMENDACIONES.xaml</DependentUpon>
@@ -620,7 +679,12 @@
     <Compile Include="PAGINAS\UNETE3.xaml.vb">
       <DependentUpon>UNETE3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Service References\WS_SEGURIDAD\Reference.vb">
+    <Compile Include="Service References\WS_SEGURIDAD_MANTENIMIENTO\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WS_SEGURIDAD_PRODUCCION\Reference.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -630,12 +694,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service References\WS_SPFM\Reference.vb">
+    <Compile Include="Service References\WS_SPFM_MANTENIMIENTO\Reference.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service References\WS_WAH\Reference.vb">
+    <Compile Include="Service References\WS_SPFM_PRODUCCION\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WS_WAH_PRODUCCION\Reference.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -649,17 +718,90 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\1.png" />
+    <Content Include="Assets\2.png" />
+    <Content Include="Assets\3.png" />
+    <Content Include="Assets\actividad.png" />
     <Content Include="Assets\atras.png" />
+    <Content Include="Assets\Cardio.png" />
+    <Content Include="Assets\centers_list_icon.png" />
+    <Content Include="Assets\centers_location_icon.png" />
+    <Content Include="Assets\centers_mail_icon.png" />
+    <Content Include="Assets\Cerca.png" />
     <Content Include="Assets\Fondo.png" />
     <Content Include="Assets\Fondo_verde.png" />
+    <Content Include="Assets\general_down_bar.png" />
+    <Content Include="Assets\general_expand_icon.png" />
+    <Content Include="Assets\general_new_icon.png" />
+    <Content Include="Assets\general_remove_icon.png" />
     <Content Include="Assets\general_top_bar.png" />
+    <Content Include="Assets\habitos.png" />
+    <Content Include="Assets\health_campana.png" />
+    <Content Include="Assets\health_checked.png" />
+    <Content Include="Assets\health_notification_red%282%29.png" />
+    <Content Include="Assets\information_header.png" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\Meta.png" />
     <Content Include="Assets\misaludarriba.png" />
+    <Content Include="Assets\MiSalud\1.png" />
+    <Content Include="Assets\MiSalud\2.png" />
+    <Content Include="Assets\MiSalud\3.png" />
+    <Content Include="Assets\MiSalud\atras.png" />
+    <Content Include="Assets\MiSalud\centers_list_icon.png" />
+    <Content Include="Assets\MiSalud\Fondo.png" />
+    <Content Include="Assets\MiSalud\Fondo_verde.png" />
+    <Content Include="Assets\MiSalud\general_expand_icon.png" />
+    <Content Include="Assets\MiSalud\general_new_icon.png" />
+    <Content Include="Assets\MiSalud\general_remove_icon.png" />
+    <Content Include="Assets\MiSalud\general_top_bar.png" />
+    <Content Include="Assets\MiSalud\health_campana.png" />
+    <Content Include="Assets\MiSalud\health_checked.png" />
+    <Content Include="Assets\MiSalud\health_notification_red%282%29.png" />
+    <Content Include="Assets\MiSalud\information_header.png" />
+    <Content Include="Assets\MiSalud\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\MiSalud\misaludarriba.png" />
+    <Content Include="Assets\MiSalud\newuser_icon.png" />
+    <Content Include="Assets\MiSalud\profile_user_icon.png" />
+    <Content Include="Assets\MiSalud\Sing.png" />
+    <Content Include="Assets\MiSalud\Splash2480.png" />
+    <Content Include="Assets\MiSalud\Splash620.png" />
+    <Content Include="Assets\MiSalud\Splash775.png" />
+    <Content Include="Assets\MiSalud\Splash930.png" />
+    <Content Include="Assets\MiSalud\SplashScreen.scale-100.png" />
+    <Content Include="Assets\MiSalud\SplashScreen.scale-125.png" />
+    <Content Include="Assets\MiSalud\SplashScreen.scale-150.png" />
+    <Content Include="Assets\MiSalud\SplashScreen.scale-200.png" />
+    <Content Include="Assets\MiSalud\SplashScreen.scale-400.png" />
+    <Content Include="Assets\MiSalud\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\MiSalud\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\MiSalud\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\MiSalud\StoreLogo.png" />
+    <Content Include="Assets\MiSalud\welcome_cardio_image_1.png" />
+    <Content Include="Assets\MiSalud\welcome_cardio_image_2.png" />
+    <Content Include="Assets\MiSalud\welcome_cardio_image_3 - copia.png" />
+    <Content Include="Assets\MiSalud\welcome_cardio_image_3.png" />
+    <Content Include="Assets\MiSalud\welcome_step_four.png" />
+    <Content Include="Assets\MiSalud\welcome_step_one.png" />
+    <Content Include="Assets\MiSalud\welcome_step_three.png" />
+    <Content Include="Assets\MiSalud\welcome_step_two.png" />
+    <Content Include="Assets\MiSalud\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\newuser_icon.png" />
+    <Content Include="Assets\profile_user_icon.png" />
+    <Content Include="Assets\PULMPONAR.png" />
+    <Content Include="Assets\SENTIDOS.png" />
     <Content Include="Assets\Sing.png" />
+    <Content Include="Assets\Splash2480.png" />
+    <Content Include="Assets\Splash620.png" />
+    <Content Include="Assets\Splash775.png" />
+    <Content Include="Assets\Splash930.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-125.png" />
     <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\welcome_cardio_image_1.png" />
     <Content Include="Assets\welcome_cardio_image_2.png" />
     <Content Include="Assets\welcome_cardio_image_3 - copia.png" />
@@ -668,49 +810,87 @@
     <Content Include="Assets\welcome_step_one.png" />
     <Content Include="Assets\welcome_step_three.png" />
     <Content Include="Assets\welcome_step_two.png" />
-    <Content Include="My Project\Default.rd.xml" />
-    <Content Include="Assets\LockScreenLogo.scale-200.png" />
-    <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\Square150x150Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
-    <None Include="Service References\WS_WAH\Reference.svcmap">
+    <Content Include="My Project\Default.rd.xml" />
+    <None Include="Service References\WS_SPFM_PRODUCCION\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
     </None>
-    <None Include="Service References\WS_WAH\configuration.svcinfo" />
-    <None Include="Service References\WS_WAH\configuration91.svcinfo" />
+    <None Include="Service References\WS_SPFM_PRODUCCION\configuration.svcinfo" />
+    <None Include="Service References\WS_SPFM_PRODUCCION\configuration91.svcinfo" />
+    <None Include="Service References\WS_SEGURIDAD_PRODUCCION\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\WS_SEGURIDAD_PRODUCCION\configuration.svcinfo" />
+    <None Include="Service References\WS_SEGURIDAD_PRODUCCION\configuration91.svcinfo" />
+    <None Include="Service References\WS_SEGURIDAD_MANTENIMIENTO\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\WS_SEGURIDAD_MANTENIMIENTO\configuration.svcinfo" />
+    <None Include="Service References\WS_SEGURIDAD_MANTENIMIENTO\configuration91.svcinfo" />
+    <None Include="Service References\WS_SPFM_MANTENIMIENTO\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\WS_SPFM_MANTENIMIENTO\configuration.svcinfo" />
+    <None Include="Service References\WS_SPFM_MANTENIMIENTO\configuration91.svcinfo" />
+    <None Include="Service References\WS_WAH_PRODUCCION\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\WS_WAH_PRODUCCION\configuration.svcinfo" />
+    <None Include="Service References\WS_WAH_PRODUCCION\configuration91.svcinfo" />
     <None Include="Service References\WS_SMARTPHONE\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
     </None>
     <None Include="Service References\WS_SMARTPHONE\configuration.svcinfo" />
     <None Include="Service References\WS_SMARTPHONE\configuration91.svcinfo" />
-    <None Include="Service References\WS_SEGURIDAD\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.vb</LastGenOutput>
-    </None>
-    <None Include="Service References\WS_SEGURIDAD\configuration.svcinfo" />
-    <None Include="Service References\WS_SEGURIDAD\configuration91.svcinfo" />
-    <None Include="Service References\WS_SPFM\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.vb</LastGenOutput>
-    </None>
-    <None Include="Service References\WS_SPFM\configuration.svcinfo" />
-    <None Include="Service References\WS_SPFM\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="CONTROLES\CircularProgressBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GridView\GridVW.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\DET_CENTRO.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\DET_PRUEBA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\DISEÑOS\DISEÑOS2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\DISEÑOS\DISEÑOS3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\LOADING.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="PAGINAS\ANALITICAS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\AVISOS.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -723,6 +903,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PAGINAS\DET_HEXAGONO.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\DISEÑOS\DISEÑOSxaml.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -750,11 +934,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PAGINAS\LST_CENTROS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PAGINAS\OBJ_CAMP.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PAGINAS\PERFIL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\QR.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -834,16 +1026,19 @@
     <Import Include="Windows.UI.Xaml.Navigation" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CONTROLES\" />
+    <Folder Include="Assets\Correos\" />
+    <Folder Include="Assets\Telefonica\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\WS_SEGURIDAD\" />
+    <WCFMetadataStorage Include="Service References\WS_SEGURIDAD_MANTENIMIENTO\" />
+    <WCFMetadataStorage Include="Service References\WS_SEGURIDAD_PRODUCCION\" />
     <WCFMetadataStorage Include="Service References\WS_SMARTPHONE\" />
-    <WCFMetadataStorage Include="Service References\WS_SPFM\" />
-    <WCFMetadataStorage Include="Service References\WS_WAH\" />
+    <WCFMetadataStorage Include="Service References\WS_SPFM_MANTENIMIENTO\" />
+    <WCFMetadataStorage Include="Service References\WS_SPFM_PRODUCCION\" />
+    <WCFMetadataStorage Include="Service References\WS_WAH_PRODUCCION\" />
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="Microsoft.VCLibs, Version=14.0">

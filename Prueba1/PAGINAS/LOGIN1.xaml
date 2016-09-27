@@ -5,8 +5,8 @@
     xmlns:local="using:Prueba1"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
-
+    mc:Ignorable="d"  >
+    <!--Height="540" Width="320"-->
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Grid.ColumnDefinitions>
@@ -22,11 +22,11 @@
         <Image Name="CABE" Grid.Row="0" Source="ms-appx:///Assets/misaludarriba.png" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform"></Image>
         <Image Name="F_verde" Source="ms-appx:///Assets/Fondo_verde.png" Stretch="Fill" Grid.Row="1" />
 
-        <TextBlock Grid.Row="2" x:Name="USU" HorizontalAlignment="Center" TextWrapping="Wrap" Text="¿No tienes usuario?" VerticalAlignment="Top" Margin="124,6,126,0" Width="110" FontSize="12" Foreground="#FF767272"/>
-        <Button Grid.Row="2" x:Name="BTN_NO"  Width="250" Height="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="55,33,55,17">
+        <TextBlock Grid.Row="2" x:Name="USU" HorizontalAlignment="Center" TextWrapping="Wrap" Text="¿No tienes usuario?" VerticalAlignment="Top" Width="110" FontSize="12" Foreground="#FF767272"/> <!--Margin="124,6,126,0"-->
+        <Button Grid.Row="2" x:Name="BTN_NO"  Width="250" Height="30" VerticalAlignment="Bottom" Margin="0,7" HorizontalAlignment="Stretch" >
             <Button.Template>
                 <ControlTemplate>
-                    <Border CornerRadius="10" Background="Transparent" BorderBrush="red" BorderThickness="1"  >
+                    <Border CornerRadius="15" Background="Transparent" BorderBrush="red" BorderThickness="1"  >
                         <TextBlock Text="Únete" Foreground="Red" 
                                            HorizontalAlignment="Center"   VerticalAlignment="Center"                                       
                                          ></TextBlock>
@@ -55,12 +55,12 @@
 
             <Border Grid.Row="1"  BorderThickness="1" BorderBrush="Transparent" CornerRadius="15" Padding="2"
         HorizontalAlignment="Center" VerticalAlignment="Center"  Width="250" Height="35" Background="White">
-                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="1,0" PlaceholderText="DNI" />
+                <TextBox x:Name="txtdni" BorderThickness="0" BorderBrush="Transparent" Margin="1,0,1,-3" PlaceholderText="DNI" />
             </Border>
 
             <Border Grid.Row="2"  BorderThickness="1" BorderBrush="Transparent" CornerRadius="15" Padding="2"
         HorizontalAlignment="Center" VerticalAlignment="Center"  Width="250" Height="35" Background="White">
-                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="1,0" PlaceholderText="Contraseña" />
+                <TextBox x:Name="txtpass" BorderThickness="0" BorderBrush="Transparent"   PlaceholderText="Contraseña"  />
             </Border>
 
 
@@ -76,28 +76,28 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <ToggleSwitch  Grid.Row="3"  x:Name="OK" Header="" HorizontalAlignment="Center"   VerticalAlignment="Center" Margin="57,9,149,4.333" OffContent="" OnContent=""/>
+            
+                <ToggleSwitch  Grid.Row="3"  x:Name="OK" Header="" HorizontalAlignment="Left"   VerticalAlignment="Center"  OffContent="" OnContent="" Margin="40,0"/>
 
-            <HyperlinkButton x:Name="legal"  Background="Transparent" BorderBrush="Transparent"  HorizontalAlignment="center" Height="50"  Grid.Row="3" VerticalAlignment="Center" Width="134"  Margin="121,3.667,105,3" FontSize="9.333" NavigateUri="TEXTOLEGAL.xaml">
-                <HyperlinkButton.Content>
+              
 
-                    <TextBlock Text="Acepto los términos de uso y la política de privacidad"   TextWrapping="Wrap" FontSize="10.667"></TextBlock>
-
-                </HyperlinkButton.Content>
-            </HyperlinkButton>
-
+            <Button x:Name="LEG" Background="Transparent" BorderBrush="Transparent"  HorizontalAlignment="center" Height="50"  Grid.Row="3" VerticalAlignment="Bottom"  Width="160">
+                <TextBlock Text="Acepto los términos de uso y la política de privacidad"  TextWrapping="Wrap" Width="auto" FontSize="10.667" Foreground="#FF0078D7"  ></TextBlock>
+            </Button>
 
 
-            <HyperlinkButton x:Name="recu"  Background="Transparent" BorderBrush="Transparent"  HorizontalAlignment="center" Height="50"  Grid.Row="5" VerticalAlignment="Bottom"  Width="auto"  FontSize="9.333" NavigateUri= "RECUPERARPASS.xaml">
-                <HyperlinkButton.Content>
 
-                    <TextBlock Text="¿Has olvidado tu contraseña? Recuperar contraseña"   Width="auto" FontSize="10.667"></TextBlock>
 
-                </HyperlinkButton.Content>
-            </HyperlinkButton>
+
+            <Button x:Name="REC_CON" Background="Transparent" BorderBrush="Transparent"  HorizontalAlignment="center" Height="50"  Grid.Row="5" VerticalAlignment="Bottom"  Width="auto">
+                <TextBlock Text="¿Has olvidado tu contraseña? Recuperar contraseña"   Width="auto" FontSize="10.667" Foreground="#FF0078D7"  ></TextBlock>
+            </Button>
+
 
 
         </Grid>
         
     </Grid>
 </Page>
+
+

@@ -5,8 +5,8 @@
     xmlns:local="using:Prueba1"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
-
+    mc:Ignorable="d" >
+    <!--Height="540" Width="320"-->
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Grid.ColumnDefinitions>
@@ -24,7 +24,7 @@
 
         <Image Name="F_verde" Source="ms-appx:///Assets/Fondo_verde.png" Stretch="Fill" Grid.Row="1" />
 
-        <Button Grid.Row="2" x:Name="BTN_SIG"  Width="250" Height="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="55,33,55,17">
+        <Button Grid.Row="2" x:Name="BTN_SIG"  Width="250" Height="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
             <Button.Template>
                 <ControlTemplate>
                     <Border CornerRadius="15" Background="Transparent" BorderBrush="#FF01B0A8" BorderThickness="1"  >

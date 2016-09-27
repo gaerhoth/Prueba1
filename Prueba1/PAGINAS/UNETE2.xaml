@@ -5,8 +5,8 @@
     xmlns:local="using:Prueba1"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
-
+    mc:Ignorable="d"  >
+    <!--Height="540" Width="320"-->
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Grid.ColumnDefinitions>
@@ -26,10 +26,10 @@
 
         <Image Name="F_verde" Source="ms-appx:///Assets/Fondo_verde.png" Stretch="Fill" Grid.Row="1" />
 
-        <Button Grid.Row="2" x:Name="BTN_SIG"  Width="250" Height="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="55,33,55,17">
+        <Button Grid.Row="2" x:Name="BTN_SIG"  Width="250" Height="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
             <Button.Template>
                 <ControlTemplate>
-                    <Border CornerRadius="10" Background="Transparent" BorderBrush="#FF01B0A8" BorderThickness="1"  >
+                    <Border CornerRadius="15" Background="Transparent" BorderBrush="#FF01B0A8" BorderThickness="1"  >
                         <TextBlock Text="Siguiente Paso" Foreground="#FF01B0A8" 
                                            HorizontalAlignment="Center"   VerticalAlignment="Center" FontWeight="SemiBold"                                       
                                          ></TextBlock>
@@ -62,43 +62,85 @@
 
             <Border Grid.Row="2"  BorderThickness="1" BorderBrush="Transparent" CornerRadius="15" Padding="2"
         HorizontalAlignment="Center" VerticalAlignment="Center"  Width="250" Height="35" Background="White">
-                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="1,0" PlaceholderText="Nombre*" />
+                <TextBox x:Name="TxtNombre" BorderThickness="1" BorderBrush="Transparent" Margin="1,0" PlaceholderText="Nombre*" />
             </Border>
 
             <Border Grid.Row="3"  BorderThickness="1" BorderBrush="Transparent" CornerRadius="15" Padding="2"
         HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="35" Background="White">
-                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="1,0" PlaceholderText="Primer Apellido*" />
+                <TextBox x:Name="TxtApe1" BorderThickness="1" BorderBrush="Transparent" Margin="1,0" PlaceholderText="Primer Apellido*" />
             </Border>
 
             <Border Grid.Row="4" BorderThickness="1" BorderBrush="Transparent" CornerRadius="15" Padding="2"
         HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="35" Background="White">
-                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="1,0" PlaceholderText="Segundo Apellido*" />
+                <TextBox x:Name="TxtApe2" BorderThickness="1" BorderBrush="Transparent" Margin="1,0" PlaceholderText="Segundo Apellido*" />
             </Border>
 
-            <Border Grid.Row="5" BorderThickness="1" BorderBrush="Transparent" CornerRadius="15" Padding="2"
-                    VerticalAlignment="Center"  Height="35" Background="White" Width="166" Margin="55,10.667,139,11.333">
-                <ComboBox   x:Name="CMB_CAL" BorderBrush="Transparent"  Width="160" PlaceholderText="Fecha de Nacimiento*" FontSize="12"/>
-            </Border>
-
-            <Border Grid.Row="5" BorderThickness="1" BorderBrush="Transparent" CornerRadius="15" Padding="2" 
-                     VerticalAlignment="Center"  Height="35" Background="White"  Width="81" Margin="224,10.667,55,11.333">
-                <ComboBox Grid.Row="4"  x:Name="CMB_SEX"  Width="75" PlaceholderText="Sexo*" FontSize="12" BorderBrush="Transparent" />
-            </Border>
-            <ToggleSwitch  Grid.Row="6"  x:Name="OK" Header="" HorizontalAlignment="Center"   VerticalAlignment="Center"  OffContent="" OnContent="" Margin="61,8.667,145,8" Grid.ColumnSpan="2"/>
-            <TextBlock Grid.Row="7" Grid.ColumnSpan="2" Text="* Campos obligatorios" Foreground="White" FontWeight="SemiBold" VerticalAlignment="Bottom" Margin="55,0,0,0"></TextBlock>
 
 
-            <HyperlinkButton x:Name="legal"  Background="Transparent" BorderBrush="Transparent"  HorizontalAlignment="center" Height="50"  Grid.Row="6" VerticalAlignment="Center" Width="134"  Margin="121,3.667,105,3" FontSize="9.333" NavigateUri="TEXTOLEGAL.xaml">
-                <HyperlinkButton.Content>
+            <TextBlock Grid.Row="7" Grid.ColumnSpan="2" Text="* Campos obligatorios" Foreground="White" FontWeight="SemiBold" VerticalAlignment="Bottom" Margin="35,0,0,0"></TextBlock>
 
-                    <TextBlock Text="Acepto los términos de uso y la política de privacidad"   TextWrapping="Wrap" FontSize="10.667"></TextBlock>
-                                         
-                </HyperlinkButton.Content>       
-               </HyperlinkButton>
 
-      
-            
-            
+
+
+
+            <Grid Name="GR3" Grid.Row="5" Grid.RowSpan="2">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*" />
+                    <ColumnDefinition Width="32*" />
+                    <ColumnDefinition Width="18*" />
+                    <ColumnDefinition Width="7*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+
+                </Grid.RowDefinitions>
+
+
+                <StackPanel Grid.ColumnSpan="2" Grid.Column="1" Margin="11,11,0,11" Orientation="Horizontal">
+
+                    <Border BorderThickness="1" BorderBrush="Transparent" CornerRadius="15" Padding="2"
+            			VerticalAlignment="Center" HorizontalAlignment="center" Height="35" Background="White" Width="160" Margin="5,0,0,0"  >
+                        <!--<ComboBox   x:Name="CMB_CAL" BorderBrush="Transparent" HorizontalAlignment="Stretch"  PlaceholderText="Fecha de Nacimiento*" FontSize="9"/>-->
+                        <CalendarDatePicker BorderThickness="0" BorderBrush="Transparent" x:Name="FNACI" HorizontalAlignment="Stretch"    VerticalAlignment="Stretch"  PlaceholderText="Fecha de nacimiento*" FontSize="5" />
+                    </Border>
+
+
+                    <Border BorderThickness="1" BorderBrush="Transparent" CornerRadius="15" Padding="2" 
+            			VerticalAlignment="Center"  Height="35" Background="White" HorizontalAlignment="Stretch" Width="90"   >
+                        <ComboBox  x:Name="CMB_SEX"  HorizontalAlignment="Stretch" PlaceholderText="Sexo*" FontSize="9" BorderBrush="Transparent"  />
+                    </Border>
+
+
+                </StackPanel>
+
+
+                <Grid x:Name="GR4" Grid.Row="1" Grid.ColumnSpan="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="12*" />
+                        <ColumnDefinition Width="13*" />
+                        <ColumnDefinition Width="47*" />
+                    </Grid.ColumnDefinitions>
+
+
+                    <ToggleSwitch  Grid.Row="0" Grid.Column="1"  x:Name="OK" Header="" HorizontalAlignment="Left"   VerticalAlignment="Center"  OffContent=""  FontSize="9"  OnContent="" Grid.ColumnSpan="3" Height="40"  Width="154"/>
+                    <HyperlinkButton Grid.Row="0" Grid.Column="2" x:Name="legal"  Background="Transparent" BorderBrush="Transparent"  HorizontalAlignment="Left" Height="50"   VerticalAlignment="Center" Width="134"   FontSize="9.333" NavigateUri="TEXTOLEGAL.xaml" Margin="0,4,0,3">
+
+                        <TextBlock Text="Acepto los términos de uso y la política de privacidad"   TextWrapping="Wrap" FontSize="10.667"/>
+
+                    </HyperlinkButton>
+
+                </Grid>
+
+
+
+            </Grid>
+
+
+
+
         </Grid>
 
 

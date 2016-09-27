@@ -54,22 +54,9 @@
             <Image Name="C2" Grid.Row="0" Grid.ColumnSpan="3" Source="ms-appx:///Assets/welcome_step_four.png" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="70" Height="15" Margin="0,5" Stretch="Uniform" />
 
 
-            <Border Grid.Row="1" Grid.ColumnSpan="3" BorderThickness="1" BorderBrush="Transparent"  Padding="2"
-             VerticalAlignment="Center"  Background="DarkGray">
-                <TextBlock  Margin="5,0" Text="CARDIO" Foreground="White" FontWeight="SemiBold"  />
-            </Border>
-            <TextBlock Text="cm" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,8,0"></TextBlock>
+        
 
-
-            <TextBox Name="TXTPERO" Grid.Row="2" Grid.Column="1" BorderBrush="Transparent" PlaceholderText="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0,0"></TextBox>
-
-            <Border Grid.Row="2"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
-        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White">
-                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" PlaceholderText="PÉRIMETRO ABDOMINAL" />
-            </Border>
-            <Line Grid.Row="2" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
-
-
+         
 
         </Grid>
 

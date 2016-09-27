@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/WS_SPFM/Service1" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://tempuri.org/WS_SPFM/Service1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/WS_SPFM/Service1">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="existeEnTCOMPROVE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iCodigoProveedor" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="existeEnTCOMPROVEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="existeEnTCOMPROVEResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="existeEnTEMPLEADO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iCodigoPersona" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="existeEnTEMPLEADOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="existeEnTEMPLEADOResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="existeNumeroDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sNumDocumento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="existeNumeroDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="existeNumeroDocumentoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarEusuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sNomPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCodPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDesEMail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDesDomicilio" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iCodPoblacion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iCodPostal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iCodProvincia" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNumTelefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNumDocumento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iCodTipoDocumento" type="s:short" />
+            <s:element minOccurs="0" maxOccurs="1" name="sFecNacimiento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iNumColegiado" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNumFax" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cIndCertificado" type="s1:char" />
+            <s:element minOccurs="0" maxOccurs="1" name="sObservacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sComercial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sFecAlta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarEusuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertarEusuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarEusuemp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iCodUsuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNumCif" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodProvincia" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iTipoUsuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNumCcc" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iNumReg" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarEusuempResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertarEusuempResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarEusucolab">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iCodUsuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iCodColaborador" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarEusucolabResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertarEusucolabResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarEusuca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iCodUsuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iCodigoCentroAsistencial" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarEusucaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertarEusucaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarEususumin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iCodUsuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iProveedor" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarEususuminResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertarEususuminResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarTipoUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iTipoUsuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iCodUsuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sFecAlta" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iModificado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarTipoUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iModificado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarEusupwd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iCodUsuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDesPwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarEusupwdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertarEusupwdResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="obtenerResponsablesAsesoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iPermisoAsesoriaInformatica" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="obtenerResponsablesAsesoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obtenerResponsablesAsesoriaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCorreo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iCodPersona" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCorreoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCorreoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dameDatosPeticion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iCodUsuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDireccion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iCodPoblacion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDesTipoUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNombrePersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTipoIdentif" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNumDocumento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sFecNacimiento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNumColegiado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCodProveedor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCodCentroAsistencial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNumCif" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCodigoPostal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNumTelefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNumFax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDesEMail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cIndCertificado" type="s1:char" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDesEstado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dameDatosPeticionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sDireccion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iCodPoblacion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDesTipoUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNombrePersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTipoIdentif" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNumDocumento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sFecNacimiento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNumColegiado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCodProveedor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCodCentroAsistencial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNumCif" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCodigoPostal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNumTelefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNumFax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDesEMail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cIndCertificado" type="s1:char" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDesEstado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dameDescripcionTipoVia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sCodTipoVia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dameDescripcionTipoViaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dameDescripcionTipoViaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="damePoblacionProvincia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iCodPoblacion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDesPoblacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDesProvincia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="damePoblacionProvinciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sDesPoblacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDesProvincia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dameDirectorProvincial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iCodPoblacion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iCodPersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNombreDirector" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dameDirectorProvincialResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="dameDirectorGeneralProvincia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iCodProvincia" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iCodPersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNombreDirector" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dameDirectorGeneralProvinciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iCodPersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNombreDirector" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarDirectorProvincial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iCodPersona" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iCodUsuario" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarDirectorProvincialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarDirectorProvincialResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="avisoFM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iCodPersonaResponsable" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNombrePersona" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iTipoAviso" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iGrupo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="avisoFMResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="avisoSPFM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iCodPersonaResponsable" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNombrePersona" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iTipoAviso" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iGrupo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="avisoSPFMResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="existeEnTCOMPROVESoapIn">
+    <wsdl:part name="parameters" element="tns:existeEnTCOMPROVE" />
+  </wsdl:message>
+  <wsdl:message name="existeEnTCOMPROVESoapOut">
+    <wsdl:part name="parameters" element="tns:existeEnTCOMPROVEResponse" />
+  </wsdl:message>
+  <wsdl:message name="existeEnTEMPLEADOSoapIn">
+    <wsdl:part name="parameters" element="tns:existeEnTEMPLEADO" />
+  </wsdl:message>
+  <wsdl:message name="existeEnTEMPLEADOSoapOut">
+    <wsdl:part name="parameters" element="tns:existeEnTEMPLEADOResponse" />
+  </wsdl:message>
+  <wsdl:message name="existeNumeroDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:existeNumeroDocumento" />
+  </wsdl:message>
+  <wsdl:message name="existeNumeroDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:existeNumeroDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarEusuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarEusuario" />
+  </wsdl:message>
+  <wsdl:message name="insertarEusuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarEusuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarEusuempSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarEusuemp" />
+  </wsdl:message>
+  <wsdl:message name="insertarEusuempSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarEusuempResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarEusucolabSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarEusucolab" />
+  </wsdl:message>
+  <wsdl:message name="insertarEusucolabSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarEusucolabResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarEusucaSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarEusuca" />
+  </wsdl:message>
+  <wsdl:message name="insertarEusucaSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarEusucaResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarEususuminSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarEususumin" />
+  </wsdl:message>
+  <wsdl:message name="insertarEususuminSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarEususuminResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarTipoUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarTipoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="insertarTipoUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarTipoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarEusupwdSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarEusupwd" />
+  </wsdl:message>
+  <wsdl:message name="insertarEusupwdSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarEusupwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtenerResponsablesAsesoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:obtenerResponsablesAsesoria" />
+  </wsdl:message>
+  <wsdl:message name="obtenerResponsablesAsesoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:obtenerResponsablesAsesoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCorreoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerCorreo" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCorreoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerCorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="dameDatosPeticionSoapIn">
+    <wsdl:part name="parameters" element="tns:dameDatosPeticion" />
+  </wsdl:message>
+  <wsdl:message name="dameDatosPeticionSoapOut">
+    <wsdl:part name="parameters" element="tns:dameDatosPeticionResponse" />
+  </wsdl:message>
+  <wsdl:message name="dameDescripcionTipoViaSoapIn">
+    <wsdl:part name="parameters" element="tns:dameDescripcionTipoVia" />
+  </wsdl:message>
+  <wsdl:message name="dameDescripcionTipoViaSoapOut">
+    <wsdl:part name="parameters" element="tns:dameDescripcionTipoViaResponse" />
+  </wsdl:message>
+  <wsdl:message name="damePoblacionProvinciaSoapIn">
+    <wsdl:part name="parameters" element="tns:damePoblacionProvincia" />
+  </wsdl:message>
+  <wsdl:message name="damePoblacionProvinciaSoapOut">
+    <wsdl:part name="parameters" element="tns:damePoblacionProvinciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="dameDirectorProvincialSoapIn">
+    <wsdl:part name="parameters" element="tns:dameDirectorProvincial" />
+  </wsdl:message>
+  <wsdl:message name="dameDirectorProvincialSoapOut">
+    <wsdl:part name="parameters" element="tns:dameDirectorProvincialResponse" />
+  </wsdl:message>
+  <wsdl:message name="dameDirectorGeneralProvinciaSoapIn">
+    <wsdl:part name="parameters" element="tns:dameDirectorGeneralProvincia" />
+  </wsdl:message>
+  <wsdl:message name="dameDirectorGeneralProvinciaSoapOut">
+    <wsdl:part name="parameters" element="tns:dameDirectorGeneralProvinciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarDirectorProvincialSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarDirectorProvincial" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarDirectorProvincialSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarDirectorProvincialResponse" />
+  </wsdl:message>
+  <wsdl:message name="avisoFMSoapIn">
+    <wsdl:part name="parameters" element="tns:avisoFM" />
+  </wsdl:message>
+  <wsdl:message name="avisoFMSoapOut">
+    <wsdl:part name="parameters" element="tns:avisoFMResponse" />
+  </wsdl:message>
+  <wsdl:message name="avisoSPFMSoapIn">
+    <wsdl:part name="parameters" element="tns:avisoSPFM" />
+  </wsdl:message>
+  <wsdl:message name="avisoSPFMSoapOut">
+    <wsdl:part name="parameters" element="tns:avisoSPFMResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_SPFMSoap">
+    <wsdl:operation name="existeEnTCOMPROVE">
+      <wsdl:input message="tns:existeEnTCOMPROVESoapIn" />
+      <wsdl:output message="tns:existeEnTCOMPROVESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="existeEnTEMPLEADO">
+      <wsdl:input message="tns:existeEnTEMPLEADOSoapIn" />
+      <wsdl:output message="tns:existeEnTEMPLEADOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="existeNumeroDocumento">
+      <wsdl:input message="tns:existeNumeroDocumentoSoapIn" />
+      <wsdl:output message="tns:existeNumeroDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarEusuario">
+      <wsdl:input message="tns:insertarEusuarioSoapIn" />
+      <wsdl:output message="tns:insertarEusuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarEusuemp">
+      <wsdl:input message="tns:insertarEusuempSoapIn" />
+      <wsdl:output message="tns:insertarEusuempSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarEusucolab">
+      <wsdl:input message="tns:insertarEusucolabSoapIn" />
+      <wsdl:output message="tns:insertarEusucolabSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarEusuca">
+      <wsdl:input message="tns:insertarEusucaSoapIn" />
+      <wsdl:output message="tns:insertarEusucaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarEususumin">
+      <wsdl:input message="tns:insertarEususuminSoapIn" />
+      <wsdl:output message="tns:insertarEususuminSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarTipoUsuario">
+      <wsdl:input message="tns:insertarTipoUsuarioSoapIn" />
+      <wsdl:output message="tns:insertarTipoUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarEusupwd">
+      <wsdl:input message="tns:insertarEusupwdSoapIn" />
+      <wsdl:output message="tns:insertarEusupwdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerResponsablesAsesoria">
+      <wsdl:input message="tns:obtenerResponsablesAsesoriaSoapIn" />
+      <wsdl:output message="tns:obtenerResponsablesAsesoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCorreo">
+      <wsdl:input message="tns:ObtenerCorreoSoapIn" />
+      <wsdl:output message="tns:ObtenerCorreoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dameDatosPeticion">
+      <wsdl:input message="tns:dameDatosPeticionSoapIn" />
+      <wsdl:output message="tns:dameDatosPeticionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dameDescripcionTipoVia">
+      <wsdl:input message="tns:dameDescripcionTipoViaSoapIn" />
+      <wsdl:output message="tns:dameDescripcionTipoViaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="damePoblacionProvincia">
+      <wsdl:input message="tns:damePoblacionProvinciaSoapIn" />
+      <wsdl:output message="tns:damePoblacionProvinciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dameDirectorProvincial">
+      <wsdl:input message="tns:dameDirectorProvincialSoapIn" />
+      <wsdl:output message="tns:dameDirectorProvincialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dameDirectorGeneralProvincia">
+      <wsdl:input message="tns:dameDirectorGeneralProvinciaSoapIn" />
+      <wsdl:output message="tns:dameDirectorGeneralProvinciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDirectorProvincial">
+      <wsdl:input message="tns:ActualizarDirectorProvincialSoapIn" />
+      <wsdl:output message="tns:ActualizarDirectorProvincialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="avisoFM">
+      <wsdl:input message="tns:avisoFMSoapIn" />
+      <wsdl:output message="tns:avisoFMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="avisoSPFM">
+      <wsdl:input message="tns:avisoSPFMSoapIn" />
+      <wsdl:output message="tns:avisoSPFMSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_SPFMSoap" type="tns:WS_SPFMSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="existeEnTCOMPROVE">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/existeEnTCOMPROVE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="existeEnTEMPLEADO">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/existeEnTEMPLEADO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="existeNumeroDocumento">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/existeNumeroDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarEusuario">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/insertarEusuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarEusuemp">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/insertarEusuemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarEusucolab">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/insertarEusucolab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarEusuca">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/insertarEusuca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarEususumin">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/insertarEususumin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarTipoUsuario">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/insertarTipoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarEusupwd">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/insertarEusupwd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerResponsablesAsesoria">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/obtenerResponsablesAsesoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCorreo">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/ObtenerCorreo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dameDatosPeticion">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/dameDatosPeticion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dameDescripcionTipoVia">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/dameDescripcionTipoVia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="damePoblacionProvincia">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/damePoblacionProvincia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dameDirectorProvincial">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/dameDirectorProvincial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dameDirectorGeneralProvincia">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/dameDirectorGeneralProvincia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDirectorProvincial">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/ActualizarDirectorProvincial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="avisoFM">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/avisoFM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="avisoSPFM">
+      <soap:operation soapAction="http://tempuri.org/WS_SPFM/Service1/avisoSPFM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_SPFM">
+    <wsdl:port name="WS_SPFMSoap" binding="tns:WS_SPFMSoap">
+      <soap:address location="http://213.0.25.236:1253/WS_SPFM/WS_SPFM.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
