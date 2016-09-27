@@ -1,0 +1,280 @@
+﻿<Page
+    x:Class="Prueba1.PERFIL"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Prueba1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"  >
+    <!--Height="1000"-->
+    <!--Height="1000" Width="320"-->
+
+    <ScrollViewer  VerticalScrollMode="Enabled" Height="auto" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+
+
+        <Grid  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="1000">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height= "0.1*" />
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+
+            </Grid.RowDefinitions>
+
+            <TextBlock Name="titulo" Text="Mi Salud" FontWeight="SemiBold"  Foreground="#FF01B0A8" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+
+            <Button Grid.Row="0" Grid.Column="0" Name="Atras" HorizontalAlignment="Left" Background="Transparent" Width="40" Height="40">
+                <Image x:Name="IMB" Source="ms-appx:///Assets/atras.png"  ></Image>
+            </Button>
+
+
+            <Button Name="BTN_OK" HorizontalAlignment="Right" Background="Transparent" Content="OK" FontSize="15" FontWeight="Bold">
+
+            </Button>
+
+            <!--<ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Visible">-->
+            <Grid x:Name="GR2" Grid.Row="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height= "2*" />
+                    <RowDefinition Height= "0.5*" />
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="0.5*"/>
+
+                </Grid.RowDefinitions>
+
+                <StackPanel VerticalAlignment="Center" Grid.Row="0" Background="#FF01B0A8" Height="146" Margin="0,0,0,0.333" >
+                    <Image Name="C" Grid.Row="0" Height="90" Width="90" Source="ms-appx:///Assets/profile_user_icon.png" Margin="45,15" />
+                    <Button Name="cambiar" Content="Cambiar" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Background="Transparent" FontSize="12"></Button>
+                </StackPanel>
+
+                <Button x:Name="B_QR" Grid.Row="0" Grid.Column="2"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Transparent" BorderThickness="0" BorderBrush="Transparent">
+                    <Image x:Name="QR"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ></Image>
+                </Button>
+                
+                <Border Grid.Row="1" Grid.ColumnSpan="3" BorderThickness="1" BorderBrush="Transparent"  Padding="2"
+             VerticalAlignment="Top"  Background="Gray">
+                    <TextBlock  Margin="5,0" Text="INFORMACIÓN" Foreground="White" FontWeight="SemiBold"  />
+                </Border>
+
+
+
+
+
+                <Border Grid.Row="2"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
+                    <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="Nombre" IsHitTestVisible="False" />
+                </Border>
+                <Line Grid.Row="2" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+
+                <Line Grid.Row="2" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+                <Border Grid.Row="3"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+            	HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
+                    <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="Apellidos" IsHitTestVisible="False" />
+                </Border>
+                <Line Grid.Row="3" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+
+                <Border Grid.Row="4"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
+                    <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="DNI / NIF" IsHitTestVisible="False" />
+                </Border>
+                <Line Grid.Row="4" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+
+
+
+                <Border Grid.Row="5"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
+                    <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="Nacimiento" IsHitTestVisible="False" />
+                </Border>
+                <Line Grid.Row="5" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+
+                <Border x:Name="B_HOMBRE" Grid.Row="6" Grid.Column="0" BorderThickness="1" BorderBrush="Black" CornerRadius="15"  
+        HorizontalAlignment="Center" VerticalAlignment="Center"   Background="White" Width="130">
+                    <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="HOMBRE ♂" TextAlignment="Center" />
+                </Border>
+
+                <Border x:Name="B_HOMBRE_V" Grid.Row="6" Grid.Column="0" BorderThickness="1" BorderBrush="Black" CornerRadius="15"  
+        HorizontalAlignment="Center" VerticalAlignment="Center"   Background="PaleGreen" Width="130" Visibility="Collapsed">
+                    <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="HOMBRE ♂" TextAlignment="Center" />
+                </Border>
+
+                <Border  Grid.Row="6" x:Name="B_MUJER" Grid.Column="1" BorderThickness="1" BorderBrush="Black" CornerRadius="15" 
+        HorizontalAlignment="Center" VerticalAlignment="Center"   Background="Transparent" Width="130" >
+                    <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="MUJER ♀" TextAlignment="Center" />
+                </Border>
+
+                <Border  Grid.Row="6" x:Name="B_MUJER_V" Grid.Column="1" BorderThickness="1" BorderBrush="Black" CornerRadius="15" 
+        HorizontalAlignment="Center" VerticalAlignment="Center"   Background="PaleGreen" Width="130" Visibility="Collapsed">
+                    <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="MUJER ♀" TextAlignment="Center" />
+                </Border>
+
+
+                <!--<Border Grid.Row="6"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
+                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="hombre" />
+            </Border>-->
+                <Line Grid.Row="2" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+
+
+                <Border Grid.Row="7" Grid.ColumnSpan="3" BorderThickness="1" BorderBrush="Transparent"  Padding="2"
+             VerticalAlignment="top"  Background="Gray" >
+                    <TextBlock  Margin="5,0" Text="CONTACTO" Foreground="White" FontWeight="SemiBold"  />
+                </Border>
+
+
+
+
+                <!--<Border Grid.Row="7"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
+                <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="SUEÑO" />
+            </Border>
+            <Line Grid.Row="2" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+            <Button Name="B6"  Grid.Row="7" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent">
+                <Image Name="B6I" Source="ms-appx:///Assets/general_expand_icon.png" Stretch="None"></Image>
+            </Button>-->
+
+                <TextBlock  Name="TXTNOMBRE" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"  VerticalAlignment="Center"  TextWrapping="Wrap" Text="" Margin="5,0"></TextBlock>
+                <TextBlock Name="TXTAPE" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"  VerticalAlignment="Center" Text="" Margin="5,0" TextWrapping="Wrap"></TextBlock>
+                <TextBlock Name="TXTnif" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" Text="" Margin="5,0" TextWrapping="Wrap"></TextBlock>
+                <TextBlock x:Name="TXTNACI" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center"  Text="" Margin="5,0" TextWrapping="Wrap"></TextBlock>
+                <!--<TextBlock Name="TXTEJE" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"  VerticalAlignment="Center" TextWrapping="Wrap"></TextBlock>-->
+                <!--<TextBox Name="TXTSUE" Grid.Row="7" Grid.Column="1" PlaceholderText="SUEÑO" VerticalAlignment="Center" BorderBrush="Transparent" TextWrapping="Wrap"></TextBox>-->
+
+
+            </Grid>
+
+            <Grid x:Name="GR3" Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height= "0.8*" />
+                    <RowDefinition Height= "0.8*" />
+                    <RowDefinition Height="0.4*"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="0.4*"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="0.8*"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
+                    <TextBox BorderThickness="1" Background="Transparent" BorderBrush="Transparent" Margin="0,0" Text="Email"  IsHitTestVisible="False"/>
+                </Border>
+                <Line Grid.Row="0" Grid.ColumnSpan="2" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+
+                <TextBlock x:Name="TXTEMAIL" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center"  Text="" Margin="5,0" TextWrapping="Wrap" IsHitTestVisible="False"></TextBlock>
+
+
+                <Border Grid.Row="1"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
+                    <TextBox BorderThickness="1" Background="Transparent" BorderBrush="Transparent" Margin="0,0" Text="Teléfono"  IsHitTestVisible="False"/>
+                </Border>
+                <Line Grid.Row="1" Grid.ColumnSpan="2" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+
+
+
+                <Border Grid.Row="1"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
+                    <TextBox BorderThickness="1" Background="Transparent" BorderBrush="Transparent" Margin="0,0" Text="Teléfono"  IsHitTestVisible="False"/>
+                </Border>
+                <Line Grid.Row="0" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+
+                <TextBox x:Name="TXTTEL" BorderBrush="Transparent" BorderThickness="0" Grid.Row="1" Grid.Column="1"  VerticalAlignment="Center"   Margin="5,0" TextWrapping="Wrap" Text="Teléfono"  Foreground="Gray"  ></TextBox>
+
+                <Border Grid.Row="2" Grid.ColumnSpan="3" BorderThickness="1" BorderBrush="Transparent"  Padding="2"
+             VerticalAlignment="top"  Background="Gray" >
+                    <TextBlock  Margin="5,0" Text="INFORMACIÓN MÉDICA" Foreground="White" FontWeight="SemiBold"  />
+                </Border>
+
+                <Border Grid.Row="3"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="150">
+                    <TextBox BorderThickness="0" Background="Transparent" BorderBrush="Transparent" Margin="0,0" Text="Grupo Sanguíneo"  IsHitTestVisible="False"/>
+                </Border>
+                <Line Grid.Row="3" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+
+                <ComboBox x:Name="CMB_SAN" Grid.Row="3" Grid.Column="1" BorderBrush="Transparent" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Stretch"></ComboBox>
+
+                <Border Grid.Row="4"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="150">
+                    <TextBox BorderThickness="1" Background="Transparent" BorderBrush="Transparent" Margin="0,0" Text="Donante Órganos"  IsHitTestVisible="False"/>
+                </Border>
+                <Line Grid.Row="4" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+
+                <ToggleSwitch x:Name="Organos" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch"    VerticalAlignment="Center" OffContent="" OnContent="" RenderTransformOrigin="0.5,0.5"  >
+                    <ToggleSwitch.RenderTransform>
+                        <CompositeTransform  ScaleX="-1"/>
+                    </ToggleSwitch.RenderTransform>
+                </ToggleSwitch>
+
+                <Border Grid.Row="5"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="150">
+                    <TextBox BorderThickness="1" Background="Transparent" BorderBrush="Transparent" Margin="0,0" Text="Compartir Salud"  IsHitTestVisible="False"/>
+                </Border>
+                <Line Grid.Row="5" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+
+                <ToggleSwitch x:Name="Salud" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch"    VerticalAlignment="Center" OffContent="" OnContent="" RenderTransformOrigin="0.5,0.5"  >
+                    <ToggleSwitch.RenderTransform>
+                        <CompositeTransform  ScaleX="-1"/>
+                    </ToggleSwitch.RenderTransform>
+                </ToggleSwitch>
+
+
+
+                <Border Grid.Row="6" Grid.ColumnSpan="3" BorderThickness="1" BorderBrush="Transparent"  Padding="2"
+             VerticalAlignment="top"  Background="Gray" >
+                    <TextBlock  Margin="5,0" Text="CONTACTO DE EMERGENCIA" Foreground="White" FontWeight="SemiBold"  />
+                </Border>
+
+
+                <Border Grid.Row="7"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="120">
+                    <TextBox BorderThickness="1" Background="Transparent" BorderBrush="Transparent" Margin="0,0" Text="Nombre"  IsHitTestVisible="False"/>
+                </Border>
+                <Line Grid.Row="7" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+
+                <TextBox x:Name="AANombre" BorderBrush="Transparent" BorderThickness="0" Grid.Row="7" Grid.Column="1"  VerticalAlignment="Center"  Text="Nombre"  Foreground="Gray"  Margin="5,0" TextWrapping="Wrap" IsHitTestVisible="true"  ></TextBox>
+
+                <Border Grid.Row="8"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="120">
+                    <TextBox BorderThickness="1" Background="Transparent" BorderBrush="Transparent" Margin="0,0" Text="Teléfono"  IsHitTestVisible="False"/>
+                </Border>
+                <Line Grid.Row="8" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+
+                <TextBox  x:Name="AATelefono" Grid.Row="8"  Grid.Column="1" BorderBrush="Transparent" BorderThickness="0" VerticalAlignment="Center"  Margin="5,0" TextWrapping="Wrap" IsHitTestVisible="true" Text="Teléfono"  Foreground="Gray" ></TextBox>
+
+
+                <Button Grid.Row="9" Grid.ColumnSpan="2" x:Name="BTN_CERRAR"  Width="250" Height="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Border CornerRadius="15" Background="Transparent" BorderBrush="#FF01B0A8" BorderThickness="1"  >
+                                <TextBlock Text="CERRAR SESIÓN" Foreground="#FF01B0A8" 
+                                           HorizontalAlignment="Center"   VerticalAlignment="Center" FontWeight="SemiBold"                                       
+                                         ></TextBlock>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+
+            </Grid>
+
+        </Grid>
+
+    </ScrollViewer>
+</Page>

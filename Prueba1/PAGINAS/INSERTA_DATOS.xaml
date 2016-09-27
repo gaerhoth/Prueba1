@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="Prueba1.INSERTA_DATOS"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Prueba1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+
+
+
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            
+
+
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.3*"/>
+        </Grid.ColumnDefinitions>
+
+
+
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Name="titulo" Text="Algunos datos sobre ti" FontWeight="SemiBold"  Foreground="#FF01B0A8" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+
+        <Button Grid.Row="0" Grid.Column="0" x:Name="Atras" HorizontalAlignment="Left" Background="Transparent">
+            <Image x:Name="IMB" Source="ms-appx:///Assets/atras.png"></Image>
+        </Button>
+
+
+        <Border Grid.Row="1"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
+            <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="Fecha" IsHitTestVisible="False" />
+        </Border>
+        <Line Grid.Row="1" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>
+
+        <Border Grid.Row="2"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
+            <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="Valor" IsHitTestVisible="False" />
+        </Border>
+        <Line Grid.Row="2" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom"   StrokeThickness="1" X1="500"  ></Line>
+
+        <CalendarDatePicker x:Name="calFecha"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center"  HorizontalAlignment="Right" PlaceholderText=""></CalendarDatePicker>
+
+        <TextBox x:Name="txtval" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" BorderBrush="Transparent" BorderThickness="0"  Width="150" TextAlignment="Right"></TextBox>
+        <TextBlock x:Name="txtunid" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False" Text="Cm" Foreground="Gray"></TextBlock>
+    </Grid>
+</Page>

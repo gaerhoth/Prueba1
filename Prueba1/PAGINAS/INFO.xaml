@@ -1,0 +1,140 @@
+﻿<Page
+    x:Class="Prueba1.INFO"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Prueba1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" >
+
+    <!--Height="540" Width="320"-->
+    <Grid x:Name="gridMain" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <SplitView x:Name="MySplitView" 
+               DisplayMode="CompactOverlay"
+               IsPaneOpen="false"
+               CompactPaneLength="0"
+               OpenPaneLength="300">
+            <SplitView.Pane>
+                <StackPanel Background="Gray">
+
+                    <StackPanel Orientation="Horizontal" Background="#FF01B0A8" Height="100">
+                        <!--<TextBlock Text="Ver Perfil" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="SemiBold" Foreground="White" FontSize="8" />-->
+
+
+                        <Button x:Name="PERFIL" Width="70" Height="70" Background="Transparent">
+                            <Image x:Name="iperfil" HorizontalAlignment="center" VerticalAlignment="Center" Stretch="Uniform" Source="ms-appx:///Assets/profile_user_icon.png"/>
+                        </Button>
+
+
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <TextBlock x:Name="txtnombre" Text="David Venturo" FontSize="13" Foreground="White" VerticalAlignment="Center"/>
+                            <TextBlock x:Name ="txtcorreo" Text="9dventuro@spfm.es" FontSize="10" VerticalAlignment="Center" Foreground="#FF52DD95"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_MISALUD"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Información"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_CITAS"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Citas"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_ANALITICAS"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Analíticas"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_DOC"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Informes y Documentos"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_RECOM"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Recomendaciones y Consejos"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_OBJ"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Objetivos"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_CAMPA"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Campañas"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_CENTROS"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Localizador de Centros"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_INFO"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Información"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+
+
+
+                </StackPanel>
+            </SplitView.Pane>
+            <SplitView.Content>
+
+
+
+
+                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height= "0.5*" />
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Image HorizontalAlignment="Right" Source="ms-appx:///Assets/centers_list_icon.png"></Image>
+                    <TextBlock Name="titulo" Text="Mi Salud" FontWeight="SemiBold"  Foreground="#FF01B0A8" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    <ToggleButton   Foreground="Black" Background="Transparent" VerticalAlignment="Center" >
+                        <ToggleButton.Content>
+                            <FontIcon x:Name="Hamburger"   FontWeight="Bold" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" VerticalAlignment="Top" Glyph="&#xE700;" />
+
+                        </ToggleButton.Content>
+
+                    </ToggleButton>
+
+                    <Image Name ="C" Grid.Row="1" Source="ms-appx:///Assets/information_header.png" Stretch="UniformToFill"></Image>
+
+                    <TextBlock Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" Text="Acerca de MiSalud!" FontSize="14" FontWeight="SemiBold" Margin="0,5"></TextBlock>
+                     <RichTextBlock Name="Texto" Grid.Row="2" Height="180" Width="180"  TextAlignment="Justify"  ></RichTextBlock>
+
+
+                    <ScrollViewer VerticalScrollBarVisibility="Hidden" Grid.Row="2" Height="180" Width="180" >
+                      
+                                <TextBlock Text="hola esto es una prueba." TextWrapping="Wrap" FontWeight="Bold"></TextBlock>
+                        
+                    </ScrollViewer>
+
+
+                    <Button Grid.Row="3" x:Name="BTN_SIG"  Width="250" Height="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="15" Background="#FF01B0A8" BorderBrush="#FF01B0A8" BorderThickness="1"  >
+                                    <TextBlock Text="Ver Tutorial" Foreground="White" 
+                                           HorizontalAlignment="Center"   VerticalAlignment="Center" FontWeight="SemiBold"                                       
+                                         ></TextBlock>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button Grid.Row="4" x:Name="BTN_TERMINOS"  Width="250" Height="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="15" Background="Transparent" BorderBrush="#FF01B0A8" BorderThickness="1"  >
+                                    <TextBlock Text="Términos y Condiciones" Foreground="#FF01B0A8" 
+                                           HorizontalAlignment="Center"   VerticalAlignment="Center" FontWeight="SemiBold"                                       
+                                         ></TextBlock>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+
+
+                </Grid>
+            </SplitView.Content>
+        </SplitView>
+
+    </Grid>
+</Page>

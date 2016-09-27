@@ -1,0 +1,128 @@
+﻿<Page
+    x:Class="Prueba1.DOCUMENTOS"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Prueba1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="gridMain" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <SplitView x:Name="MySplitView" 
+               DisplayMode="CompactOverlay"
+               IsPaneOpen="false"
+               CompactPaneLength="0"
+               OpenPaneLength="300">
+            <SplitView.Pane>
+                <StackPanel Background="Gray">
+
+                    <StackPanel Orientation="Horizontal" Background="#FF01B0A8" Height="100">
+                        <!--<TextBlock Text="Ver Perfil" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="SemiBold" Foreground="White" FontSize="8" />-->
+
+
+                        <Button x:Name="PERFIL" Width="70" Height="70" Background="Transparent">
+                            <Image x:Name="iperfil" HorizontalAlignment="center" VerticalAlignment="Center" Stretch="Uniform" Source="ms-appx:///Assets/profile_user_icon.png"/>
+                        </Button>
+
+
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <TextBlock x:Name="txtnombre" Text="David Venturo" FontSize="13" Foreground="White" VerticalAlignment="Center"/>
+                            <TextBlock x:Name ="txtcorreo" Text="9dventuro@spfm.es" FontSize="10" VerticalAlignment="Center" Foreground="#FF52DD95"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_MISALUD"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Información"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_CITAS"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Citas"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_ANALITICAS"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Analíticas"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_DOC"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Informes y Documentos"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_RECOM"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Recomendaciones y Consejos"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_OBJ"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Objetivos"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_CAMPA"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Campañas"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_CENTROS"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Localizador de Centros"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_INFO"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Información"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+
+
+
+                </StackPanel>
+            </SplitView.Pane>
+            <SplitView.Content>
+
+                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height= "0.5*" />
+                        <RowDefinition Height="8*"/>
+                       
+                    </Grid.RowDefinitions>
+
+
+                    <ToggleButton   Foreground="Black" Background="Transparent" VerticalAlignment="Center" >
+                        <ToggleButton.Content>
+                            <FontIcon x:Name="Hamburger"   FontWeight="Bold" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" VerticalAlignment="Top" Glyph="&#xE700;" />
+
+                        </ToggleButton.Content>
+
+                    </ToggleButton>
+                    <TextBlock Name="titulo" Text="Informes y Documentos" FontWeight="SemiBold"  Foreground="#FF01B0A8" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    <Button Name="BTN_MAS" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Transparent">
+                        <Image Source="ms-appx:///Assets/general_new_icon.png"> </Image>
+                    </Button>
+
+                    <Button Name="BTN_ELI" HorizontalAlignment="Right" Margin="40,0" Background="Transparent">
+                        <Image Source="ms-appx:///Assets/general_remove_icon.png"></Image>
+                    </Button>
+                    
+                    <ScrollViewer VerticalScrollBarVisibility="Hidden" Grid.Row="1" >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height= "0.5*" />
+                                <RowDefinition Height="8*"/>
+
+                            </Grid.RowDefinitions>
+
+                            <!--<Image Grid.Row="0" Source="ms-appx:///Assets/general_top_bar.png" VerticalAlignment="Stretch" Stretch="Uniform" HorizontalAlignment="Stretch" ></Image>-->
+                            <Rectangle Grid.Row="0" Fill="Green"></Rectangle>
+                            <Button Name="filtro" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Stretch"  Content="M"></Button>
+                            <Border Grid.Row="0"  BorderThickness="1" BorderBrush="Black" CornerRadius="10" 
+        HorizontalAlignment="center" VerticalAlignment="Center"   Background="White" Width="250" >
+                                <TextBox BorderThickness="1" BorderBrush="Transparent"  Height="20" Margin="0,0" PlaceholderText="Buscar"  TextAlignment="Center" />
+                            </Border>
+
+                            <!--<TextBlock Text="No hay documentos" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" ></TextBlock>-->
+                        </Grid>
+
+                    </ScrollViewer>
+
+
+                </Grid>
+            </SplitView.Content>
+        </SplitView>
+
+    </Grid>
+</Page>

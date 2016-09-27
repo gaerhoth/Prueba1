@@ -1,0 +1,600 @@
+﻿<Page
+    x:Class="Prueba1.HOME"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Prueba1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d " 
+    xmlns:DesignInControl="using:Prueba1.DesignInControl"  >
+    <!--Height="540" Width="320"-->
+    <Page.Resources>
+        <SolidColorBrush Color="#FFE0DADA" Opacity=".5" x:Key="fondo"/>
+    </Page.Resources>
+
+
+    <Grid x:Name="gridMain" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <SplitView x:Name="MySplitView" 
+               DisplayMode="CompactOverlay"
+               IsPaneOpen="false"
+               CompactPaneLength="0"
+               OpenPaneLength="300">
+            <SplitView.Pane>
+                <StackPanel Background="Gray">
+
+                    <StackPanel Orientation="Horizontal" Background="#FF01B0A8" Height="100">
+                        <!--<TextBlock Text="Ver Perfil" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="SemiBold" Foreground="White" FontSize="8" />-->
+
+
+                        <Button x:Name="PERFIL" Width="70" Height="70" Background="Transparent">
+                            <Image x:Name="iperfil" HorizontalAlignment="center" VerticalAlignment="Center" Stretch="Uniform" Source="ms-appx:///Assets/profile_user_icon.png"/>
+                        </Button>
+
+
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <TextBlock x:Name="txtnombre" Text="" FontSize="13" Foreground="White" VerticalAlignment="Center"/>
+                            <TextBlock x:Name ="txtcorreo" Text="" FontSize="10" VerticalAlignment="Center" Foreground="#FF52DD95"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_MISALUD"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Mi Salud"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_CITAS"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Citas"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_ANALITICAS"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Analíticas"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_DOC"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Informes y Documentos"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_RECOM"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Recomendaciones y Consejos"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_OBJ"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Objetivos"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_CAMPA"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Campañas"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_CENTROS"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Localizador de Centros"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_INFO"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Información"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+
+
+
+                </StackPanel>
+            </SplitView.Pane>
+            <SplitView.Content>
+
+
+
+
+                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height= "0.7*" />
+                        <RowDefinition Height="6*"/>
+                        <RowDefinition Height="4*"/>
+                    </Grid.RowDefinitions>
+
+
+                    <Border x:Name="TXTHOY" Grid.Row="2" BorderThickness="1" BorderBrush="Black" CornerRadius="15" Padding="2" 
+                    							HorizontalAlignment="Center" VerticalAlignment="top"  Background="Transparent"   Width="auto" >
+                        <TextBlock x:Name="hoy" Margin="7,0" Text="Hoy" TextAlignment="Center"  FontSize="15.667" Width="50" IsHitTestVisible="False"/>
+                    </Border>
+
+
+
+                    <TextBlock Name="titulo" Text="Mi Salud" FontWeight="SemiBold"  Foreground="#FF01B0A8" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    <Button   Foreground="Black" Background="Transparent" VerticalAlignment="Center" Click="Button_Click"  >
+                        <Button.Content>
+                            <FontIcon x:Name="Hamburger"   FontWeight="Bold" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" VerticalAlignment="Top" Glyph="&#xE700;" />
+
+                        </Button.Content>
+
+
+
+                    </Button>
+
+
+
+
+                    <!--hexagono de zoom-->
+
+
+
+
+
+
+
+
+                    <!--Todos los hexagonos-->
+                    <Image x:Name="Campana" Grid.Row="1" Grid.Column="1" Source="ms-appx:///Assets/health_campana.png" Height="70" Width="70" Margin="0,0,5,20"></Image>
+
+                    <!--Esto es para el check verde o numero con elipse en rojo-->
+                    <Grid Grid.Row="1" Margin="194,134,144,205" >
+                        <Ellipse x:Name="EL_verde" Height="20" Width="20" Fill="#FF01B0A8" Visibility="Visible"></Ellipse>
+                        <TextBlock x:Name="C_ok" Text="&#xE008;" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" Visibility="Visible" ></TextBlock>
+                        
+                        <Ellipse x:Name="El_rojo" Height="20" Width="20" Fill="red" Visibility="Collapsed"></Ellipse>
+                        <TextBlock x:Name="C_no_ok" Text="" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"></TextBlock>
+                    </Grid>
+
+                    <Grid Name="HEXA" Grid.Row="1" Height="520" Width="320">
+
+                        <Button x:Name="BTN_SENTIDOS" Grid.Row="0" RenderTransformOrigin="0.5,0.5" BorderBrush="Black" Foreground="#FF041420"  HorizontalAlignment="Center"  Width="109.167" Height="125.833"  UseLayoutRounding="False" d:LayoutRounding="Auto" Margin="105.333,-3.333,105.5,397.5"  >
+                            <Button.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-90"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Button.RenderTransform>
+
+                            <Button.Background>
+                                <LinearGradientBrush x:Name="LSENTIDOS" EndPoint="0.795,-0.054" StartPoint="0.243,-0.057">
+
+                                    <GradientStop Color="#A50101" Offset="0.10"/>
+                                    <GradientStop Color="#D0021B" Offset="0.20"/>
+                                    <GradientStop Color="#FF4C00" Offset="0.30"/>
+                                    <GradientStop Color="#FF9107" Offset="0.40"/>
+                                    <GradientStop Color="#FFCC06" Offset="0.50"/>
+                                    <!--<GradientStop Color="#FF605F60" Offset="1"/>-->
+                                    <GradientStop Color="#FFE805" Offset="0.60"/>
+                                    <GradientStop Color="#FFF43B" Offset="0.70"/>
+                                    <GradientStop Color="#E2E805" Offset="0.80"/>
+                                    <GradientStop Color="#ABDC05" Offset="0.90"/>
+                                    <GradientStop Color="#22BA00" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+
+
+                            <Button.Template>
+                                <ControlTemplate>
+
+                                    <Grid Width="Auto" Height="Auto" x:Name="Grid">
+                                        <Path Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}" Height="auto"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M60,0 L100,20 100,55 60,75 20,55 20,20 60,0 z"/>
+                                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  x:Name="TextBlock"  Text="" TextWrapping="Wrap"  FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}" Width="16"/>
+                                        <Image  x:Name="IMG_SENTIDOS" Source="ms-appx:///Assets/SENTIDOS.png" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center" HorizontalAlignment="CENTER">
+                                            <Image.RenderTransform>
+                                                <CompositeTransform Rotation="90"/>
+                                            </Image.RenderTransform>
+                                        </Image>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Button.Template>
+
+                        </Button>
+                        <Button x:Name="BTN_META"  Grid.Row="0" RenderTransformOrigin="0.5,0.5" BorderBrush="Black" Foreground="#FF041420"  HorizontalAlignment="Center"  Width="109.167" Height="125.833"  UseLayoutRounding="False" d:LayoutRounding="Auto" Margin="11.333,52.667,199.5,341.5"  >
+                            <Button.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-90"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Button.RenderTransform>
+
+                            <Button.Background>
+                                <LinearGradientBrush x:Name="LMETA" EndPoint="0.795,-0.054" StartPoint="0.243,-0.057" >
+                                    <LinearGradientBrush.RelativeTransform>
+                                        <CompositeTransform CenterY="0.5" CenterX="0.5" TranslateX="0.029" TranslateY="-0.05" Rotation="300"/>
+                                    </LinearGradientBrush.RelativeTransform>
+                                    <GradientStop Color="#A50101" Offset="0.10"/>
+                                    <GradientStop Color="#D0021B" Offset="0.20"/>
+                                    <GradientStop Color="#FF4C00" Offset="0.30"/>
+                                    <GradientStop Color="#FF9107" Offset="0.40"/>
+                                    <GradientStop Color="#FFCC06" Offset="0.50"/>
+                                    <GradientStop Color="#FFE805" Offset="0.60"/>
+                                    <GradientStop Color="#FFF43B" Offset="0.70"/>
+                                    <GradientStop Color="#E2E805" Offset="0.80"/>
+                                    <GradientStop Color="#ABDC05" Offset="0.90"/>
+                                    <GradientStop Color="#22BA00" Offset="1"/>
+                                    <!--<GradientStop Color="#FF605F60" Offset="1"/>-->
+                                </LinearGradientBrush>
+                            </Button.Background>
+
+
+                            <Button.Template>
+                                <ControlTemplate>
+
+                                    <Grid Width="Auto" Height="Auto" x:Name="Grid">
+                                        <Path Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}" Height="auto"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M60,0 L100,20 100,55 60,75 20,55 20,20 60,0 z"/>
+                                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  x:Name="TextBlock"  Text="" TextWrapping="Wrap"  FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}" Width="16"/>
+                                        <Image x:Name="IMG_META" Source="ms-appx:///Assets/meta.png" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center" HorizontalAlignment="CENTER">
+                                            <Image.RenderTransform>
+                                                <CompositeTransform Rotation="90"/>
+                                            </Image.RenderTransform>
+                                        </Image>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Button.Template>
+
+
+
+                        </Button>
+                        <Button x:Name="BTN_ACTIVIDAD" Grid.Row="0" RenderTransformOrigin="0.5,0.5" BorderBrush="Black" Foreground="#FF041420"  HorizontalAlignment="Center"  Width="109.167" Height="125.833"  UseLayoutRounding="False" d:LayoutRounding="Auto" Margin="11.333,162.667,199.5,231.5"  >
+                            <Button.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-90"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Button.RenderTransform>
+
+                            <Button.Background>
+                                <LinearGradientBrush x:Name="LACTIVIDAD" EndPoint="0.795,-0.054" StartPoint="0.243,-0.057">
+                                    <LinearGradientBrush.RelativeTransform>
+                                        <CompositeTransform CenterY="0.5" CenterX="0.5" TranslateX="0.029" TranslateY="-0.05" Rotation="240"/>
+                                    </LinearGradientBrush.RelativeTransform>
+                                    <GradientStop Color="#A50101" Offset="0.10"/>
+                                    <GradientStop Color="#D0021B" Offset="0.20"/>
+                                    <GradientStop Color="#FF4C00" Offset="0.30"/>
+                                    <GradientStop Color="#FF9107" Offset="0.40"/>
+                                    <GradientStop Color="#FFCC06" Offset="0.50"/>
+                                    <!--<GradientStop Color="#FF605F60" Offset="1"/>-->
+                                    <GradientStop Color="#FFE805" Offset="0.60"/>
+                                    <GradientStop Color="#FFF43B" Offset="0.70"/>
+                                    <GradientStop Color="#E2E805" Offset="0.80"/>
+                                    <GradientStop Color="#ABDC05" Offset="0.90"/>
+                                    <GradientStop Color="#22BA00" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+
+
+                            <Button.Template>
+                                <ControlTemplate>
+
+                                    <Grid Width="Auto" Height="Auto" x:Name="Grid">
+                                        <Path Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}" Height="auto"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M60,0 L100,20 100,55 60,75 20,55 20,20 60,0 z"/>
+                                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  x:Name="TextBlock"  Text="" TextWrapping="Wrap"  FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}" Width="16"/>
+                                        <Image x:Name="IMG_ACTIVIDAD" Source="ms-appx:///Assets/ACTIVIDAD.png" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center" HorizontalAlignment="CENTER">
+                                            <Image.RenderTransform>
+                                                <CompositeTransform Rotation="90"/>
+                                            </Image.RenderTransform>
+                                        </Image>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Button.Template>
+
+                        </Button>
+                        <Button x:Name="BTN_CARDIO" Grid.Row="0" RenderTransformOrigin="0.5,0.5" BorderBrush="Black" Foreground="#FF041420"  HorizontalAlignment="Center"  Width="109.167" Height="125.833"  UseLayoutRounding="False" d:LayoutRounding="Auto" Margin="105.333,218.667,105.5,175.5"  >
+                            <Button.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-90"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Button.RenderTransform>
+
+                            <Button.Background>
+                                <LinearGradientBrush x:Name="LCARDIO" EndPoint="0.795,-0.054" StartPoint="0.243,-0.057">
+                                    <LinearGradientBrush.RelativeTransform>
+                                        <CompositeTransform CenterY="0.5" CenterX="0.5" TranslateX="0.029" TranslateY="-0.05" Rotation="180"/>
+                                    </LinearGradientBrush.RelativeTransform>
+                                    <GradientStop Color="#A50101" Offset="0.10"/>
+                                    <GradientStop Color="#D0021B" Offset="0.20"/>
+                                    <GradientStop Color="#FF4C00" Offset="0.30"/>
+                                    <GradientStop Color="#FF9107" Offset="0.40"/>
+                                    <GradientStop Color="#FFCC06" Offset="0.50"/>
+                                    <!--<GradientStop Color="#FF605F60" Offset="1"/>-->
+                                    <GradientStop Color="#FFE805" Offset="0.60"/>
+                                    <GradientStop Color="#FFF43B" Offset="0.70"/>
+                                    <GradientStop Color="#E2E805" Offset="0.80"/>
+                                    <GradientStop Color="#ABDC05" Offset="0.90"/>
+                                    <GradientStop Color="#22BA00" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+
+
+                            <Button.Template>
+                                <ControlTemplate>
+
+                                    <Grid Width="Auto" Height="Auto" x:Name="Grid">
+                                        <Path Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}" Height="auto"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M60,0 L100,20 100,55 60,75 20,55 20,20 60,0 z"/>
+                                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  x:Name="TextBlock"  Text="" TextWrapping="Wrap"  FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}" Width="16"/>
+                                        <Image x:Name="IMG_CARDIO" Source="ms-appx:///Assets/CARDIO.png" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center" HorizontalAlignment="CENTER">
+                                            <Image.RenderTransform>
+                                                <CompositeTransform Rotation="90"/>
+                                            </Image.RenderTransform>
+                                        </Image>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Button.Template>
+
+                        </Button>
+                        <Button x:Name="BTN_HABITOS" Grid.Row="0" RenderTransformOrigin="0.5,0.5" BorderBrush="Black" Foreground="#FF041420"  HorizontalAlignment="Center"  Width="109.167" Height="125.833"  UseLayoutRounding="False" d:LayoutRounding="Auto" Margin="199.333,162.667,11.5,231.5"  >
+                            <Button.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-90"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Button.RenderTransform>
+
+                            <Button.Background>
+                                <LinearGradientBrush x:Name="LHABITOS" EndPoint="0.795,-0.054" StartPoint="0.243,-0.057">
+                                    <LinearGradientBrush.RelativeTransform>
+                                        <CompositeTransform CenterY="0.5" CenterX="0.5" TranslateX="0.029" TranslateY="-0.05" Rotation="120"/>
+                                    </LinearGradientBrush.RelativeTransform>
+                                    <GradientStop Color="#A50101" Offset="0.10"/>
+                                    <GradientStop Color="#D0021B" Offset="0.20"/>
+                                    <GradientStop Color="#FF4C00" Offset="0.30"/>
+                                    <GradientStop Color="#FF9107" Offset="0.40"/>
+                                    <GradientStop Color="#FFCC06" Offset="0.50"/>
+                                    <!--<GradientStop Color="#FF605F60" Offset="1"/>-->
+                                    <GradientStop Color="#FFE805" Offset="0.60"/>
+                                    <GradientStop Color="#FFF43B" Offset="0.70"/>
+                                    <GradientStop Color="#E2E805" Offset="0.80"/>
+                                    <GradientStop Color="#ABDC05" Offset="0.90"/>
+                                    <GradientStop Color="#22BA00" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+
+
+                            <Button.Template>
+                                <ControlTemplate>
+
+                                    <Grid Width="Auto" Height="Auto" x:Name="Grid">
+                                        <Path Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}" Height="auto"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M60,0 L100,20 100,55 60,75 20,55 20,20 60,0 z"/>
+                                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  x:Name="TextBlock"  Text="" TextWrapping="Wrap"  FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}" Width="16"/>
+                                        <Image x:Name="IMG_HABITOS" Source="ms-appx:///Assets/HABITOS.png" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center" HorizontalAlignment="CENTER">
+                                            <Image.RenderTransform>
+                                                <CompositeTransform Rotation="90"/>
+                                            </Image.RenderTransform>
+                                        </Image>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Button.Template>
+
+
+                        </Button>
+                        <Button x:Name="BTN_PULMONAR" Grid.Row="0" RenderTransformOrigin="0.5,0.5" BorderBrush="Black" Foreground="#FF041420"  HorizontalAlignment="Center"  Width="109.167" Height="125.833"  UseLayoutRounding="False" d:LayoutRounding="Auto" Margin="199.333,52.667,11.5,341.5"  >
+                            <Button.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-90"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Button.RenderTransform>
+
+                            <Button.Background>
+                                <LinearGradientBrush x:Name="LPULMONAR" EndPoint="0.795,-0.054" StartPoint="0.243,-0.057">
+                                    <LinearGradientBrush.RelativeTransform>
+                                        <CompositeTransform CenterY="0.5" CenterX="0.5" TranslateX="0.029" TranslateY="-0.05" Rotation="60"/>
+                                    </LinearGradientBrush.RelativeTransform>
+
+                                    <GradientStop Color="#A50101" Offset="0.10"/>
+                                    <GradientStop Color="#D0021B" Offset="0.20"/>
+                                    <GradientStop Color="#FF4C00" Offset="0.30"/>
+                                    <GradientStop Color="#FF9107" Offset="0.40"/>
+                                    <GradientStop Color="#FFCC06" Offset="0.50"/>
+                                    <!--<GradientStop Color="#FF605F60" Offset="1"/>-->
+                                    <GradientStop Color="#FFE805" Offset="0.60"/>
+                                    <GradientStop Color="#FFF43B" Offset="0.70"/>
+                                    <GradientStop Color="#E2E805" Offset="0.80"/>
+                                    <GradientStop Color="#ABDC05" Offset="0.90"/>
+                                    <GradientStop Color="#22BA00" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+
+
+                            <Button.Template>
+                                <ControlTemplate>
+
+                                    <Grid Width="Auto" Height="Auto" x:Name="Grid">
+                                        <Path Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}" Height="auto"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M60,0 L100,20 100,55 60,75 20,55 20,20 60,0 z"/>
+                                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  x:Name="TextBlock"  Text="" TextWrapping="Wrap"  FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}" Width="16"/>
+                                        <Image x:Name="IMG_PULMONAR" Source="ms-appx:///Assets/PULMPONAR.png" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center" HorizontalAlignment="CENTER">
+                                            <Image.RenderTransform>
+                                                <CompositeTransform Rotation="90"/>
+                                            </Image.RenderTransform>
+                                        </Image>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Button.Template>
+
+                        </Button>
+
+
+
+                    </Grid>
+                    <Grid x:Name="H_Zomm" Grid.Row="1"  Visibility="Collapsed"  Background="{StaticResource fondo}"    Height="520" Width="320"  >
+
+                        <Border x:Name="cuadrado" BorderBrush="Transparent" BorderThickness="0"  Height="200" Opacity="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Margin="56,70,64,250">
+
+                            <Button x:Name="BTN_GR" RenderTransformOrigin="0.5,0.5" BorderBrush="Black" Foreground="#FF041420" VerticalAlignment="center" HorizontalAlignment="Center"  Width="130.667" Height="148.333"  UseLayoutRounding="False" d:LayoutRounding="Auto"  Margin="14.258,-4.895,8.075,-5.438"   >
+                                <Button.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-90"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Button.RenderTransform>
+
+                                <Button.Background>
+                                    <LinearGradientBrush x:Name="L" EndPoint="0.795,-0.054" StartPoint="0.243,-0.057">
+                                        <LinearGradientBrush.RelativeTransform>
+
+                                            <CompositeTransform CenterY="0.5" CenterX="0.5" TranslateX="0.029" TranslateY="-0.05" Rotation="120"/>
+                                        </LinearGradientBrush.RelativeTransform>
+
+                                        <GradientStop Color="#FF9107" Offset="0"  />
+                                        <GradientStop Color="#FFE75B1F" Offset="0.20" />
+                                        <GradientStop Color="#FFE5A911" Offset="1" />
+
+                                    </LinearGradientBrush>
+                                </Button.Background>
+
+
+                                <Button.Template>
+                                    <ControlTemplate>
+
+                                        <Grid Width="Auto" Height="Auto" x:Name="Grid">
+                                            <Path Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}" Height="auto"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M60,0 L100,20 100,55 60,75 20,55 20,20 60,0 z"/>
+                                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  x:Name="TextBlock"  Text="" TextWrapping="Wrap"  FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}" Width="16"/>
+
+                                            <DesignInControl:CircularProgressBar x:Name="fija" HorizontalAlignment="Center" VerticalAlignment="Center" SegmentColor="Gray" StrokeThickness="1" Percentage="100" RenderTransformOrigin="0.5,0.5">
+                                                <DesignInControl:CircularProgressBar.RenderTransform>
+                                                    <CompositeTransform Rotation="-90"/>
+                                                </DesignInControl:CircularProgressBar.RenderTransform>
+                                            </DesignInControl:CircularProgressBar>
+
+                                            <DesignInControl:CircularProgressBar x:Name="movil" HorizontalAlignment="Center" VerticalAlignment="Center" Percentage="{Binding Value, ElementName=slider}" SegmentColor="White" StrokeThickness="1"   RenderTransformOrigin="0.5,0.5">
+                                                <DesignInControl:CircularProgressBar.RenderTransform>
+                                                    <CompositeTransform Rotation="90"/>
+                                                </DesignInControl:CircularProgressBar.RenderTransform>
+                                            </DesignInControl:CircularProgressBar>
+
+                                            <TextBox x:Name="por" Text="{Binding Value, ElementName=slider}"  Background="Transparent" IsHitTestVisible="False" Margin="31,64,35.667,52.333" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                                                <TextBox.RenderTransform>
+                                                    <CompositeTransform Rotation="90"/>
+                                                </TextBox.RenderTransform>
+
+
+                                            </TextBox>
+                                            <TextBox x:Name="por2" Text="%" Background="Transparent" IsHitTestVisible="False" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Right" Margin="0,88,35.667,28.333"  VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                                                <TextBox.RenderTransform>
+                                                    <CompositeTransform Rotation="90"/>
+                                                </TextBox.RenderTransform>
+                                            </TextBox>
+
+
+
+                                            <Border x:Name="NS" BorderThickness="1" BorderBrush="Black" CornerRadius="15" Padding="2" 
+                    							HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="gray" Margin="-51,0,104.667,63.333" RenderTransformOrigin="0.5,0.5" Width="77" >
+                                                <Border.RenderTransform>
+                                                    <CompositeTransform Rotation="90"/>
+                                                </Border.RenderTransform>
+                                                <TextBlock x:Name="Diff" Margin="4,0" Text="VER MAS" TextAlignment="Center" IsHitTestVisible="False" FontSize="10.667" Width="50"/>
+                                            </Border>
+
+
+
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+
+                            </Button>
+
+                        </Border>
+                        <Border x:Name="cuadife"  BorderThickness="1" BorderBrush="Black" CornerRadius="10" Padding="2" 
+                    							HorizontalAlignment="Center" VerticalAlignment="top"    Background="White" Margin="140,211,140,0" RenderTransformOrigin="0.5,0.5" Width="40" >
+
+                            <TextBlock x:Name="dife"  Margin="4,0" Text="0%" TextAlignment="Center" FontSize="10.667" Width="30" IsHitTestVisible="False"/>
+                        </Border>
+                        <Border x:Name="VM" BorderThickness="1" BorderBrush="Transparent" CornerRadius="15" Padding="2" 
+                    							HorizontalAlignment="Center" VerticalAlignment="top"  Background="Transparent"  RenderTransformOrigin="0.5,0.5" Width="77" Margin="120,84,123,0" >
+
+                            <TextBlock x:Name="NOM_HEX" Margin="4,0" Text="Hexagono" TextAlignment="Center" IsHitTestVisible="False" FontSize="11.667" Width="60"/>
+                        </Border>
+
+
+                        <Slider x:Name="slider" Maximum="100" Value="0" Visibility="Collapsed"/>
+                    </Grid>
+
+
+
+
+                    <!--
+                    <Border BorderThickness="1" BorderBrush="Black"  Grid.Row="2"  Height="141" Width="140"
+        HorizontalAlignment="Center" VerticalAlignment="top"     Margin="130,451.333,90,0"   >
+
+                        <Button x:Name="BTN_GR" RenderTransformOrigin="0.5,0.5" BorderBrush="Black" Foreground="#FF041420" VerticalAlignment="Bottom" HorizontalAlignment="Center"  Width="130.667" Height="148.333"  UseLayoutRounding="False" d:LayoutRounding="Auto" Margin="122,0,107.333,-578.666"  >
+                            <Button.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-90"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Button.RenderTransform>
+
+                            <Button.Background>
+                                <LinearGradientBrush x:Name="L" EndPoint="0.795,-0.054" StartPoint="0.243,-0.057">
+                                    <LinearGradientBrush.RelativeTransform>
+
+                                        <CompositeTransform CenterY="0.5" CenterX="0.5" TranslateX="0.029" TranslateY="-0.05" Rotation="120"/>
+                                    </LinearGradientBrush.RelativeTransform>
+
+                                    <GradientStop Color="#FF9107" Offset="0"  />
+                                    <GradientStop Color="#FFE75B1F" Offset="0.20" />
+                                    <GradientStop Color="#FFE5A911" Offset="1" />
+
+                                </LinearGradientBrush>
+                            </Button.Background>
+
+
+                            <Button.Template>
+                                <ControlTemplate>
+
+                                    <Grid Width="Auto" Height="Auto" x:Name="Grid">
+                                        <Path Stroke="{TemplateBinding BorderBrush}" Fill="{TemplateBinding Background}" Height="auto"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M60,0 L100,20 100,55 60,75 20,55 20,20 60,0 z"/>
+                                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  x:Name="TextBlock"  Text="" TextWrapping="Wrap"  FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}" Width="16"/>
+
+                                        <DesignInControl:CircularProgressBar HorizontalAlignment="Center" VerticalAlignment="Center" SegmentColor="Gray" StrokeThickness="1" Percentage="100" RenderTransformOrigin="0.5,0.5">
+                                            <DesignInControl:CircularProgressBar.RenderTransform>
+                                                <CompositeTransform Rotation="-90"/>
+                                            </DesignInControl:CircularProgressBar.RenderTransform>
+                                        </DesignInControl:CircularProgressBar>
+
+                                        <DesignInControl:CircularProgressBar HorizontalAlignment="Center" VerticalAlignment="Center" Percentage="{Binding Value, ElementName=slider}" SegmentColor="White" StrokeThickness="1"   RenderTransformOrigin="0.5,0.5">
+                                            <DesignInControl:CircularProgressBar.RenderTransform>
+                                                <CompositeTransform Rotation="90"/>
+                                            </DesignInControl:CircularProgressBar.RenderTransform>
+                                        </DesignInControl:CircularProgressBar>
+
+                                        <TextBox Text="{Binding Value, ElementName=slider}"  Background="Transparent"  Margin="31,64,35.667,52.333" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                                            <TextBox.RenderTransform>
+                                                <CompositeTransform Rotation="90"/>
+                                            </TextBox.RenderTransform>
+
+
+                                        </TextBox>
+                                        <TextBox Text="%" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Right" Margin="0,88,35.667,28.333"  VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                                            <TextBox.RenderTransform>
+                                                <CompositeTransform Rotation="90"/>
+                                            </TextBox.RenderTransform>
+                                        </TextBox>
+
+                                        <Slider x:Name="slider" Maximum="100" Value="0"></Slider>
+
+                                        <Border BorderThickness="1" BorderBrush="Black" CornerRadius="15" Padding="2" 
+        HorizontalAlignment="Center" VerticalAlignment="top"    Background="gray" Margin="-21,64,74.667,0" RenderTransformOrigin="0.5,0.5" Width="77" >
+                                            <Border.RenderTransform>
+                                                <CompositeTransform Rotation="90"/>
+                                            </Border.RenderTransform>
+                                            <TextBlock Margin="4,0" Text="VER MAS" TextAlignment="Center" FontSize="10.667" Width="50"/>
+                                        </Border>
+
+
+                                    </Grid>
+                                </ControlTemplate>
+                            </Button.Template>
+
+                        </Button>
+
+                    </Border>
+                    -->
+                </Grid>
+            </SplitView.Content>
+        </SplitView>
+
+    </Grid>
+</Page>
