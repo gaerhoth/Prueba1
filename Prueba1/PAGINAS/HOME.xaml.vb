@@ -291,6 +291,7 @@ Public NotInheritable Class HOME
 
 
     Private Async Function DescargaCal() As Task(Of String)
+
         LS = conn.Query(Of TCALSENTIDOS)("SELECT * FROM TCALSENTIDOS ORDER BY ID_CALSENTIDOS") ' WHERE ID_TRABAJADOR=48")
         POR_SENTIDOS = LS(0).CAN_SENTIDOS
         C_Sentidos = AYUDA.CreaColores(listaColores(CInt(LS(0).COD_COL_SENTIDOS) - 1).DES_COLOR)

@@ -1,6 +1,8 @@
 ﻿Imports Prueba1.VAR_GLOBALES
 Imports System.Text
 Imports System.Text.RegularExpressions
+Imports Windows.UI.Xaml.Controls.Maps
+Imports Windows.Devices.Geolocation
 'Imports Windows.System.Runtime.CompilerServices.Extension
 Public NotInheritable Class AYUDA
     Private Sub New()
@@ -15,24 +17,46 @@ Public NotInheritable Class AYUDA
             jsonlimpio = json.Replace(""",""ID_COMUNICACION"":""0""", "")
 
             'jsonlimpio = json
-
+            If funcion = "Delegaciones" Then
+                jsonlimpio = jsonlimpio.Replace("http://", "$$")
+            End If
 
             jsonlimpio = jsonlimpio.Replace(""":""", """ç""")
             jsonlimpio = jsonlimpio.Replace(""",""", """ç""")
 
             jsonlimpio = jsonlimpio.Replace("""", "")
 
-            jsonlimpio = jsonlimpio.Replace("{datos:{" & funcion & ":", "")
+            If funcion = "Delegaciones" Then
+                jsonlimpio = jsonlimpio.Replace("{datos : [{", "")
+            Else
+                jsonlimpio = jsonlimpio.Replace("{datos:{" & funcion & ":", "")
+            End If
+
             jsonlimpio = jsonlimpio.Replace("}}", "")
             jsonlimpio = jsonlimpio.Replace("[", "")
             jsonlimpio = jsonlimpio.Replace("]", "")
-            jsonlimpio = jsonlimpio.Replace("},{", "@")
+            If funcion = "Delegaciones" Then
+                jsonlimpio = jsonlimpio.Replace("},{", "^")
+            Else
+                jsonlimpio = jsonlimpio.Replace("},{", "@")
+            End If
             jsonlimpio = jsonlimpio.Replace("{", "")
             jsonlimpio = jsonlimpio.Replace("}", "")
 
-            JsonOK = jsonlimpio.Split("@")
+            If funcion = "Delegaciones" Then
+                JsonOK = jsonlimpio.Split("^")
+            Else
+                JsonOK = jsonlimpio.Split("@")
+            End If
+
 
             For i = 0 To JsonOK.Count - 1
+                If funcion = "Delegaciones" Then
+
+                    JsonOK(i) = JsonOK(i).Replace(",", "ç")
+                    JsonOK(i) = JsonOK(i).Replace(":", "ç")
+                    JsonOK(i) = JsonOK(i).Replace("$$", "http://")
+                End If
                 CrearInsert(JsonOK(i), TABLA)
             Next
 
@@ -50,7 +74,9 @@ Public NotInheritable Class AYUDA
         Dim VAL_CAMPOS As String = ""
 
 
+
         ARRi = Valores.Split("ç")
+
 
         For i = 0 To ARRi.Count - 1 Step 2
             If i = 0 Then
@@ -149,3 +175,6 @@ Public NotInheritable Class AYUDA
 
 
 End Class
+
+
+

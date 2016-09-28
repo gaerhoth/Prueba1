@@ -731,6 +731,7 @@
     <Content Include="Assets\Fondo_verde.png" />
     <Content Include="Assets\general_down_bar.png" />
     <Content Include="Assets\general_expand_icon.png" />
+    <Content Include="Assets\general_map_icon.png" />
     <Content Include="Assets\general_new_icon.png" />
     <Content Include="Assets\general_remove_icon.png" />
     <Content Include="Assets\general_top_bar.png" />

@@ -2,6 +2,7 @@
 Imports Windows.Devices.Geolocation
 Imports Prueba1.AYUDA
 Imports Prueba1.VAR_GLOBALES
+Imports Windows.Storage.Streams
 ' La plantilla de elemento Página en blanco está documentada en http://go.microsoft.com/fwlink/?LinkId=234238
 
 ''' <summary>
@@ -9,6 +10,7 @@ Imports Prueba1.VAR_GLOBALES
 ''' </summary>
 Public NotInheritable Class CENTROS
     Inherits Page
+    ' Dim poiManager As AYUDA.PointOfInterestsManager
 #Region "Menu"
 
 
@@ -59,8 +61,15 @@ Public NotInheritable Class CENTROS
 
     End Sub
     Private Async Sub CENTROS_Loading(sender As FrameworkElement, args As Object) Handles Me.Loading
+        'Centra el mapa para que se vea toda españa
+        mapa.Center = New Geopoint(New BasicGeoposition() With {
+        .Latitude = 40.416667,
+        .Longitude = -3.75
+    })
+        mapa.ZoomLevel = 5
 
-        Await DAMECENTROS()
+
+        '  Await DAMECENTROS()
 
 
         CMB_Provincias.Items.Insert(0, "Albacete")
@@ -120,11 +129,15 @@ Public NotInheritable Class CENTROS
         'CMB_Provincias.Items.Insert(52, "Melilla")
 
 
-        mapa.Center = New Geopoint(New BasicGeoposition() With {
-        .Latitude = 40.416667,
-        .Longitude = -3.75
-    })
-        mapa.ZoomLevel = 5
+        'Con esto creamos los Pois en el mapa
+        Dim lcentros As List(Of TCENTROS)
+        lcentros = conn.Query(Of TCENTROS)("SELECT * FROM TCENTROS")
+        For i = 0 To lcentros.Count - 1
+            hijos(lcentros(i).des_centro, CDec(lcentros(i).longitud.Replace(".", ",")), CDec(lcentros(i).latitud.Replace(".", ",")))
+
+        Next
+
+
 
     End Sub
 
@@ -132,12 +145,10 @@ Public NotInheritable Class CENTROS
 
     Public Async Function DAMECENTROS() As Task(Of String)
         Dim a As WS_SMARTPHONE.DelegacionesResponse
-        Dim h As String
-        'Agua
-        a = Await C_PHONE.DelegacionesAsync()
-        h = a.Body.DelegacionesResult
 
-        '  LimpiarJson(a.Body.DelegacionesResult, "DameTiposAgua", "TTIPOAGUA")
+
+        a = Await C_PHONE.DelegacionesAsync()
+        LimpiarJson(a.Body.DelegacionesResult, "Delegaciones", "TCENTROS")
 
         Return "ok"
 
@@ -146,4 +157,41 @@ Public NotInheritable Class CENTROS
     Private Sub BTNlstCentros_Click(sender As Object, e As RoutedEventArgs) Handles BTNlstCentros.Click
         Me.Frame.Navigate(GetType(LST_CENTROS))
     End Sub
+
+    'Public Function hijos(Nombre As String, lon As Decimal, lat As Decimal) As List(Of PointOfInterest)
+    '    Dim pois As New List(Of PointOfInterest)()
+    '    pois.Add(New PointOfInterest() With {
+    '        .DisplayName = Nombre,
+    '        .ImageSourceUri = New Uri("ms-appx:///Assets/general_map_icon.png", UriKind.RelativeOrAbsolute),
+    '        .Location = New Geopoint(New BasicGeoposition() With {
+    '            .Latitude = lat,
+    '            .Longitude = lon
+    '        })
+    '    })
+
+    '    Return pois
+    'End Function
+
+    Public Sub hijos(Nombre As String, lon As Decimal, lat As Decimal)
+        Dim snPosition As BasicGeoposition
+        Dim mapicon As New MapIcon
+        Dim snPoint As New Geopoint(snPosition)
+
+
+        snPosition.Latitude = lat
+        snPosition.Longitude = lon
+        snPoint = New Geopoint(snPosition)
+        mapicon.Image = RandomAccessStreamReference.CreateFromUri(New Uri("ms-appx:///Assets/general_map_icon.png"))
+        mapicon.Location = snPoint
+
+        mapa.MapElements.Add(mapicon)
+
+        mapicon.NormalizedAnchorPoint = New Point(0.5, 1.0)
+        ' mapicon.Title = Nombre
+        mapicon.ZIndex = 0
+
+    End Sub
+
+
+
 End Class

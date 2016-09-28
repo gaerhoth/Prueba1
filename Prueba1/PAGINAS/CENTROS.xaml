@@ -91,7 +91,7 @@
                     </Grid.ColumnDefinitions>
 
 
-                    <Button x:Name="BTNlstCentros" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Background="Transparent" Height="32" Width="45" Click="Button_Click">
+                    <Button x:Name="BTNlstCentros" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Background="Transparent" Height="32" Width="45">
                         <Image Source="ms-appx:///Assets/centers_list_icon.png" Stretch="UniformToFill" />
                     </Button>
 
@@ -108,7 +108,13 @@
 			Style="{ThemeResource TitleTextBlockStyle}" 
 			 Grid.Row="0" Grid.ColumnSpan="3"/>
 
-                    <Maps:MapControl Grid.Row="2" Grid.ColumnSpan="3" x:Name="mapa" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />
+                    <Maps:MapControl Grid.Row="2" Grid.ColumnSpan="3" x:Name="mapa" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" >
+                        <Maps:MapItemsControl x:Name="MapItems">
+                            
+                        </Maps:MapItemsControl>
+
+                    </Maps:MapControl>
+                    
                     <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
                     <Image x:Name="PP"  Stretch="Fill" Source="ms-appx:///Assets/general_down_bar.png" RenderTransformOrigin="0.5,0.5">
                         <Image.RenderTransform>

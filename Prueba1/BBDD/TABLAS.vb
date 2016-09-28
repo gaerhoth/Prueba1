@@ -309,7 +309,7 @@ Public Class TRESANALI
 End Class
 
 
-Partial Public Class RECOMENDACIONES
+Public Class TRECOMENDACIONES
     <PrimaryKey>
     Public Property COD_RECOMENDACION As String
     Public Property ID_TRABAJADOR As String
@@ -542,6 +542,26 @@ Public Class AUX_PRUEBAS
     Public Property VAL_MAX As String
     Public Property VAL_MIN As String
 
+
+End Class
+
+
+Public Class TCENTROS
+    <PrimaryKey>
+    Public Property cod_centro As String
+    Public Property cod_centro_fragua As String
+    Public Property e_mail As String
+    Public Property calle As String
+    Public Property numero As String
+    Public Property cod_postal As String
+    Public Property poblacion As String
+    Public Property provincia As String
+    Public Property direccion As String
+    Public Property telefono As String
+    Public Property fax As String
+    Public Property des_centro As String
+    Public Property latitud As String
+    Public Property longitud As String
 
 End Class
 

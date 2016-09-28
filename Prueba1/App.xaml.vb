@@ -86,11 +86,11 @@ NotInheritable Class App
         End Sub
 
     Public Async Sub Iniciar(e As Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)
-        Dim rootFrame As Frame = TryCast(Window.Current.Content, Frame)
-        rootFrame.Navigate(GetType(CENTROS))
-        Window.Current.Activate()
+        'Dim rootFrame As Frame = TryCast(Window.Current.Content, Frame)
+        'rootFrame.Navigate(GetType(CENTROS))
+        'Window.Current.Activate()
 
-        ' Await CreaBBDD(e)
+        Await CreaBBDD(e)
     End Sub
     Public Async Function CreaBBDD(e As Windows.ApplicationModel.Activation.LaunchActivatedEventArgs) As Task
 
@@ -110,7 +110,7 @@ NotInheritable Class App
 
 
 
-
+        conn.CreateTable(Of TCENTROS)()
         conn.CreateTable(Of TCONSTANT)()
 
             conn.CreateTable(Of TUSUARIO)()
@@ -125,8 +125,8 @@ NotInheritable Class App
             conn.CreateTable(Of TCOLOR)()
             conn.CreateTable(Of TUNIDADES)()
             conn.CreateTable(Of TTIPOAVISO)()
-            'conn.CreateTable(Of RECOMENDACIONES)()
-            conn.CreateTable(Of TTIPOCITA)()
+        conn.CreateTable(Of TRECOMENDACIONES)()
+        conn.CreateTable(Of TTIPOCITA)()
 
         conn.CreateTable(Of TPRUEBA)()
         conn.CreateTable(Of TCALACTIVIDAD)()
