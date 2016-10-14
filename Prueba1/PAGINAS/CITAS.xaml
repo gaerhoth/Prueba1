@@ -6,8 +6,307 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Resources>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <DataTemplate  x:Key="HeaderTemplate1" >
+            <Grid Height="36" Background="Transparent" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid>
+                    <Image x:Name="d" Grid.ColumnSpan="2" Source="ms-appx:///Assets/general_down_bar.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"></Image>
+                    <TextBlock   
+        			Text="Futuras" 
+        			FontSize="20"
+        			Foreground="Black"
+        			HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"
+                          >
+
+                    </TextBlock>
+                </Grid>
+
+            </Grid>
+        </DataTemplate>
+
+
+        <DataTemplate  x:Key="HeaderTemplate2" >
+            <Grid Height="En Curso" Background="Transparent" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid>
+                    <Image x:Name="d" Source="ms-appx:///Assets/general_down_bar.png" Stretch="Fill"></Image>
+                    <TextBlock   
+        			Text="En Curso" 
+        			FontSize="20"
+        			Foreground="Black"
+        			HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"  >
+
+
+                    </TextBlock>
+                </Grid>
+
+            </Grid>
+        </DataTemplate>
+
+
+        <DataTemplate x:Name="Lstview" x:DataType="local:CIRCO2">
+            <Grid Width="Auto">
+                <Grid.RowDefinitions>
+                    <!--<RowDefinition Height="75"/>-->
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*"/>
+
+
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+
+                <!--<Grid Grid.ColumnSpan="2" Grid.Row="0">
+                    <Image x:Name="d" Source="ms-appx:///Assets/general_top_bar.png"></Image>
+                    <TextBlock x:Name="NomTabla1"  
+        			Text="En Curso" 
+        			FontSize="20"
+        			Foreground="Black"
+        			HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Margin="0,5"     >
+                        
+                    </TextBlock>
+                </Grid>-->
+
+
+                <!--<TextBlock x:Name="NomTabla"  Grid.Column="0" Grid.Row="0"
+        			Text="En Curso" 
+        			FontSize="20"
+        			Foreground="Black"
+        			HorizontalAlignment="Left" VerticalAlignment="Center"/>-->
+
+
+
+                <!--<TextBlock x:Name="DesPrue"  Grid.Column="0" Grid.Row="2"
+        			Text="{Binding NP}" 
+        			FontSize="20"
+        			Foreground="Black"
+        			HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                <TextBlock x:Name="ValPrue" Grid.Column="1" Grid.Row="2"
+        			Text="{Binding NP}" 
+                    TextWrapping="Wrap"      			
+        			FontSize="20"
+        			Foreground="Black"
+        			HorizontalAlignment="Right" VerticalAlignment="Center"/>
+
+                <Image x:Name="mas" Source="ms-appx:///Assets/general_new_icon.png" HorizontalAlignment="Right" VerticalAlignment="Center" Height="25" Width="25" Grid.Column="2"></Image>-->
+
+                <!--<Line Grid.Row="2" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>-->
+            </Grid>
+
+
+
+
+        </DataTemplate>
+
+
+        <DataTemplate x:Name="Lstview2" x:DataType="local:CIRCO2">
+            <Grid Width="Auto">
+                <Grid.RowDefinitions>
+                    <!--<RowDefinition Height="75"/>-->
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+
+
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+
+
+                <!--<Grid Grid.ColumnSpan="2" Grid.Row="0">
+                <Image x:Name="d" Source="ms-appx:///Assets/general_top_bar.png"></Image>
+                    <TextBlock x:Name="NomTabla"  
+        			Text="Disponibles" 
+        			FontSize="20"
+        			Foreground="Black"
+        			HorizontalAlignment="Left" VerticalAlignment="Center"
+                               Margin="0,5">
+                    </TextBlock>
+                </Grid>-->
+
+
+                <!--<Border Background="Aquamarine" Grid.ColumnSpan="2" Grid.Row="0">
+
+                    <TextBlock x:Name="NomTabla"  
+        			Text="Disponibles" 
+        			FontSize="20"
+        			Foreground="Black"
+        			HorizontalAlignment="Left" VerticalAlignment="Center">
+                    </TextBlock>
+                    
+                    </Border>-->
+
+
+
+                <!--<TextBlock x:Name="DesPrue"  Grid.Column="0" Grid.Row="2"
+        			Text="{Binding NP}" 
+        			FontSize="20"
+        			Foreground="Black"
+        			HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                <TextBlock x:Name="ValPrue" Grid.Column="1" Grid.Row="2"
+        			Text="{Binding NP}" 
+                    TextWrapping="Wrap"      			
+        			FontSize="20"
+        			Foreground="Black"
+        			HorizontalAlignment="Right" VerticalAlignment="Center"/>
+
+                <Image x:Name="mas" Source="ms-appx:///Assets/general_new_icon.png" HorizontalAlignment="Right" VerticalAlignment="Center" Height="25" Width="25" Grid.Column="2"></Image>-->
+
+                <!--<Line Grid.Row="2" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>-->
+            </Grid>
+        </DataTemplate>
+
+    </Page.Resources>
+
+    <Grid x:Name="gridMain" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <SplitView x:Name="MySplitView" 
+               DisplayMode="CompactOverlay"
+               IsPaneOpen="false"
+               CompactPaneLength="0"
+               OpenPaneLength="300">
+            <SplitView.Pane>
+                <StackPanel Background="Gray">
+
+                    <StackPanel Orientation="Horizontal" Background="#FF01B0A8" Height="100">
+                        <!--<TextBlock Text="Ver Perfil" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="SemiBold" Foreground="White" FontSize="8" />-->
+
+
+                        <Button x:Name="PERFIL" Width="70" Height="70" Background="Transparent">
+                            <Image x:Name="iperfil" HorizontalAlignment="center" VerticalAlignment="Center" Stretch="Uniform" Source="ms-appx:///Assets/profile_user_icon.png"/>
+                        </Button>
+
+
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <TextBlock x:Name="txtnombre" Text="David Venturo" FontSize="13" Foreground="White" VerticalAlignment="Center"/>
+                            <TextBlock x:Name ="txtcorreo" Text="9dventuro@spfm.es" FontSize="10" VerticalAlignment="Center" Foreground="#FF52DD95"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_MISALUD"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Información"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_CITAS"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Citas"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_ANALITICAS"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Analíticas"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_DOC"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Informes y Documentos"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_RECOM"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Recomendaciones y Consejos"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_OBJ"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Objetivos"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_CAMPA"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Campañas"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_CENTROS"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Localizador de Centros"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BTN_INFO"  Width="300" HorizontalContentAlignment="Left"  Height="50" Background="Transparent" Content="Información"  FontWeight="SemiBold" Foreground="White"/>
+                    </StackPanel>
+
+
+
+                </StackPanel>
+            </SplitView.Pane>
+            <SplitView.Content>
+
+                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height= "45" />
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+
+
+                    <ToggleButton   Foreground="Black" Background="Transparent" VerticalAlignment="Center"   >
+                        <ToggleButton.Content>
+                            <FontIcon x:Name="Hamburger"   FontWeight="Bold" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" VerticalAlignment="Top" Glyph="&#xE700;" />
+
+                        </ToggleButton.Content>
+
+                    </ToggleButton>
+                    <TextBlock Name="titulo"  Grid.Row="0" Grid.ColumnSpan="4" Text="Citas" FontWeight="SemiBold"  Foreground="#FF01B0A8" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+
+                    
+
+                    <Button Grid.Row="0" Grid.Column="3" Name="BTN_ELI" HorizontalAlignment="Right"  Background="Transparent">
+                        <Image Source="ms-appx:///Assets/general_new_icon.png"></Image>
+                    </Button>
+
+                    <ScrollViewer VerticalScrollBarVisibility="Hidden" Grid.Row="1" Grid.ColumnSpan="4" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <!--<RowDefinition Height= "45" />-->
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                           
+
+
+
+
+                            <ListView x:Name="PL" MinHeight="10" 
+                              HeaderTemplate="{StaticResource HeaderTemplate1}"
+                              VerticalContentAlignment="Center" Grid.ColumnSpan="2" 
+                              ItemTemplate="{StaticResource Lstview}" Grid.Row="0"  >
+
+                            </ListView>
+
+                            <ListView x:Name="PL2" HeaderTemplate="{StaticResource HeaderTemplate2}"  
+                              VerticalContentAlignment="Center"
+                              Grid.ColumnSpan="2"
+                              ItemTemplate="{StaticResource Lstview2}" Grid.Row="1"  >
+                            </ListView>
+
+
+
+
+
+                        </Grid>
+
+                    </ScrollViewer>
+
+
+                </Grid>
+            </SplitView.Content>
+        </SplitView>
 
     </Grid>
 </Page>

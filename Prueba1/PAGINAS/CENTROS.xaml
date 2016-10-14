@@ -7,6 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
     mc:Ignorable="d">
+    <Page.Resources>
+        <SolidColorBrush Color="#FFE0DADA" Opacity=".5" x:Key="fondo"/>
+    </Page.Resources>
 
 
     <Grid x:Name="gridMain" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -108,12 +111,42 @@
 			Style="{ThemeResource TitleTextBlockStyle}" 
 			 Grid.Row="0" Grid.ColumnSpan="3"/>
 
-                    <Maps:MapControl Grid.Row="2" Grid.ColumnSpan="3" x:Name="mapa" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" >
+                   
+                    
+                    <!---->
+
+                    <Maps:MapControl Grid.Row="2" Grid.ColumnSpan="3" x:Name="mapa" MapServiceToken="3EpLCmUEydXGjIEgBIFM~c8G8RFI6JkEImHfKY0vzjw~AuEW7k_rO1NU9eu28csmCBAPyzURzhSUMLx0HrKhm_HpHDe43QL_uBX_420tsuL6" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  MapElementClick="mapa_MapElementClick">
                         <Maps:MapItemsControl x:Name="MapItems">
-                            
+                        
                         </Maps:MapItemsControl>
 
                     </Maps:MapControl>
+                    
+                    <!--<Button Grid.Row="1" x:Name="Enc" Content="Encontrar" ></Button>-->
+                    
+                     <Grid x:Name="MasInfo" Grid.Row="2" Grid.ColumnSpan="3" Visibility="Collapsed"  Background="{StaticResource fondo}"  >
+                        
+                     <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="75"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                         
+                         
+                         <Border Grid.Column="1" Grid.Row="2">
+                             <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                                 <Image x:Name="FotoCentro"></Image>
+                                 <TextBlock x:Name="DatosCentro"></TextBlock>
+                                 <Button x:Name="Detalles" Content="Ver Detalles" ></Button>
+                             </StackPanel>
+                         </Border>
+                         
+                    </Grid>
                     
                     <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
                     <Image x:Name="PP"  Stretch="Fill" Source="ms-appx:///Assets/general_down_bar.png" RenderTransformOrigin="0.5,0.5">

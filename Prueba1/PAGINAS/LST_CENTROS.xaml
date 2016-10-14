@@ -93,7 +93,7 @@
         </Grid.ColumnDefinitions>
 
 
-        <Button Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Background="Transparent"  Width="45">
+        <Button x:Name="ToMap" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Background="Transparent"  Width="45">
             <Image Source="ms-appx:///Assets/centers_location_icon.png" Stretch="UniformToFill" >
 
             </Image>

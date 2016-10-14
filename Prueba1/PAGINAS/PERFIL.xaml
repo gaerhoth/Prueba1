@@ -55,7 +55,9 @@
                 </Grid.RowDefinitions>
 
                 <StackPanel VerticalAlignment="Center" Grid.Row="0" Background="#FF01B0A8" Height="146" Margin="0,0,0,0.333" >
-                    <Image Name="C" Grid.Row="0" Height="90" Width="90" Source="ms-appx:///Assets/profile_user_icon.png" Margin="45,15" />
+                    <Border BorderBrush="Transparent" BorderThickness="0" CornerRadius="5">
+                    <Image  Name="C" Grid.Row="0" Height="90" Width="90" Source="ms-appx:///Assets/profile_user_icon.png" Margin="45,15" />
+                    </Border>
                     <Button Name="cambiar" Content="Cambiar" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Background="Transparent" FontSize="12"></Button>
                 </StackPanel>
 

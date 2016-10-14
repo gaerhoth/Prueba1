@@ -68,46 +68,49 @@
             <SplitView.Content>
 
                 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*" />
-                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height= "0.5*" />
-                        <RowDefinition Height="8*"/>
-                       
+                        <RowDefinition Height= "45" />
+                        <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+               
 
 
-                    <ToggleButton   Foreground="Black" Background="Transparent" VerticalAlignment="Center" >
+                    <ToggleButton   Foreground="Black" Background="Transparent" VerticalAlignment="Center"   >
                         <ToggleButton.Content>
                             <FontIcon x:Name="Hamburger"   FontWeight="Bold" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Center" VerticalAlignment="Top" Glyph="&#xE700;" />
 
                         </ToggleButton.Content>
 
                     </ToggleButton>
-                    <TextBlock Name="titulo" Text="Informes y Documentos" FontWeight="SemiBold"  Foreground="#FF01B0A8" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                    <Button Name="BTN_MAS" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Transparent">
+                    <TextBlock Name="titulo"  Grid.Row="0" Grid.ColumnSpan="4" Text="Informes y Documentos" FontWeight="SemiBold"  Foreground="#FF01B0A8" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                   
+                    <Button Name="BTN_MAS"  Grid.Row="0" Grid.Column="2"  HorizontalAlignment="Right" VerticalAlignment="Center" Background="Transparent">
                         <Image Source="ms-appx:///Assets/general_new_icon.png"> </Image>
                     </Button>
 
-                    <Button Name="BTN_ELI" HorizontalAlignment="Right" Margin="40,0" Background="Transparent">
+                    <Button Grid.Row="0" Grid.Column="3" Name="BTN_ELI" HorizontalAlignment="Right"  Background="Transparent">
                         <Image Source="ms-appx:///Assets/general_remove_icon.png"></Image>
                     </Button>
                     
-                    <ScrollViewer VerticalScrollBarVisibility="Hidden" Grid.Row="1" >
+                    <ScrollViewer VerticalScrollBarVisibility="Hidden" Grid.Row="1" Grid.ColumnSpan="4" >
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height= "0.5*" />
-                                <RowDefinition Height="8*"/>
+                                <RowDefinition Height= "45" />
+                                <RowDefinition Height="*"/>
 
                             </Grid.RowDefinitions>
 
                             <!--<Image Grid.Row="0" Source="ms-appx:///Assets/general_top_bar.png" VerticalAlignment="Stretch" Stretch="Uniform" HorizontalAlignment="Stretch" ></Image>-->
-                            <Rectangle Grid.Row="0" Fill="Green"></Rectangle>
+                            <Rectangle Grid.Row="0" Fill="#FF01B0A8"></Rectangle>
                             <Button Name="filtro" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Stretch"  Content="M"></Button>
                             <Border Grid.Row="0"  BorderThickness="1" BorderBrush="Black" CornerRadius="10" 
         HorizontalAlignment="center" VerticalAlignment="Center"   Background="White" Width="250" >

@@ -48,9 +48,12 @@ Public NotInheritable Class HOME
     Public C_Habitos As String()
     Public C_Meta As String()
 
+    'Parametros es el ID_TRABAJADOR
     Public Parametros As String
     Public X1 As Integer
     Public X2 As Integer
+    Dim antes As Boolean
+
 
     Private Async Sub HOME_Loading(sender As FrameworkElement, args As Object) Handles Me.Loading
 
@@ -70,9 +73,15 @@ Public NotInheritable Class HOME
         ' Await C_WAH.RESETAR_USUARIOAsync("50987325M")
         ' Parametros = 48
 
+        AYUDA.Mostrar(GrLoad, customIndeterminateProgressBar, HOME)
+
         Await descarga()
 
         Await DescargaCal()
+
+        AYUDA.Ocualtar(GrLoad, customIndeterminateProgressBar, HOME)
+
+
 
     End Sub
 
@@ -109,6 +118,30 @@ Public NotInheritable Class HOME
         CAL_META = Await C_WAH.DameCalMetasAsync(Parametros, IND_ENVIADO)
         AYUDA.LimpiarJson(CAL_META.Body.DameCalMetasResult, "DameCalMetas", "TCALMETAS")
 
+        ' Dim News As List(Of TAVISOS)
+
+        MAVISOS = Await C_WAH.DameAvisoAsync(Parametros)
+        AYUDA.LimpiarJson(MAVISOS.Body.DameAvisoResult, "DameAviso", "TAVISOS")
+
+
+
+        LSAV = conn.Query(Of TAVISOS)("SELECT * FROM TAVISOS WHERE IND_ENVIADO ='N'")
+
+        If LSAV.Count <> 0 Then
+            Me.EL_verde.Visibility = Visibility.Collapsed
+            Me.El_rojo.Visibility = Visibility.Visible
+            Me.C_ok.Visibility = Visibility.Collapsed
+            C_no_ok.Visibility = Visibility.Visible
+            Me.C_no_ok.Text = LSAV.Count.ToString
+        Else
+            Me.EL_verde.Visibility = Visibility.Visible
+            Me.El_rojo.Visibility = Visibility.Collapsed
+            Me.C_ok.Visibility = Visibility.Visible
+            C_no_ok.Visibility = Visibility.Collapsed
+
+
+        End If
+
         LSR = conn.Query(Of TRESSENTIDOS)("SELECT * FROM TRESSENTIDOS")
         LCR = conn.Query(Of TRESCARDIO)("SELECT * FROM TRESCARDIO")
         LHR = conn.Query(Of TRESHABITOS)("SELECT * FROM TRESHABITOS")
@@ -136,7 +169,7 @@ Public NotInheritable Class HOME
     End Sub
 
     Private Sub BTN_DOC_Click(sender As Object, e As RoutedEventArgs) Handles BTN_DOC.Click
-        Me.Frame.Navigate(GetType(DOCUMENTOS))
+        Me.Frame.Navigate(GetType(DOCUMENTOS), Parametros)
     End Sub
 
     Private Sub BTN_OBJ_Click(sender As Object, e As RoutedEventArgs) Handles BTN_OBJ.Click
@@ -145,6 +178,7 @@ Public NotInheritable Class HOME
 
     Private Sub BTN_CENTROS_Click(sender As Object, e As RoutedEventArgs) Handles BTN_CENTROS.Click
         Me.Frame.Navigate(GetType(CENTROS), Me.BTN_CENTROS.Content)
+
     End Sub
 
     Private Sub BTN_CITAS_Click(sender As Object, e As RoutedEventArgs) Handles BTN_CITAS.Click
@@ -195,28 +229,36 @@ Public NotInheritable Class HOME
     End Sub
 
     Private Sub BTN_SENTIDOS_Click(sender As Object, e As RoutedEventArgs) Handles BTN_SENTIDOS.Click
+        If antes <> True Then
+            Aparecer()
 
-        Aparecer()
 
-        Me.NOM_HEX.Text = "Sentidos"
+            Me.NOM_HEX.Text = "Sentidos"
 
-        gira(CInt(MaxSentidos * 100))
+            gira(CInt(MaxSentidos * 100))
 
-        'calcular la diferencia
-        Me.dife.Text = LS(0).CAN_SENTIDOS - LS(1).CAN_SENTIDOS & " %"
+            'calcular la diferencia
+            Me.dife.Text = LS(0).CAN_SENTIDOS - LS(1).CAN_SENTIDOS & " %"
+        Else
+            Desaparecer()
+        End If
 
     End Sub
 
     Public Async Sub Aparecer()
-        Dim i As Decimal = 0
+        GC.Collect()
 
-        Me.H_Zomm.Visibility = Visibility.Visible
-        While i <= 1
-            Await Task.Delay(TimeSpan.FromMilliseconds(20))
-            H_Zomm.Opacity = i
-            Me.BTN_GR.Opacity = i
-            i = i + 0.05
-        End While
+        If GrLoad.Visibility = Visibility.Collapsed Then
+            Dim i As Decimal = 0
+
+            Me.H_Zomm.Visibility = Visibility.Visible
+            While i <= 1
+                Await Task.Delay(TimeSpan.FromMilliseconds(20))
+                H_Zomm.Opacity = i
+                Me.BTN_GR.Opacity = i
+                i = i + 0.05
+            End While
+        End If
     End Sub
 
     Public Async Sub Desaparecer()
@@ -393,7 +435,7 @@ Public NotInheritable Class HOME
 
             I = I + 0.01
         End While
-
+        antes = False
     End Sub
 
 
@@ -442,63 +484,100 @@ Public NotInheritable Class HOME
     End Sub
 
     Private Sub BTN_PULMONAR_Click(sender As Object, e As RoutedEventArgs) Handles BTN_PULMONAR.Click
+        If antes <> True Then
+            Aparecer()
 
-        Aparecer()
+            Me.NOM_HEX.Text = "Respiraicón"
 
-        Me.NOM_HEX.Text = "Respiraicón"
+            gira(CInt(MaxPulmonar * 100))
 
-        gira(CInt(MaxPulmonar * 100))
+            'calcular la diferencia
+            Me.dife.Text = LP(0).CAN_PULMONAR - LP(1).CAN_PULMONAR & " %"
+        Else
+            Desaparecer()
 
-        'calcular la diferencia
-        Me.dife.Text = LP(0).CAN_PULMONAR - LP(1).CAN_PULMONAR & " %"
+        End If
     End Sub
 
     Private Sub BTN_HABITOS_Click(sender As Object, e As RoutedEventArgs) Handles BTN_HABITOS.Click
-        Aparecer()
+        If antes <> True Then
+            Aparecer()
 
-        Me.NOM_HEX.Text = "Hábitos"
+            Me.NOM_HEX.Text = "Hábitos"
 
-        gira(CInt(MaxHabitos * 100))
+            gira(CInt(MaxHabitos * 100))
 
-        'calcular la diferencia
-        Me.dife.Text = LH(0).CAN_HABITOS - LH(1).CAN_HABITOS & " %"
+            'calcular la diferencia
+            Me.dife.Text = LH(0).CAN_HABITOS - LH(1).CAN_HABITOS & " %"
+        Else
+            Desaparecer()
+        End If
     End Sub
 
     Private Sub BTN_ACTIVIDAD_Click(sender As Object, e As RoutedEventArgs) Handles BTN_ACTIVIDAD.Click
         ' limpiarHex()
         ' LLENADO()
+        If antes <> True Then
+            Aparecer()
 
-        Aparecer()
 
-        Me.NOM_HEX.Text = "Actividad"
+            Me.NOM_HEX.Text = "Actividad"
 
-        gira(CInt(MaxActividad * 100))
+            gira(CInt(MaxActividad * 100))
 
-        'calcular la diferencia
-        Me.dife.Text = LA(0).CAN_ACTIVIDAD - LA(1).CAN_ACTIVIDAD & " %"
+            'calcular la diferencia
+            Me.dife.Text = LA(0).CAN_ACTIVIDAD - LA(1).CAN_ACTIVIDAD & " %"
+        Else
+            Desaparecer()
+        End If
     End Sub
 
     Private Sub BTN_META_Click(sender As Object, e As RoutedEventArgs) Handles BTN_META.Click
-        Aparecer()
+        If antes <> True Then
+            Aparecer()
 
-        Me.NOM_HEX.Text = "Metabolismo"
 
-        gira(CInt(MaxMeta * 100))
+            Me.NOM_HEX.Text = "Metabolismo"
 
-        'calcular la diferencia
-        Me.dife.Text = LM(0).CAN_META - LM(1).CAN_META & " %"
+            gira(CInt(MaxMeta * 100))
+
+            'calcular la diferencia
+            Me.dife.Text = LM(0).CAN_META - LM(1).CAN_META & " %"
+        Else
+            Desaparecer()
+        End If
     End Sub
 
     Private Sub BTN_CARDIO_Click(sender As Object, e As RoutedEventArgs) Handles BTN_CARDIO.Click
-        Aparecer()
+        If antes <> True Then
+            Aparecer()
 
-        Me.NOM_HEX.Text = "Cardio"
 
-        gira(CInt(MaxCardio * 100))
+            Me.NOM_HEX.Text = "Cardio"
 
-        'calcular la diferencia
-        Me.dife.Text = LC(0).CAN_CARDIO - LC(1).CAN_CARDIO & " %"
+            gira(CInt(MaxCardio * 100))
+
+            'calcular la diferencia
+            Me.dife.Text = LC(0).CAN_CARDIO - LC(1).CAN_CARDIO & " %"
+        Else
+            Desaparecer()
+        End If
     End Sub
 
+    Private Sub Campana_Click(sender As Object, e As RoutedEventArgs) Handles Campana.Click
+        Frame.Navigate(GetType(AVISOS), Parametros)
+    End Sub
 
+    Private Sub GrLoad_PointerCanceled(sender As Object, e As PointerRoutedEventArgs)
+
+    End Sub
+
+    Private Sub GrLoad_PointerCaptureLost(sender As Object, e As PointerRoutedEventArgs)
+
+    End Sub
+
+    Private Sub GrLoad_PointerPressed(sender As Object, e As PointerRoutedEventArgs)
+        antes = True
+
+    End Sub
 End Class

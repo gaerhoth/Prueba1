@@ -73,7 +73,8 @@ Public NotInheritable Class AYUDA
         Dim CAMPOS As String = ""
         Dim VAL_CAMPOS As String = ""
 
-
+        Dim rec As String = ""
+        Dim ana As String = ""
 
         ARRi = Valores.Split("ç")
 
@@ -88,14 +89,26 @@ Public NotInheritable Class AYUDA
         For i = 1 To ARRi.Count - 1 Step 2
             If i = 1 Then
                 VAL_CAMPOS = "'" & ARRi(i) & "'"
+
+                rec = ARRi(5)
+
             Else
                 VAL_CAMPOS = VAL_CAMPOS & " , '" & ARRi(i) & "'"
+
+                ana = ARRi(7)
+
             End If
         Next
 
 
         INSERT_BBDD = "INSERT INTO " & Tabla & "(" & CAMPOS & ") VALUES(" & VAL_CAMPOS & ")"
-        conn.Execute(INSERT_BBDD)
+
+        Try
+            conn.Execute(INSERT_BBDD)
+        Catch ex As Exception
+
+        End Try
+
 
         ' conn.Insert(New TTIPOCAFE() With {.ID_TIPO_CAFE = 50, .COD_IDIOMA = 1, .DES_CAFE = "á"})
 
@@ -139,17 +152,36 @@ Public NotInheritable Class AYUDA
 
 
     Public Shared Sub Mostrar(Gr As Grid, Pr As ProgressBar, Pa As Page)
+
         Gr.Visibility = Visibility.Visible
         Pr.Visibility = Visibility.Visible
-        Pa.IsHitTestVisible = False
+        '  Pa.IsHitTestVisible = False
+
+
     End Sub
 
     Public Shared Sub Ocualtar(Gr As Grid, Pr As ProgressBar, Pa As Page)
         Gr.Visibility = Visibility.Collapsed
         Pr.Visibility = Visibility.Collapsed
-        Pa.IsHitTestVisible = True
+        '  Pa.IsHitTestVisible = True
+
     End Sub
 
+    Public Shared Sub Mostrar2(Gr As Grid, Pr As ProgressBar, Pa As Page, sp As SplitView)
+
+        Gr.Visibility = Visibility.Visible
+        Pr.Visibility = Visibility.Visible
+        '  Pa.IsHitTestVisible = False
+        sp.Visibility = Visibility.Visible
+
+    End Sub
+    Public Shared Sub Ocualtar2(Gr As Grid, Pr As ProgressBar, Pa As Page, sp As SplitView)
+        Gr.Visibility = Visibility.Collapsed
+        Pr.Visibility = Visibility.Collapsed
+        '  Pa.IsHitTestVisible = True
+        sp.Visibility = Visibility.Collapsed
+
+    End Sub
 
     Public Shared Function CreaColores(COD_COLOR As String) As String()
         Dim Col As String

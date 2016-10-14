@@ -97,6 +97,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="Assets\Windows_7_Product_Guide.pdf" />
     <None Include="My Project\ServiceReferences.Designer.ClientConfig" />
     <None Include="project.json" />
     <None Include="Service References\WS_SEGURIDAD_MANTENIMIENTO\Prueba1.WS_SEGURIDAD_MANTENIMIENTO.DesencriptarPasswordResponse.datasource">
@@ -591,6 +592,9 @@
     <Compile Include="PAGINAS\DISEÑOS\DISEÑOS3.xaml.vb">
       <DependentUpon>DISEÑOS3.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PAGINAS\DOCUMENTOS2.xaml.vb">
+      <DependentUpon>DOCUMENTOS2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PAGINAS\LOADING.xaml.vb">
       <DependentUpon>LOADING.xaml</DependentUpon>
     </Compile>
@@ -642,6 +646,9 @@
     </Compile>
     <Compile Include="PAGINAS\PERFIL.xaml.vb">
       <DependentUpon>PERFIL.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\PHOTO.xaml.vb">
+      <DependentUpon>PHOTO.xaml</DependentUpon>
     </Compile>
     <Compile Include="PAGINAS\QR.xaml.vb">
       <DependentUpon>QR.xaml</DependentUpon>
@@ -739,6 +746,7 @@
     <Content Include="Assets\health_campana.png" />
     <Content Include="Assets\health_checked.png" />
     <Content Include="Assets\health_notification_red%282%29.png" />
+    <Content Include="Assets\health_popup_calendar_icon.png" />
     <Content Include="Assets\information_header.png" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\Meta.png" />
@@ -879,6 +887,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PAGINAS\DOCUMENTOS2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PAGINAS\LOADING.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -944,6 +956,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PAGINAS\PERFIL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\PHOTO.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1047,6 +1063,9 @@
     </SDKReference>
     <SDKReference Include="SQLite.UWP.2015, Version=3.13.0">
       <Name>SQLite for Universal Windows Platform</Name>
+    </SDKReference>
+    <SDKReference Include="WindowsMobile, Version=10.0.10586.0">
+      <Name>Windows Mobile Extensions for the UWP</Name>
     </SDKReference>
   </ItemGroup>
   <ItemGroup>

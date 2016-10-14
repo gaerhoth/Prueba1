@@ -8,6 +8,10 @@ Imports Windows.Storage
 Imports Windows.Graphics.Imaging
 Imports Windows.Storage.Streams
 Imports System.Runtime.InteropServices.WindowsRuntime
+Imports Windows.Media.MediaProperties
+Imports Windows.Storage.FileProperties
+Imports Windows.Media.Capture
+Imports Windows.Storage.Pickers
 
 ' La plantilla de elemento Página en blanco está documentada en http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -18,6 +22,9 @@ Public NotInheritable Class PERFIL
     Inherits Page
     Private id As Object
     Public Cadenas As String
+    Public MediaCapture As New MediaCapture
+    Public PW As Boolean
+    Public captureFolder As StorageFolder = Nothing
 
 
     Private Sub BTN_CERRAR_Click(sender As Object, e As RoutedEventArgs) Handles BTN_CERRAR.Click
@@ -133,7 +140,7 @@ Public NotInheritable Class PERFIL
 
     End Sub
 
-    Private Sub PERFIL_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
+    Private Async Sub PERFIL_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
 
         'Con esto generamos el QR
         Dim write = New BarcodeWriter()
@@ -144,7 +151,21 @@ Public NotInheritable Class PERFIL
         Dim wb = write.Write(Cadenas)
         Me.QR.Source = wb.ToBitmap
 
+        'If ApplicationData.Current.LocalFolder Then
 
+        'End If
+
+        '  Dim fot = Await captureFolder.GetFileAsync("MI_Foto.jpg") 'CreateFileAsync("Mi_Foto.jpg", CreationCollisionOption.OpenIfExists)
+
+        ' Await captureFolder.("MI_Foto.jpg",)
+
+        If File.Exists(ApplicationData.Current.LocalFolder.Path & "\Mi_foto.jpg") Then
+
+
+
+            Dim BM As New BitmapImage(New Uri(ApplicationData.Current.LocalFolder.Path & "\Mi_foto.jpg"))
+            C.Source = BM
+        End If
 
     End Sub
 
@@ -210,5 +231,40 @@ Public NotInheritable Class PERFIL
 
     Private Sub TXTTEL_GotFocus(sender As Object, e As RoutedEventArgs) Handles TXTTEL.GotFocus
         TXTTEL.Text = ""
+    End Sub
+
+    Private Async Sub cambiar_Click(sender As Object, e As RoutedEventArgs) Handles cambiar.Click
+
+
+        Frame.Navigate(GetType(PHOTO))
+
+
+        'Await MediaCapture.InitializeAsync
+
+
+
+
+        'Dim myPictures = Await Windows.Storage.StorageLibrary.GetLibraryAsync(Windows.Storage.KnownLibraryId.Pictures)
+        'Dim file As StorageFile = Await myPictures.SaveFolder.CreateFileAsync("Mi_foto.jpg", CreationCollisionOption.GenerateUniqueName)
+
+        'Using captureStream = New InMemoryRandomAccessStream()
+        '    Await MediaCapture.CapturePhotoToStreamAsync(ImageEncodingProperties.CreateJpeg(), captureStream)
+
+        '    Using fileStream = Await file.OpenAsync(FileAccessMode.ReadWrite)
+        '        Dim decoder = Await BitmapDecoder.CreateAsync(captureStream)
+        '        Dim encoder = Await BitmapEncoder.CreateForTranscodingAsync(fileStream, decoder)
+
+        '        Dim properties = New BitmapPropertySet() From {
+        '    {"System.Photo.Orientation", New BitmapTypedValue(PhotoOrientation.Normal, PropertyType.UInt16)}
+        '}
+        '        Await encoder.BitmapProperties.SetPropertiesAsync(properties)
+
+        '        Await encoder.FlushAsync()
+        '    End Using
+        'End Using
+
+        '    C.Source = myPictures & "Mi_foto.jpg"
+
+
     End Sub
 End Class

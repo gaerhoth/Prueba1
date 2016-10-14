@@ -55,7 +55,7 @@
             <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="CONTACTO" IsHitTestVisible="False" />
         </Border>
 
-        <Maps:MapControl Grid.Row="4" Grid.ColumnSpan="3" x:Name="mapa" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />
+        <Maps:MapControl Grid.Row="4" Grid.ColumnSpan="3" x:Name="mapa" HorizontalAlignment="Stretch" MapServiceToken="3EpLCmUEydXGjIEgBIFM~c8G8RFI6JkEImHfKY0vzjw~AuEW7k_rO1NU9eu28csmCBAPyzURzhSUMLx0HrKhm_HpHDe43QL_uBX_420tsuL6" VerticalAlignment="Stretch" />
 
         <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" PlaceholderText="Dirección del centro" TextAlignment="Center" BorderBrush="Transparent" BorderThickness="0"  IsHitTestVisible="False"></TextBox>
         <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" PlaceholderText="Horario de apertura" BorderBrush="Transparent" BorderThickness="0"  IsHitTestVisible="False"></TextBox>

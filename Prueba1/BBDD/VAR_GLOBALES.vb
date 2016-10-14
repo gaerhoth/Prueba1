@@ -14,6 +14,7 @@
     Public Shared LH As List(Of TCALHABITOS) = Nothing
     Public Shared LP As List(Of TCALPULMONAR) = Nothing
 
+    Public Shared LSAV As List(Of TAVISOS) = Nothing
     Public Shared LSR As List(Of TRESSENTIDOS) = Nothing
     Public Shared LMR As List(Of TRESMETAS) = Nothing
     Public Shared LAR As List(Of TRESACTIVIDAD) = Nothing
@@ -58,6 +59,9 @@
     Public Shared R_IRP As WS_WAH_PRODUCCION.IRPResponse = Nothing
     Public Shared R_IRC As WS_WAH_PRODUCCION.IRCResponse = Nothing
 
+
+    Public Shared DOCS As WS_WAH_PRODUCCION.DameDocumentosResponse = Nothing
+    Public Shared MAVISOS As WS_WAH_PRODUCCION.DameAvisoResponse = Nothing
     Public Shared RES_CARIDIO As WS_WAH_PRODUCCION.DameResCardiosResponse = Nothing
     Public Shared RES_HABITOS As WS_WAH_PRODUCCION.DameResHabitosResponse = Nothing
     Public Shared RES_META As WS_WAH_PRODUCCION.DameResMetasResponse = Nothing

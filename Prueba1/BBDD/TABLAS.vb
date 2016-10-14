@@ -567,6 +567,28 @@ End Class
 
 
 
+Public Class TAVISOS
+    <PrimaryKey>
+    Public Property COD_AVISO As String
+    Public Property ID_TRABAJADOR As String
+    Public Property ID_TIPO_AVISO As String
+    Public Property COD_CLAVE_ORIGEN As String
+    Public Property FEC_ALTA As String
+    Public Property FEC_DESDE As String
+    Public Property FEC_HASTA As String
+    Public Property IND_ENVIADO As String
+    Public Property FEC_ENVIADO As String
+    Public Property FEC_BAJA As String
+    Public Property USUARIO_BAJA As String
+    Public Property USUARIO_ALTA As String
+    Public Property DES_TITULO As String
+    Public Property DES_TEXTO As String
+    Public Property DES_IMAGEN As String
+    Public Property DES_URL As String
+    Public Property IND_DESTACADO As String
+
+End Class
+
 #End Region
 
 

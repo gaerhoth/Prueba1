@@ -29,6 +29,8 @@ Imports System.Text
 
 
 
+
+
 NotInheritable Class App
         Inherits Application
 
@@ -87,7 +89,7 @@ NotInheritable Class App
 
     Public Async Sub Iniciar(e As Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)
         'Dim rootFrame As Frame = TryCast(Window.Current.Content, Frame)
-        'rootFrame.Navigate(GetType(CENTROS))
+        'rootFrame.Navigate(GetType(PHOTO))
         'Window.Current.Activate()
 
         Await CreaBBDD(e)
@@ -109,7 +111,8 @@ NotInheritable Class App
         Encoding.GetEncoding("UTF-8")
 
 
-
+        conn.CreateTable(Of TDOCUMENTOS2)()
+        conn.CreateTable(Of TAVISOS)()
         conn.CreateTable(Of TCENTROS)()
         conn.CreateTable(Of TCONSTANT)()
 
