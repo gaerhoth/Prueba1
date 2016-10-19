@@ -45,5 +45,17 @@ Public NotInheritable Class RECOMENDACIONES
     Private Sub BTN_CAMPA_Click(sender As Object, e As RoutedEventArgs) Handles BTN_CAMPA.Click
         Me.Frame.Navigate(GetType(OBJ_CAMP), Me.BTN_CAMPA.Content)
     End Sub
+
+    Private Sub RECOMENDACIONES_Loading(sender As FrameworkElement, args As Object) Handles Me.Loading
+
+        For i = 0 To 10
+            Me.PL.Items.Add(New CLASERECOM With
+                      {.TIT = "1 " & i.ToString
+                                            })
+        Next
+    End Sub
 #End Region
 End Class
+
+
+

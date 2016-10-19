@@ -208,5 +208,18 @@ Public NotInheritable Class AYUDA
 
 End Class
 
+Class CLASERECOM
+    Public Property TIT() As String
+        Get
+            Return m_TIT
+        End Get
+        Set
+            m_TIT = Value
+        End Set
+    End Property
+    Private m_TIT As String
+
+End Class
+
 
 

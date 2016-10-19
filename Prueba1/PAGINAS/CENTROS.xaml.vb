@@ -13,6 +13,7 @@ Imports System.Math
 Public NotInheritable Class CENTROS
     Inherits Page
     ' Dim poiManager As AYUDA.PointOfInterestsManager
+    Public Parametros As String
     Dim Bcartel As Boolean = False
     Public N_LAT As Decimal
     Public N_LON As Decimal
@@ -69,6 +70,9 @@ Public NotInheritable Class CENTROS
     Private Async Sub CENTROS_Loading(sender As FrameworkElement, args As Object) Handles Me.Loading
         'Centra el mapa para que se vea toda españa
 
+        If Parametros <> "" Then
+            Tit.Text = Parametros
+        End If
 
 
         mapa.Center = New Geopoint(New BasicGeoposition() With {
@@ -330,8 +334,7 @@ Public NotInheritable Class CENTROS
 
 
         For i = 0 To lcentros.Count - 1
-            ' SPuntoB.Latitude = CDbl(lcentros(i).latitud.ToString.Replace(".", ","))
-            'SPuntoB.Longitude = CDbl(lcentros(i).longitud.ToString.Replace(".", ","))
+
 
 
 
@@ -339,10 +342,6 @@ Public NotInheritable Class CENTROS
             Dim PuntoB As New Geopoint(SPuntoB)
 
 
-            '     Dim Lat1 As Long
-            'Dim Lat2 As Long
-            'Dim Lon1 As Long
-            'Dim Lon2 As Long
 
             Dim d As Decimal = 0
             Dim Lat1 = SPuntoA.Latitude * PI / 180
@@ -558,5 +557,13 @@ Public NotInheritable Class CENTROS
         Me.Frame.Navigate(GetType(DET_CENTRO), N_LAT & ";" & N_LON)
     End Sub
 
+
+
+    Protected Overrides Sub OnNavigatedTo(e As NavigationEventArgs)
+        MyBase.OnNavigatedTo(e)
+
+        Parametros = e.Parameter
+
+    End Sub
 
 End Class

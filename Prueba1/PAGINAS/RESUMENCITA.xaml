@@ -1,0 +1,215 @@
+﻿<Page
+    x:Class="Prueba1.RESUMENCITA"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Prueba1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+           
+
+        </Grid.ColumnDefinitions>
+       
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Name="titulo" Text="Resumen de la Cita" FontWeight="SemiBold"  Foreground="#FF01B0A8" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Button Grid.Row="0" Grid.Column="0" x:Name="Atras" HorizontalAlignment="Stretch" Background="Transparent">
+            <Image x:Name="IMB" Source="ms-appx:///Assets/atras.png"></Image>
+        </Button>
+        <!--<StackPanel >-->
+            <ScrollViewer Grid.Row="1" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Hidden" >
+           
+                <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"></RowDefinition>
+                    <RowDefinition Height="200"></RowDefinition>
+                    <RowDefinition Height="200"></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>
+                </Grid.RowDefinitions>
+               
+<!--1º-->
+                <Grid Grid.Row="0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="105"/>
+                        <ColumnDefinition Width="*"/>
+
+
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Row="0" Grid.ColumnSpan="2" ></Image>
+
+                    <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                        <Image x:Name="d" Grid.ColumnSpan="2" Source="ms-appx:///Assets/general_down_bar.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"></Image>
+                        <TextBlock   
+        			Text="RESUMEN DE LA CITA" 
+        			FontSize="20"
+        			Foreground="Black"
+        			HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
+                        </TextBlock>
+                    </Grid>
+
+                    <Border Grid.Row="1"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="100">
+                        <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="Tipo de cita" IsHitTestVisible="False" />
+                    </Border>
+                    <Line  Grid.Row="1" Grid.Column="1" Stroke="Gray"  VerticalAlignment="Bottom" StrokeThickness="1" Width="Auto" X2="1" Stretch="Fill" ></Line>
+
+
+
+                    
+
+                    <Border Grid.Row="2"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="100">
+                        <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="Fecha" IsHitTestVisible="False" />
+                    </Border>
+                    <Line  Grid.Row="2" Grid.Column="1" Stroke="Gray"  VerticalAlignment="Bottom" StrokeThickness="1" Width="Auto" X2="1" Stretch="Fill" ></Line>
+
+                    
+
+                    <Border Grid.Row="3"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="100">
+                        <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="Hora" IsHitTestVisible="False" />
+                    </Border>
+                    <Line  Grid.Row="3" Grid.Column="1" Stroke="Gray"  VerticalAlignment="Bottom" StrokeThickness="1" Width="Auto" X2="1" Stretch="Fill" ></Line>
+
+
+
+                    <TextBox x:Name="TipoCita"  Grid.Row="1" Grid.Column="1"  PlaceholderText="Tipo de cita" VerticalAlignment="Center" Margin="5,0"  TextAlignment="Left" Padding="5"  VerticalContentAlignment="Center" BorderBrush="Transparent" BorderThickness="0" IsHitTestVisible="False"></TextBox>
+                    <TextBox x:Name="fechacita" Grid.Row="2" Grid.Column="1"  PlaceholderText="Fecha" VerticalAlignment="Center" Margin="5,0"  TextAlignment="Left" Padding="5"  VerticalContentAlignment="Center" BorderBrush="Transparent" BorderThickness="0" IsHitTestVisible="False"></TextBox>
+                    <TextBox x:Name="horacita" Grid.Row="3" Grid.Column="1"  PlaceholderText="Hora" VerticalAlignment="Center" Margin="5,0"  TextAlignment="Left" Padding="5"  VerticalContentAlignment="Center" BorderBrush="Transparent" BorderThickness="0" IsHitTestVisible="False"></TextBox>
+
+                </Grid>
+                
+                
+                
+                <!--2º-->
+                
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="105"/>
+                        <ColumnDefinition Width="*"/>
+
+
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                        <Image x:Name="d2" Grid.ColumnSpan="2" Source="ms-appx:///Assets/general_down_bar.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"></Image>
+                        <TextBlock   
+        			Text="DATOS DEL PACIENTE" 
+        			FontSize="20"
+        			Foreground="Black"
+        			HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"
+                          >
+
+                        </TextBlock>
+                    </Grid>
+
+                    <TextBlock  Name="TXTNOMBRE" Grid.Row="1" Grid.Column="1"   VerticalAlignment="Center"  TextWrapping="Wrap" Text="" Margin="5,0"></TextBlock>
+                    <Line  Grid.Row="1" Grid.Column="1" Stroke="Gray"  VerticalAlignment="Bottom" StrokeThickness="1" Width="Auto" X2="1" Stretch="Fill" ></Line>
+                    
+                    <Border Grid.Row="1"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="100">
+                        <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="Nombre" IsHitTestVisible="False" />
+                    </Border>
+
+                    
+                    <!--<AppBarSeparator  Width="Auto" Grid.Row="1"  Grid.Column="1" VerticalAlignment="Bottom" Background="Black" HorizontalAlignment="Stretch"></AppBarSeparator>-->
+
+                    <Border Grid.Row="2"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="100">
+                        <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="Apellidos" IsHitTestVisible="False" />
+                    </Border>
+                    <Line  Grid.Row="2" Grid.Column="1" Stroke="Gray"  VerticalAlignment="Bottom" StrokeThickness="1" Width="Auto" X2="1" Stretch="Fill" ></Line>
+
+                    <Border Grid.Row="3"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="100">
+                        <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="Razón social" IsHitTestVisible="False" />
+                    </Border>
+                    <Line  Grid.Row="3" Grid.Column="1" Stroke="Gray"  VerticalAlignment="Bottom" StrokeThickness="1" Width="Auto" X2="1" Stretch="Fill" ></Line>
+
+
+                    <TextBox x:Name="NombrePaciente"  Grid.Row="1" Grid.Column="1"  PlaceholderText="Nombre" VerticalAlignment="Center" Margin="5,0"  TextAlignment="Left" Padding="5"  VerticalContentAlignment="Center" BorderBrush="Transparent" BorderThickness="0" IsHitTestVisible="False"></TextBox>
+                    <TextBox x:Name="ApePaciente"  Grid.Row="2" Grid.Column="1"  PlaceholderText="Apellidos" VerticalAlignment="Center" Margin="5,0"  TextAlignment="Left" Padding="5"  VerticalContentAlignment="Center" BorderBrush="Transparent" BorderThickness="0" IsHitTestVisible="False"></TextBox>
+                    <TextBox x:Name="Razonsocial" Grid.Row="3" Grid.Column="1"  PlaceholderText="Razón Social" VerticalAlignment="Center" Margin="5,0"  TextAlignment="Left" Padding="5"  VerticalContentAlignment="Center" BorderBrush="Transparent" BorderThickness="0" IsHitTestVisible="False"></TextBox>
+
+                </Grid>
+                
+                
+                <!--3º-->
+                <Grid Grid.Row="2" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="105"/>
+                        <ColumnDefinition Width="*"/>
+
+
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                        <Image x:Name="d3" Grid.ColumnSpan="2" Source="ms-appx:///Assets/general_down_bar.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"></Image>
+                        <TextBlock   
+        			Text="DATOS DEL CENTRO" 
+        			FontSize="20"
+        			Foreground="Black"
+        			HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"
+                          >
+
+                        </TextBlock>
+                    </Grid>
+
+
+                    <Border Grid.Row="1"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="100">
+                        <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="Provincia" IsHitTestVisible="False" />
+                    </Border>
+                    <Line  Grid.Row="1" Grid.Column="1" Stroke="Gray"  VerticalAlignment="Bottom" StrokeThickness="1" Width="Auto" X2="1" Stretch="Fill" ></Line>
+
+
+                    <Border Grid.Row="2"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="100">
+                        <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="Dirección" IsHitTestVisible="False" />
+                    </Border>
+                    <Line  Grid.Row="2" Grid.Column="1" Stroke="Gray"  VerticalAlignment="Bottom" StrokeThickness="1" Width="Auto" X2="1" Stretch="Fill" ></Line>
+
+                    <Border Grid.Row="3"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="100">
+                        <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="Teléfono" IsHitTestVisible="False" />
+                    </Border>
+                    <Line  Grid.Row="3" Grid.Column="1" Stroke="Gray"  VerticalAlignment="Bottom" StrokeThickness="1" Width="Auto" X2="1" Stretch="Fill" ></Line>
+
+                    <TextBox x:Name="ProCentro" Grid.Row="1" Grid.Column="1"  PlaceholderText="Provincia" VerticalAlignment="Center" Margin="5,0"  TextAlignment="Left" Padding="5"  VerticalContentAlignment="Center" BorderBrush="Transparent" BorderThickness="0" IsHitTestVisible="False"></TextBox>
+                    <TextBox x:Name="Direcentro"  Grid.Row="2" Grid.Column="1"  PlaceholderText="Dirección" VerticalAlignment="Center" Margin="5,0"  TextAlignment="Left" Padding="5"  VerticalContentAlignment="Center" BorderBrush="Transparent" BorderThickness="0" IsHitTestVisible="False"></TextBox>
+                    <TextBox x:Name="TelCentro" Grid.Row="3" Grid.Column="1"  PlaceholderText="Teléfono" VerticalAlignment="Center" Margin="5,0"  TextAlignment="Left" Padding="5"  VerticalContentAlignment="Center" BorderBrush="Transparent" BorderThickness="0" IsHitTestVisible="False"></TextBox>
+
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                    <ToggleSwitch  x:Name="CALENDARIO" OnContent="Agregar a mi calendario" OffContent="Agregar a mi calendario" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Button Grid.Row="1" Content="Confirmar Cita" BorderBrush="#FF01B0A8" VerticalAlignment="Center"  BorderThickness="1" Width="320" Foreground="#FF01B0A8"  HorizontalAlignment="center" Grid.Column="0" Grid.ColumnSpan="3"  Background="Transparent" Style="{StaticResource ButtonStyleR}" ></Button>
+                    
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+    <!--</StackPanel>-->
+    </Grid>
+</Page>

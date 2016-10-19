@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="Prueba1.DATOSCITAS"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Prueba1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="140"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+
+        </Grid.ColumnDefinitions>
+
+
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Name="titulo" Text="Solicitar Cita" FontWeight="SemiBold"  Foreground="#FF01B0A8" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Button Grid.Row="0" Grid.Column="0" x:Name="Atras" HorizontalAlignment="Stretch" Background="Transparent">
+            <Image x:Name="IMB" Source="ms-appx:///Assets/atras.png"></Image>
+        </Button>
+
+        <Image x:Name="fondo" Grid.Row="1" Grid.RowSpan="6" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="ms-appx:///Assets/reports_background_02.png" Stretch="Fill" ></Image>
+        <Image Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Source="ms-appx:///Assets/appoiment_calendar.png" Height="100" Width="100"></Image>
+
+        <ComboBox x:Name="mes" Background="White" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" PlaceholderText="Mes" BorderBrush="Transparent" BorderThickness="0" VerticalAlignment="Center"  HorizontalAlignment="Center" Width="320" Height="35" Style="{StaticResource ComboBoxStyle1}"></ComboBox>
+        <ComboBox x:Name="dia" Background="White" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" PlaceholderText="Día" BorderBrush="Transparent" BorderThickness="0" VerticalAlignment="Center"  HorizontalAlignment="Center" Width="320" Height="35" Style="{StaticResource ComboBoxStyle1}"></ComboBox>
+        <ComboBox x:Name="hora" Background="White" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" PlaceholderText="Hora" BorderBrush="Transparent" BorderThickness="0" VerticalAlignment="Center"  HorizontalAlignment="Center" Width="320" Height="35" Style="{StaticResource ComboBoxStyle1}"></ComboBox>
+        <ComboBox x:Name="minuto" Background="White" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" PlaceholderText="Minuto" BorderBrush="Transparent" BorderThickness="0" VerticalAlignment="Center"  HorizontalAlignment="Center" Width="320" Height="35" Style="{StaticResource ComboBoxStyle1}"></ComboBox>
+
+        <TextBlock  TextWrapping="Wrap" Grid.Row="6" Grid.ColumnSpan="2" Height="50" Width="320" FontSize="13" TextAlignment="Center" Text="La fecha y hora se ajustará a la disponibilidad del centro elegido." VerticalAlignment="Top" Foreground="White"></TextBlock>
+
+        <Button Grid.Row="7" Content="Siguiente paso" BorderBrush="#FF01B0A8" VerticalAlignment="Center"  BorderThickness="1" Width="320" Foreground="#FF01B0A8"  HorizontalAlignment="center" Grid.Column="0" Grid.ColumnSpan="3"  Background="Transparent" Style="{StaticResource ButtonStyleR}" ></Button>
+    </Grid>
+</Page>

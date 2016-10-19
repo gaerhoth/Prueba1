@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="Prueba1.SOLCITA"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Prueba1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Name="titulo" Text="Solicitar Cita" FontWeight="SemiBold"  Foreground="#FF01B0A8" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Button Grid.Row="0" Grid.Column="0" x:Name="Atras" HorizontalAlignment="Stretch" Background="Transparent">
+            <Image x:Name="IMB" Source="ms-appx:///Assets/atras.png"></Image>
+        </Button>
+
+
+        <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"  HorizontalAlignment="Left" Background="Transparent"></Button>
+        <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"  HorizontalAlignment="Left" Background="Transparent"></Button>
+
+        <Button Grid.Row="3" Content="Siguiente paso" BorderBrush="#FF01B0A8" VerticalAlignment="Center"  BorderThickness="1" Width="320" Foreground="#FF01B0A8"  HorizontalAlignment="center" Grid.Column="0" Grid.ColumnSpan="3"  Background="Transparent" Style="{StaticResource ButtonStyleR}" Click="Button_Click"></Button>
+
+        <Grid Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+
+            <Button x:Name="btnemp" Background="White" Grid.Row="0" Grid.Column="0" Content="Empresa" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderThickness="1" BorderBrush="Black"></Button>
+            <Button x:Name="btnpart" Background="LightGray" Grid.Row="0" Grid.Column="1" Content="Particular" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderThickness="1" BorderBrush="Black"></Button>
+
+            <Image x:Name="fondo" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="ms-appx:///Assets/reports_background_02.png" Stretch="Fill" ></Image>
+
+            <ComboBox x:Name="TipoReco" Background="White" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" PlaceholderText="Tipo de Cita" BorderBrush="Transparent" BorderThickness="0" VerticalAlignment="Center"  HorizontalAlignment="Center" Width="320" Height="35" Style="{StaticResource ComboBoxStyle1}"></ComboBox>
+            <TextBox x:Name="Empresa" Visibility="Visible"  Grid.Row="3" Grid.ColumnSpan="2" Height="35" Width="320" BorderThickness="0" BorderBrush="Transparent"  VerticalAlignment="Center"  HorizontalAlignment="center" TextWrapping="Wrap" Text="" VerticalContentAlignment="Center"  PlaceholderText="Empresa" Style="{StaticResource TextBoxR}"/>
+
+            <TextBlock  Visibility="Collapsed" TextWrapping="Wrap" Grid.Row="3" Grid.ColumnSpan="2" Height="50" Width="320" FontSize="11" TextAlignment="Center" Text="El coste del RECONOCIMIENTO MÉDICO se los facturará a la llegada a nuestro Centro. Para más información contacte con nuestros centros" Foreground="White" IsHitTestVisible="False"></TextBlock>
+        </Grid>
+
+
+    </Grid>
+</Page>

@@ -10,60 +10,36 @@
     <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">-->
     <Page.Resources>
         <SolidColorBrush Color="DarkGray" Opacity=".5" x:Key="fondo"/>
+        <SolidColorBrush Color="#FF01B0A8" x:Key="Colapp"></SolidColorBrush>
 
-        <DataTemplate x:Name="Lstview" x:DataType="local:CIRCO2">
-            <Grid Width="Auto">
+        <DataTemplate x:Name="Lstview" xmlns:DataType="local:CLASERECOM">
+            <Grid>
                 <Grid.RowDefinitions>
-                    <!--<RowDefinition Height="75"/>-->
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*"/>
-
-
-
+                    
+                    <RowDefinition Height="65" />
+                   
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="50"></ColumnDefinition>
 
                 </Grid.ColumnDefinitions>
-
-                <!--<Grid Grid.ColumnSpan="2" Grid.Row="0">
-                    <Image x:Name="d" Source="ms-appx:///Assets/general_top_bar.png"></Image>
-                    <TextBlock x:Name="NomTabla1"  
-        			Text="En Curso" 
+              <TextBlock x:Name="NomRecom"  Grid.Column="0" Grid.Row="0"
+        			Text="{Binding TIT}" 
         			FontSize="20"
-        			Foreground="Black"
-        			HorizontalAlignment="Left" VerticalAlignment="Center"
-                     Margin="0,5"     >
-                        
-                    </TextBlock>
-                </Grid>-->
-
-
-                <!--<TextBlock x:Name="NomTabla"  Grid.Column="0" Grid.Row="0"
-        			Text="En Curso" 
-        			FontSize="20"
-        			Foreground="Black"
-        			HorizontalAlignment="Left" VerticalAlignment="Center"/>-->
-
-
-
-                <!--<TextBlock x:Name="DesPrue"  Grid.Column="0" Grid.Row="2"
-        			Text="{Binding NP}" 
-        			FontSize="20"
-        			Foreground="Black"
+        			Foreground="{StaticResource Colapp}"
         			HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-                <TextBlock x:Name="ValPrue" Grid.Column="1" Grid.Row="2"
-        			Text="{Binding NP}" 
-                    TextWrapping="Wrap"      			
-        			FontSize="20"
-        			Foreground="Black"
-        			HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    <Image x:Name="Ima" Grid.Row="0" Grid.Column="1"  Source="ms-appx:///Assets/atras.png" Stretch="Uniform" RenderTransformOrigin="0.5,0.5" Height="25" Width="25">
+                    <Image.RenderTransform>
+                        <CompositeTransform ScaleX="-1"/>
+                    </Image.RenderTransform>
+                    </Image>
+                <Line  Grid.Row="0" Grid.Column="0" Stroke="LightGray"  VerticalAlignment="Bottom" StrokeThickness="1" Width="Auto" X2="1" Stretch="Fill" ></Line>
 
-                <Image x:Name="mas" Source="ms-appx:///Assets/general_new_icon.png" HorizontalAlignment="Right" VerticalAlignment="Center" Height="25" Width="25" Grid.Column="2"></Image>-->
 
-                <!--<Line Grid.Row="2" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>-->
+
+           
             </Grid>
 
 
@@ -82,7 +58,7 @@
                 <SplitView.Pane>
                     <StackPanel Background="Gray">
 
-                        <StackPanel Orientation="Horizontal" Background="#FF01B0A8" Height="100">
+                    <StackPanel Orientation="Horizontal" Background="{StaticResource Colapp}" Height="100">
                             <!--<TextBlock Text="Ver Perfil" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="SemiBold" Foreground="White" FontSize="8" />-->
 
 
@@ -140,7 +116,8 @@
 
 
                             <RowDefinition Height="Auto"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
                     
 
                         </Grid.RowDefinitions>
@@ -156,10 +133,11 @@
                             </ToggleButton.Content>
                         </ToggleButton>
 
-                        <TextBlock x:Name="Tit" Text="" 
+                        <TextBlock x:Name="Tit" Text="Recomendaciones" 
 			VerticalAlignment="Center"
 			HorizontalAlignment="Center"
 			Style="{ThemeResource TitleTextBlockStyle}" 
+             Foreground="{StaticResource Colapp}"
 			 Grid.Row="0" Grid.ColumnSpan="2"/>
 
                         <Grid x:Name="ND1" Grid.ColumnSpan="2"  Grid.Row="1" Background="{StaticResource fondo}"   Visibility="Collapsed">
@@ -169,10 +147,13 @@
                         <Grid x:Name="ND2" Grid.ColumnSpan="2"  Grid.Row="2" Background="{StaticResource fondo}"   Visibility="Collapsed">
                             <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="No tiene Campañas en curso" Foreground="White" FontSize="15" ></TextBlock>
                         </Grid>
+ 
 
+                    <TextBox Grid.Row="1" Grid.ColumnSpan="2" Text="filtro"></TextBox>
+                        
                         <ListView x:Name="PL" MinHeight="10" 
                                                        VerticalContentAlignment="Center" Grid.ColumnSpan="2" 
-                              ItemTemplate="{StaticResource Lstview}" Grid.Row="1"  >
+                              ItemTemplate="{StaticResource Lstview}" Grid.Row="2"  >
 
                         </ListView>
 

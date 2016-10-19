@@ -580,6 +580,9 @@
       <DependentUpon>GridVW.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Pruebas.vb" />
+    <Compile Include="PAGINAS\DATOSCITAS.xaml.vb">
+      <DependentUpon>DATOSCITAS.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PAGINAS\DET_CENTRO.xaml.vb">
       <DependentUpon>DET_CENTRO.xaml</DependentUpon>
     </Compile>
@@ -659,6 +662,12 @@
     <Compile Include="PAGINAS\RECUPERARPASS.xaml.vb">
       <DependentUpon>RECUPERARPASS.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PAGINAS\RESUMENCITA.xaml.vb">
+      <DependentUpon>RESUMENCITA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGINAS\SOLCITA.xaml.vb">
+      <DependentUpon>SOLCITA.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PAGINAS\TEXTOLEGAL.xaml.vb">
       <DependentUpon>TEXTOLEGAL.xaml</DependentUpon>
     </Compile>
@@ -728,6 +737,7 @@
     <Content Include="Assets\2.png" />
     <Content Include="Assets\3.png" />
     <Content Include="Assets\actividad.png" />
+    <Content Include="Assets\appoiment_calendar.png" />
     <Content Include="Assets\atras.png" />
     <Content Include="Assets\Cardio.png" />
     <Content Include="Assets\centers_list_icon.png" />
@@ -796,6 +806,7 @@
     <Content Include="Assets\newuser_icon.png" />
     <Content Include="Assets\profile_user_icon.png" />
     <Content Include="Assets\PULMPONAR.png" />
+    <Content Include="Assets\reports_background_02.png" />
     <Content Include="Assets\SENTIDOS.png" />
     <Content Include="Assets\Sing.png" />
     <Content Include="Assets\Splash2480.png" />
@@ -868,6 +879,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GridView\GridVW.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\DATOSCITAS.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -972,6 +987,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PAGINAS\RECUPERARPASS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\RESUMENCITA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\SOLCITA.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

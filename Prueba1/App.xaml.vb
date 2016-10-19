@@ -88,11 +88,11 @@ NotInheritable Class App
         End Sub
 
     Public Async Sub Iniciar(e As Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)
-        'Dim rootFrame As Frame = TryCast(Window.Current.Content, Frame)
-        'rootFrame.Navigate(GetType(PHOTO))
-        'Window.Current.Activate()
+        Dim rootFrame As Frame = TryCast(Window.Current.Content, Frame)
+        rootFrame.Navigate(GetType(RECOMENDACIONES))
+        Window.Current.Activate()
 
-        Await CreaBBDD(e)
+        ' Await CreaBBDD(e)
     End Sub
     Public Async Function CreaBBDD(e As Windows.ApplicationModel.Activation.LaunchActivatedEventArgs) As Task
 
