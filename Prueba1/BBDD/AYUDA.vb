@@ -208,6 +208,7 @@ Public NotInheritable Class AYUDA
 
 End Class
 
+'Clase para cargar la listview de recomendaciones
 Class CLASERECOM
     Public Property TIT() As String
         Get
@@ -221,5 +222,15 @@ Class CLASERECOM
 
 End Class
 
-
+Class CLASECENTROS
+    Public Property CNT() As String
+        Get
+            Return m_CNT
+        End Get
+        Set
+            m_CNT = Value
+        End Set
+    End Property
+    Private m_CNT As String
+End Class
 

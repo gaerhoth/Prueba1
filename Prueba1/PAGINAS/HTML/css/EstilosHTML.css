@@ -1,0 +1,434 @@
+﻿/* ++++++++++  Fuentes  ++++++++++ */
+
+@font-face {
+	font-family: 'Calibri-Regular';
+	src: url('fonts/calibri.eot');
+	src: local('☺'), url('../fonts/calibri.woff') format('woff'),
+					 url('../fonts/calibri.ttf') format('truetype'), 
+					 url('../fonts/calibri.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Calibri-Bold';
+	src: url('fonts/calibrib.eot');
+	src: local('☺'), url('../fonts/calibrib.woff') format('woff'), 
+					 url('../fonts/calibrib.ttf') format('truetype'), 
+					 url('../fonts/calibrib.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Calibri-Light';
+	src: url('fonts/calibril.eot');
+	src: local('☺'), url('../fonts/calibril.woff') format('woff'), 
+					 url('../fonts/calibril.ttf') format('truetype'), 
+					 url('../fonts/calibril.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ++++++++++  Normalizado Css  ++++++++++ */
+
+body{
+	width:100%;
+	margin: 0px;
+}
+
+h1{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+}
+
+p{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.lowerc{
+	text-transform: lowercase;
+}
+.initicalc{
+	text-transform: initial;
+}
+
+/* ++++++++++  Cuerpo Css  ++++++++++ */
+
+header {
+	background: url(../images/dark_bg.png); 
+	padding: 10% 3%;
+    text-align: center;
+    border-bottom: 10px solid #21d2be;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+}
+
+header h1{
+	color: #ffffff;
+    font-family: "Calibri-Regular";
+    font-size: 1.2em;
+    letter-spacing: 0;
+    line-height: 25px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+section h1{
+	background: url(../images/bg.png);
+	background-size: 100% 100%;
+	color: #ffffff;
+    font-family: "Calibri-Light";
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10% 3%;
+}
+
+.espacio
+{
+	margin-top: 30px;
+}
+
+.green
+{
+	color: #1fae96;
+}
+
+.red
+{
+	color: #e04657;
+}
+
+section article.darkred{
+	background: url(../images/darkred_bg.png); 
+}
+
+section article p.darkred{
+	color: #fff !important;
+}
+
+section article.mediumred, section article.mediumred img{
+    padding: 0;
+    max-width: 100%;
+}
+
+.minuscula
+{
+	text-transform: lowercase !important;
+}
+
+section article.wine{
+	background: #70363C;
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align: center;
+}
+
+section article.varices p {
+	text-align: center !important;
+}
+
+section article.varices p:last-child {
+	font-size: 1.2em;
+}
+
+section article.wine p{
+	color: #ffffff;
+}
+
+section.alert h1{
+	background: url(../images/bg-alert.png);
+	background-size: 100% 100%;
+	color: #ffffff;
+    font-family: "Calibri-Light";
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10% 3%;
+}
+
+section .title{
+	background: url(../images/dark_bg.png); 
+	padding: inherit;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .title h1{
+	color: #ffffff;
+    font-family: "Calibri-Regular";
+    font-size: 1.2em;
+    letter-spacing: 0;
+    line-height: 0;
+    margin: 0;
+    text-transform: uppercase;
+    background: none;
+}
+
+section .good h1{
+	background: url(../images/bg-good.png);
+	background-size: 100% 100%;
+	color: #ffffff;
+    font-family: "Calibri-Light";
+    font-size: 1em;
+    line-height: 20px;
+    padding: 10% 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .medium h1{
+	background: url(../images/bg-medium.png);
+	background-size: 100% 100%;
+	color: #ffffff;
+    font-family: "Calibri-Light";
+    font-size: 1em;
+    line-height: 20px;
+    padding: 10% 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .bad h1{
+	background: url(../images/bg-bad.png);
+	background-size: 100% 100%;
+	color: #ffffff;
+    font-family: "Calibri-Light";
+    font-size: 1em;
+    line-height: 20px;
+    padding: 10% 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .comments h1{
+	background: #ffffff;
+	background-size: 100% 100%;
+	color: #404547;
+    font-family: "Calibri-Bold";
+    font-size: 1.2em;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+section .comments{
+    text-align: center;
+    font-family: "Calibri-Light";
+    padding: 10% 5%;
+}
+
+section article.red{
+	background: #FA7987;
+	color: #ffffff;
+    font-family: "Calibri-Light";
+    font-size: 1em;
+    line-height: 20px;
+    padding: 10% 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section article.green{
+	background: #21D2BE;
+	color: #ffffff;
+    font-family: "Calibri-Light";
+    font-size: 1em;
+    line-height: 20px;
+    padding: 10% 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section.red h1{
+	background: url(../images/bg-red.png);
+	background-size: 100% 100%;
+	color: #ffffff;
+    font-family: "Calibri-Light";
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10% 3%;
+}
+
+section article{
+	background: #ffffff;
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align: center;
+}
+
+section article.dark{
+	background: url(../images/dark_bg.png); 
+}
+
+section.fondoclaro article, section.fondoclaro {
+	background: #e4f0ef; 
+	text-align: center;
+}
+
+section.fondoclaro article p {
+	text-align: left;
+	padding-top: 0;
+}
+
+section.fondoclaro article.dark{
+	background: #404547; 
+	margin-bottom: 5%;
+}
+
+section.fondoclaro article.dark, section.fondoclaro article.dark p, section.fondoclaro p{
+	text-align: center;
+}
+
+section article p{
+	color: #404547;
+    font-family: "Calibri-Regular";
+    font-size: 0.9em;
+    line-height: 20px;
+    text-align: justify;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+section article.dark p{
+	font-family: "Calibri-Regular";
+    font-size: 0.9em;
+    line-height: 20px;
+    text-align: justify;
+    color: #FFFFFF;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+section article img{
+	width: 100%;
+	height: auto;
+	margin:auto;
+	max-width: 500px;
+	padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+section article .varices img{
+	padding-bottom: 0;
+    padding-top: 0;
+}
+
+section article img.colesterol{
+	width: 35% !important;
+}
+
+section article img.conductor{
+	width: 80% !important;
+}
+
+section article img.audicion{
+	width: 60% !important;
+}
+section article img.Hipertension{
+	width: 60% !important;
+}
+
+.separator{
+	width:100%;
+	min-height: 6px;
+	background: url(../images/separator.png) no-repeat scroll 0 0 / 100%; 
+}
+
+section article .list .item{
+	text-align: left;
+}
+
+section article .list .item  img.item-image{
+	display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+}
+
+section article .list .item .item-text{
+	display: inline-block;
+    vertical-align: middle;
+    width: 68%;
+}
+
+.red{
+	font-family: "Calibri-Bold";
+	color: #E04657;
+	text-transform: uppercase;
+}
+
+.green{
+	font-family: "Calibri-Bold";
+	color: #1FAE96;
+	text-transform: uppercase;
+}
+
+.table{
+	width:100%;
+}
+
+
+article.table{
+	margin: 0;
+	padding: 0;
+}
+
+.table .table-item.cabecera .first-col {
+	font-family: Calibri-Bold;
+	font-size: 1.0em;
+	color: #FFFFFF;
+	letter-spacing: 0.93px;
+	line-height: 22px;
+	text-transform: uppercase;
+	background: #404547;
+    display: inline-block;
+    width:28%;
+    margin-right: 2%;
+	line-height: 30px;
+} 
+
+.table .table-item.cabecera .second-col {
+	font-family: Calibri-Bold;
+	font-size: 1.0em;
+	color: #FFFFFF;
+	letter-spacing: 0.93px;
+	line-height: 22px;
+	text-transform: uppercase;
+	background: #85CAC4;
+    width:65%;
+    padding-left:5%;
+    text-align: center;
+    display: inline-block;
+    line-height: 30px;
+} 
+ 
+.table .table-item .first-col {
+    background: #EEF1F0;
+    display: inline-block;
+    width: 28%;
+    margin-right: 2%;
+	font-family: "Calibri-Regular";
+	font-size: 0.8em;
+	line-height: 25px;
+	color: #000000;
+}
+
+.table .table-item .second-col {
+    background: #E4F0EF;
+    width: 65%;
+    text-align: left;
+    display: inline-block;
+    font-family: "Calibri-Regular";
+    font-size: 0.8em;
+}

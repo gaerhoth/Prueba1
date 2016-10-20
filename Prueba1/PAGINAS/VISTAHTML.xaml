@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="Prueba1.VISTAHTML"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Prueba1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <SolidColorBrush Color="DarkGray" Opacity=".5" x:Key="fondo"/>
+        <SolidColorBrush Color="#FF01B0A8" x:Key="Colapp"></SolidColorBrush>
+</Page.Resources>
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+
+
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Name="titulo" Text="Recomendaciones" FontWeight="SemiBold"  Foreground="{StaticResource Colapp}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Button Grid.Row="0" Grid.Column="0" x:Name="Atras" HorizontalAlignment="Stretch" Background="Transparent">
+            <Image x:Name="IMB" Source="ms-appx:///Assets/atras.png"></Image>
+        </Button>
+
+        <ScrollViewer Grid.Row="1" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Hidden">
+            <WebView x:Name="WV" >
+                
+            </WebView>
+        </ScrollViewer>
+            
+            
+            
+            
+    </Grid>
+</Page>

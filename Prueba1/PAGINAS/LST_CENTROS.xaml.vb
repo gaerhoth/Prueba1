@@ -65,6 +65,14 @@ Public NotInheritable Class LST_CENTROS
         CMB_Provincias.Items.Insert(49, "Zaragoza")
         CMB_Provincias.Items.Insert(50, "Ceuta")
         CMB_Provincias.Items.Insert(51, "Melilla")
+
+
+        For i = 0 To 10
+            Me.LS_CENTROS.Items.Add(New CLASECENTROS With
+                      {.CNT = "1 " & i.ToString
+                                            })
+        Next
+
     End Sub
 
     Private Sub ToMap_Click(sender As Object, e As RoutedEventArgs) Handles ToMap.Click

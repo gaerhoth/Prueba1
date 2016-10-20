@@ -99,6 +99,18 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <None Include="Assets\Windows_7_Product_Guide.pdf" />
     <None Include="My Project\ServiceReferences.Designer.ClientConfig" />
+    <None Include="PAGINAS\HTML\fonts\calibri.eot" />
+    <Content Include="PAGINAS\HTML\fonts\calibri.otf" />
+    <Content Include="PAGINAS\HTML\fonts\calibri.ttf" />
+    <None Include="PAGINAS\HTML\fonts\calibri.woff" />
+    <None Include="PAGINAS\HTML\fonts\calibrib.eot" />
+    <Content Include="PAGINAS\HTML\fonts\calibrib.otf" />
+    <Content Include="PAGINAS\HTML\fonts\calibrib.ttf" />
+    <None Include="PAGINAS\HTML\fonts\calibrib.woff" />
+    <None Include="PAGINAS\HTML\fonts\calibril.eot" />
+    <Content Include="PAGINAS\HTML\fonts\calibril.otf" />
+    <Content Include="PAGINAS\HTML\fonts\calibril.ttf" />
+    <None Include="PAGINAS\HTML\fonts\calibril.woff" />
     <None Include="project.json" />
     <None Include="Service References\WS_SEGURIDAD_MANTENIMIENTO\Prueba1.WS_SEGURIDAD_MANTENIMIENTO.DesencriptarPasswordResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -695,6 +707,9 @@
     <Compile Include="PAGINAS\UNETE3.xaml.vb">
       <DependentUpon>UNETE3.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PAGINAS\VISTAHTML.xaml.vb">
+      <DependentUpon>VISTAHTML.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Service References\WS_SEGURIDAD_MANTENIMIENTO\Reference.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -832,6 +847,21 @@
     <Content Include="Assets\welcome_step_two.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="My Project\Default.rd.xml" />
+    <Content Include="PAGINAS\HTML\css\EstilosHTML.css" />
+    <Content Include="PAGINAS\HTML\fonts\calibri.svg" />
+    <Content Include="PAGINAS\HTML\fonts\calibrib.svg" />
+    <Content Include="PAGINAS\HTML\fonts\calibril.svg" />
+    <Content Include="PAGINAS\HTML\images\bg-alert.png" />
+    <Content Include="PAGINAS\HTML\images\bg-bad.png" />
+    <Content Include="PAGINAS\HTML\images\bg-good.png" />
+    <Content Include="PAGINAS\HTML\images\bg-medium.png" />
+    <Content Include="PAGINAS\HTML\images\bg-red.png" />
+    <Content Include="PAGINAS\HTML\images\bg.png" />
+    <Content Include="PAGINAS\HTML\images\darkred_bg.png" />
+    <Content Include="PAGINAS\HTML\images\dark_bg.png" />
+    <Content Include="PAGINAS\HTML\images\mediumred_bg.png" />
+    <Content Include="PAGINAS\HTML\images\separator.png" />
+    <Content Include="PAGINAS\HTML\PAG_HTML.html" />
     <None Include="Service References\WS_SPFM_PRODUCCION\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
@@ -1031,6 +1061,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PAGINAS\UNETE3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\VISTAHTML.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,0 +1,459 @@
+﻿<!DOCTYPE html>
+
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+     <link rel="stylesheet" href="../css/EstilosHTML.css" type="text/css" />
+  
+  <!--  <style>
+   /* ++++++++++  Fuentes  ++++++++++ */
+
+@font-face {
+	font-family: 'Calibri-Regular';
+	src: url('fonts/calibri.eot');
+	src: local('☺'), url('../fonts/calibri.woff') format('woff'),
+					 url('../fonts/calibri.ttf') format('truetype'), 
+					 url('../fonts/calibri.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Calibri-Bold';
+	src: url('fonts/calibrib.eot');
+	src: local('☺'), url('../fonts/calibrib.woff') format('woff'), 
+					 url('../fonts/calibrib.ttf') format('truetype'), 
+					 url('../fonts/calibrib.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Calibri-Light';
+	src: url('fonts/calibril.eot');
+	src: local('☺'), url('../fonts/calibril.woff') format('woff'), 
+					 url('../fonts/calibril.ttf') format('truetype'), 
+					 url('../fonts/calibril.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ++++++++++  Normalizado Css  ++++++++++ */
+
+body{
+	width:100%;
+	margin: 0px;
+  
+}
+
+h1{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+}
+
+p{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.lowerc{
+	text-transform: lowercase;
+}
+.initicalc{
+	text-transform: initial;
+}
+
+/* ++++++++++  Cuerpo Css  ++++++++++ */
+
+header {
+	background: url(../images/dark_bg.png); 
+	padding: 10% 3%;
+    text-align: center;
+    border-bottom: 10px solid #21d2be;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+}
+
+header h1{
+	color: #ffffff;
+    font-family: "Calibri-Regular";
+    font-size: 1.2em;
+    letter-spacing: 0;
+    line-height: 25px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+section h1{
+	background: url(../images/bg.png);
+	background-size: 100% 100%;
+	color: #ffffff;
+    font-family: "Calibri-Light";
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10% 3%;
+}
+
+.espacio
+{
+	margin-top: 30px;
+}
+
+.green
+{
+	color: #1fae96;
+}
+
+.red
+{
+	color: #e04657;
+}
+
+section article.darkred{
+	background: url(../images/darkred_bg.png); 
+}
+
+section article p.darkred{
+	color: #fff !important;
+}
+
+section article.mediumred, section article.mediumred img{
+    padding: 0;
+    max-width: 100%;
+}
+
+.minuscula
+{
+	text-transform: lowercase !important;
+}
+
+section article.wine{
+	background: #70363C;
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align: center;
+}
+
+section article.varices p {
+	text-align: center !important;
+}
+
+section article.varices p:last-child {
+	font-size: 1.2em;
+}
+
+section article.wine p{
+	color: #ffffff;
+}
+
+section.alert h1{
+	background: url(../images/bg-alert.png);
+	background-size: 100% 100%;
+	color: #ffffff;
+    font-family: "Calibri-Light";
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10% 3%;
+}
+
+section .title{
+	background: url(../images/dark_bg.png); 
+	padding: inherit;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .title h1{
+	color: #ffffff;
+    font-family: "Calibri-Regular";
+    font-size: 1.2em;
+    letter-spacing: 0;
+    line-height: 0;
+    margin: 0;
+    text-transform: uppercase;
+    background: none;
+}
+
+section .good h1{
+	background: url(../images/bg-good.png);
+	background-size: 100% 100%;
+	color: #ffffff;
+    font-family: "Calibri-Light";
+    font-size: 1em;
+    line-height: 20px;
+    padding: 10% 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .medium h1{
+	background: url(../images/bg-medium.png);
+	background-size: 100% 100%;
+	color: #ffffff;
+    font-family: "Calibri-Light";
+    font-size: 1em;
+    line-height: 20px;
+    padding: 10% 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .bad h1{
+	background: url(../images/bg-bad.png);
+	background-size: 100% 100%;
+	color: #ffffff;
+    font-family: "Calibri-Light";
+    font-size: 1em;
+    line-height: 20px;
+    padding: 10% 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .comments h1{
+	background: #ffffff;
+	background-size: 100% 100%;
+	color: #404547;
+    font-family: "Calibri-Bold";
+    font-size: 1.2em;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+section .comments{
+    text-align: center;
+    font-family: "Calibri-Light";
+    padding: 10% 5%;
+}
+
+section article.red{
+	background: #FA7987;
+	color: #ffffff;
+    font-family: "Calibri-Light";
+    font-size: 1em;
+    line-height: 20px;
+    padding: 10% 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section article.green{
+	background: #21D2BE;
+	color: #ffffff;
+    font-family: "Calibri-Light";
+    font-size: 1em;
+    line-height: 20px;
+    padding: 10% 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section.red h1{
+	background: url(../images/bg-red.png);
+	background-size: 100% 100%;
+	color: #ffffff;
+    font-family: "Calibri-Light";
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10% 3%;
+}
+
+section article{
+	background: #ffffff;
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align: center;
+}
+
+section article.dark{
+	background: url(../images/dark_bg.png); 
+}
+
+section.fondoclaro article, section.fondoclaro {
+	background: #e4f0ef; 
+	text-align: center;
+}
+
+section.fondoclaro article p {
+	text-align: left;
+	padding-top: 0;
+}
+
+section.fondoclaro article.dark{
+	background: #404547; 
+	margin-bottom: 5%;
+}
+
+section.fondoclaro article.dark, section.fondoclaro article.dark p, section.fondoclaro p{
+	text-align: center;
+}
+
+section article p{
+	color: #404547;
+    font-family: "Calibri-Regular";
+    font-size: 0.9em;
+    line-height: 20px;
+    text-align: justify;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+section article.dark p{
+	font-family: "Calibri-Regular";
+    font-size: 0.9em;
+    line-height: 20px;
+    text-align: justify;
+    color: #FFFFFF;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+section article img{
+	width: 100%;
+	height: auto;
+	margin:auto;
+	max-width: 500px;
+	padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+section article .varices img{
+	padding-bottom: 0;
+    padding-top: 0;
+}
+
+section article img.colesterol{
+	width: 35% !important;
+}
+
+section article img.conductor{
+	width: 80% !important;
+}
+
+section article img.audicion{
+	width: 60% !important;
+}
+section article img.Hipertension{
+	width: 60% !important;
+}
+
+.separator{
+	width:100%;
+	min-height: 6px;
+	background: url(../images/separator.png) no-repeat scroll 0 0 / 100%; 
+}
+
+section article .list .item{
+	text-align: left;
+}
+
+section article .list .item  img.item-image{
+	display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+}
+
+section article .list .item .item-text{
+	display: inline-block;
+    vertical-align: middle;
+    width: 68%;
+}
+
+.red{
+	font-family: "Calibri-Bold";
+	color: #E04657;
+	text-transform: uppercase;
+}
+
+.green{
+	font-family: "Calibri-Bold";
+	color: #1FAE96;
+	text-transform: uppercase;
+}
+
+.table{
+	width:100%;
+}
+
+
+article.table{
+	margin: 0;
+	padding: 0;
+}
+
+.table .table-item.cabecera .first-col {
+	font-family: Calibri-Bold;
+	font-size: 1.0em;
+	color: #FFFFFF;
+	letter-spacing: 0.93px;
+	line-height: 22px;
+	text-transform: uppercase;
+	background: #404547;
+    display: inline-block;
+    width:28%;
+    margin-right: 2%;
+	line-height: 30px;
+} 
+
+.table .table-item.cabecera .second-col {
+	font-family: Calibri-Bold;
+	font-size: 1.0em;
+	color: #FFFFFF;
+	letter-spacing: 0.93px;
+	line-height: 22px;
+	text-transform: uppercase;
+	background: #85CAC4;
+    width:65%;
+    padding-left:5%;
+    text-align: center;
+    display: inline-block;
+    line-height: 30px;
+} 
+ 
+.table .table-item .first-col {
+    background: #EEF1F0;
+    display: inline-block;
+    width: 28%;
+    margin-right: 2%;
+	font-family: "Calibri-Regular";
+	font-size: 0.8em;
+	line-height: 25px;
+	color: #000000;
+}
+
+.table .table-item .second-col {
+    background: #E4F0EF;
+    width: 65%;
+    text-align: left;
+    display: inline-block;
+    font-family: "Calibri-Regular";
+    font-size: 0.8em;
+}
+
+    
+    </style> -->
+
+  
+    <title></title>
+        
+</head>
+
+ <!--  <header><h1 class="initicalc">MANTÉN LIMPIAS TUS ARTERIAS</h1></header><section><article><img src="http://213.0.19.26/Repositorio/documentos/WAH/IMAGENES_WAH/Cardio_shutterstock_147231050_132x132.png" /><p>El aumento de las concentraciones plasmáticas de colesterol por encima de niveles normales   (200 mg/dl) mantiene preocupada a buena parte de la sociedad.  Un elevado porcentaje de la población española concretamente, mas del 20% mayor de 18 años, presenta un nivel de colesterol superior a 250 mg/dl (valor excesivo) según estudio de la Sociedad Española de Cardiológia. La Hipercolesterolemia y Dislipemias son enfermedades que no duelen y la Ateroesclerosis, derivada de ellas, una enfermedad silenciosa, progresiva y grave. Las dietas son un factor determinante pero sin embargo hay otros factores que posibilitan el aumento de estos valores en nuestro organismo: enfermedades hepáticas, endocrinas, renales, administración de farmacos y predisposición genética.<br />Hace falta un cambio en el estilo de vida y el objetivo de esta campaña será el estudio de este índice de salud  y modificar los hábitos que nos ayuden a prevenir la enfermedad.<br /> Dirigida a todos los  trabajadores cuyos niveles de colesterol y triglicéridos, en analítícas realizadas en los reconocimientos de Vigilancia de la Salud, se sitúan por encima de sus valores normales (colesterol> 200 mgr/dl y triglicéridos>150 mgr/dl).<br />La campaña tiene una duración de tres meses.<br /><li>Realización.- Analítica  específica Perfil Colesterol que incluye los siguientes parámetros: Colesterol total, HDL colesterol, LDLcolesterol ,trigliceridos e Índice Aterogénico</li><li>Determinación de datos antropométricos: peso, talla, IMC y toma de la Tensión Arterial</li><li>El Médico realizará una Historia dirigida específicamente al riesgo en estudio (alimentación, ejercicio) y de hábitos tóxicos</li><li>Envío al trabajador de recomendaciones generales e individuales de cada paciente</li><br />A los tres meses de esta primera consulta acudirá de nuevo para repetir el mismo proceso que en el inicio con nueva Analítica, toma de datos y consulta médica haciendo un estudio comparativo con los datos iniciales. Pendiente de estos nuevos resultados se realizará las recomendaciones pertinentes en espera de poder dar por finalizado el control  </p></article></section><section><h1>OBJETIVO PRINCIPAL <br> <span class="initicalc">Disminuir</span> <span class="initicalc">nivel de Colesterol Total <200</span></h1><article></article></section><div class="detail"><div class="detail-title"><h1>OBJETIVOS ASOCIADOS</h1></div><div class="detail-subtitle"><img src="http://213.0.19.26/Repositorio/documentos/WAH/IMAGENES_WAH/Glucosa_shutterstock_291626555_132x132.png" /><p>Analítica de Colesterol, Triglicéridos y fracciones: Índice aterogénico</p></div><div class="detail-text"><p>El aumento de colesterol y/o triglicéridos  causa la formación de depósitos de grasa (conocidos como placas de ateroma) dentro de los vasos sanguíneos. Con el tiempo los vasos sanguíneos van volviéndose cada vez más estrechos y no pueden llevar el oxigeno suficiente al músculo cardiaco, provocando lo que se conoce como angina de pecho. Si se rompe una placa, puede causar un coágulo que puede bloquear el flujo sanguíneo al corazón (infarto de miocardio) o al cerebro (accidente cerebro vascular)</p></div><div class="detail-subtitle"><img src="http://213.0.19.26/Repositorio/documentos/WAH/IMAGENES_WAH/Alimentación_shutterstock_76317430 132x132 Circulo.png" /><p>Realiza dieta saludable</p></div><div class="detail-text"><p>La dieta equilibrada y un estilo de vida saludable  son el primer paso para reducir el colesterol y trigliceridos.</p></div><div class="detail-subtitle"><img src="http://213.0.19.26/Repositorio/documentos/WAH/IMAGENES_WAH/Actividad_shutterstock_188932856_132x132.png" /><p>Evita el sedentarismo</p></div><div class="detail-text"><p>La realización de ejercicio físico al menos 3-4 veces por semana es fundamental a la hora de disminuir los factores de riesgo cardiovascular. El ejercicio reduce el peso aumentando la masa muscular y descendiendo la masa grasa, disminuye y previene la hipertensión arterial, disminuye el riesgo de enfermedades coronarias, mejora la capacidad cardiorespiratoria…</div></div>-->
+    <body>
+        <header><h1>CÓMO REDUCIR EL COLESTEROL</h1></header><section><h1>RECOMENDACIONES PARA <br>PREVENIR SU APARICIÓN</h1><article><div class="list varices"><div class="item"><img class="item-image" src="http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_16.png" /><div class="item-text"><p>Evita las grasas saturadas como carnes de vaca y cerdo, manteca, queso, mantequilla, leche entera y aceite hidrogenado. Reemplaza estos alimentos por pescado, aves, productos lácteos bajos en grasa y aceite de oliva.</p><div class="separator"></div></div></div> <div class="item"><img class="item-image" src="http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_17.png" /><div class="item-text"><p>Come frutas, ya que, al contener pectina, tienen un efecto reductor del colesterol.</p><div class="separator"></div></div></div> <div class="item"><img class="item-image" src="http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_18.png" /><div class="item-text"><p>Come productos integrales.</p><div class="separator"></div></div></div> <div class="item"><img class="item-image" src="http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_19.png" /><div class="item-text"><p>Consume huevos con moderación. El huevo tiene 275 miligramos de colesterol. Sin embargo, se han realizado estudios que demuestran que un consumo de tres huevos a la semana no conlleva riesgos. También puedes eliminar la yema, que es la parte que contiene el colesterol. Por ejemplo, elabora las tortillas o huevos revueltos utilizando sólo una yema y las claras de varios huevos.</p><div class="separator"></div> </div><div class="item"><img class="item-image" src="http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_20.png" /><div class="item-text"><p>Evita las bebidas alcohólicas y carbonatadas, té, café, dulces, pan blanco y otros azúcares refinados.</p><div class="separator"></div></div></div> <div class="item"><img class="item-image" src="http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_21.png" /><div class="item-text"><p>Evita alimentos formadores de gas, como las coles, frijoles, coles de Bruselas o la coliflor.</p><div class="separator"></div></div></div> <div class="item"><img class="item-image" src="http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_22.png" /><div class="item-text"><p>Evita el sobrepeso, ya que la obesidad está vinculada con niveles altos de colesterol y triglicéridos.</p><div class="separator"></div></div></div> <div class="item"><img class="item-image" src="http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_23.png" /><div class="item-text"><p>Intenta no estar de pie durante tiempos prolongados.</p></div></div><div class="item"><img class="item-image" src="http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_24.png" /><div class="item-text"><p>Controla el estrés y la tensión. Es recomendable practicar técnicas de relajación.</p><div class="separator"></div></div></div> <div class="item"><img class="item-image" src="http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_25.png" /><div class="item-text"><p>Evita el consumo de tabaco.</p><div class="separator"></div></div></div> <div class="item"><img class="item-image" src="http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_26.png" /><div class="item-text"><p>Adopta un programa de ejercicios bajo supervisión médica y camina diariamente al aire libre de 15 a 20 minutos.</p><div class="separator"></div></div></div> <div class="item"><img class="item-image" src="http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_27.png" /><div class="item-text"><p>Si tienes un cuadro de colesterol alto, debes tratar de medirlo cada tres a cuatro meses para llevar un adecuado control.</p></div></div></div></article></section>
+    </body>
+
+
+</html>

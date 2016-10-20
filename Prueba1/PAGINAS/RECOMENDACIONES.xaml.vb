@@ -46,6 +46,10 @@ Public NotInheritable Class RECOMENDACIONES
         Me.Frame.Navigate(GetType(OBJ_CAMP), Me.BTN_CAMPA.Content)
     End Sub
 
+
+#End Region
+
+
     Private Sub RECOMENDACIONES_Loading(sender As FrameworkElement, args As Object) Handles Me.Loading
 
         For i = 0 To 10
@@ -54,7 +58,6 @@ Public NotInheritable Class RECOMENDACIONES
                                             })
         Next
     End Sub
-#End Region
 End Class
 
 
