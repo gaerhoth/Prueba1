@@ -73,27 +73,51 @@ Public NotInheritable Class VISTAHTML
         'WV.NavigateToLocalStreamUri(URL, resolver)
 #End Region
 
+        'Dim recom = "<!DOCTYPE html>
+
+        '    <html lang=""es"" xmlns=""http://www.w3.org/1999/xhtml"">
+        '    <head>
+        '        <meta charset=""utf-8"" />
+        '        <link rel=""stylesheet"" href=""ms-appx-web:///PAGINAS/HTML/css/EstilosHTML.css"" type=""text/css"" />
+        '        <title></title>
+        '    </head>
+        '    <body>
+        '      <header><h1>CÓMO REDUCIR EL COLESTEROL</h1></header><section><h1>RECOMENDACIONES PARA <br>PREVENIR SU APARICIÓN</h1><article><div class=""list varices""><div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_16.png"" /><div class=""item-text""><p>Evita las grasas saturadas como carnes de vaca y cerdo, manteca, queso, mantequilla, leche entera y aceite hidrogenado. Reemplaza estos alimentos por pescado, aves, productos lácteos bajos en grasa y aceite de oliva.</p><div class=""separator""></div></div></div> <div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_17.png"" /><div class=""item-text""><p>Come frutas, ya que, al contener pectina, tienen un efecto reductor del colesterol.</p><div class=""separator""></div></div></div> <div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_18.png"" /><div class=""item-text""><p>Come productos integrales.</p><div class=""separator""></div></div></div> <div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_19.png"" /><div class=""item-text""><p>Consume huevos con moderación. El huevo tiene 275 miligramos de colesterol. Sin embargo, se han realizado estudios que demuestran que un consumo de tres huevos a la semana no conlleva riesgos. También puedes eliminar la yema, que es la parte que contiene el colesterol. Por ejemplo, elabora las tortillas o huevos revueltos utilizando sólo una yema y las claras de varios huevos.</p><div class=""separator""></div> </div><div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_20.png"" /><div class=""item-text""><p>Evita las bebidas alcohólicas y carbonatadas, té, café, dulces, pan blanco y otros azúcares refinados.</p><div class=""separator""></div></div></div> <div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_21.png"" /><div class=""item-text""><p>Evita alimentos formadores de gas, como las coles, frijoles, coles de Bruselas o la coliflor.</p><div class=""separator""></div></div></div> <div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_22.png"" /><div class=""item-text""><p>Evita el sobrepeso, ya que la obesidad está vinculada con niveles altos de colesterol y triglicéridos.</p><div class=""separator""></div></div></div> <div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_23.png"" /><div class=""item-text""><p>Intenta no estar de pie durante tiempos prolongados.</p></div></div><div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_24.png"" /><div class=""item-text""><p>Controla el estrés y la tensión. Es recomendable practicar técnicas de relajación.</p><div class=""separator""></div></div></div> <div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_25.png"" /><div class=""item-text""><p>Evita el consumo de tabaco.</p><div class=""separator""></div></div></div> <div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_26.png"" /><div class=""item-text""><p>Adopta un programa de ejercicios bajo supervisión médica y camina diariamente al aire libre de 15 a 20 minutos.</p><div class=""separator""></div></div></div> <div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_27.png"" /><div class=""item-text""><p>Si tienes un cuadro de colesterol alto, debes tratar de medirlo cada tres a cuatro meses para llevar un adecuado control.</p></div></div></div></article></section>
+        '     </body>
+        '    </html>"
+
+
+        'Dim recom = "<!DOCTYPE html>
+
+        '    <html lang=""es"" xmlns=""http://www.w3.org/1999/xhtml"">
+        '    <head>
+        '        <meta charset=""utf-8"" />
+        '        <link rel=""stylesheet"" href=""ms-appx-web:///PAGINAS/HTML/css/EstilosHTML.css"" type=""text/css"" />
+        '        <title></title>
+        '    </head> 
+        '        " & Parametros & "
+        '    </html>"
+
         Dim recom = "<!DOCTYPE html>
 
             <html lang=""es"" xmlns=""http://www.w3.org/1999/xhtml"">
             <head>
                 <meta charset=""utf-8"" />
-                <link rel=""stylesheet"" href=""ms-appx-web:///PAGINAS/HTML/css/EstilosHTML.css"" type=""text/css"" />
+                <link rel=""stylesheet"" href=""ms-appx-web:///PAGINAS/HTML/css/styleC.css"" type=""text/css"" />
                 <title></title>
-            </head>
-            <body>
-              <header><h1>CÓMO REDUCIR EL COLESTEROL</h1></header><section><h1>RECOMENDACIONES PARA <br>PREVENIR SU APARICIÓN</h1><article><div class=""list varices""><div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_16.png"" /><div class=""item-text""><p>Evita las grasas saturadas como carnes de vaca y cerdo, manteca, queso, mantequilla, leche entera y aceite hidrogenado. Reemplaza estos alimentos por pescado, aves, productos lácteos bajos en grasa y aceite de oliva.</p><div class=""separator""></div></div></div> <div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_17.png"" /><div class=""item-text""><p>Come frutas, ya que, al contener pectina, tienen un efecto reductor del colesterol.</p><div class=""separator""></div></div></div> <div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_18.png"" /><div class=""item-text""><p>Come productos integrales.</p><div class=""separator""></div></div></div> <div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_19.png"" /><div class=""item-text""><p>Consume huevos con moderación. El huevo tiene 275 miligramos de colesterol. Sin embargo, se han realizado estudios que demuestran que un consumo de tres huevos a la semana no conlleva riesgos. También puedes eliminar la yema, que es la parte que contiene el colesterol. Por ejemplo, elabora las tortillas o huevos revueltos utilizando sólo una yema y las claras de varios huevos.</p><div class=""separator""></div> </div><div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_20.png"" /><div class=""item-text""><p>Evita las bebidas alcohólicas y carbonatadas, té, café, dulces, pan blanco y otros azúcares refinados.</p><div class=""separator""></div></div></div> <div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_21.png"" /><div class=""item-text""><p>Evita alimentos formadores de gas, como las coles, frijoles, coles de Bruselas o la coliflor.</p><div class=""separator""></div></div></div> <div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_22.png"" /><div class=""item-text""><p>Evita el sobrepeso, ya que la obesidad está vinculada con niveles altos de colesterol y triglicéridos.</p><div class=""separator""></div></div></div> <div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_23.png"" /><div class=""item-text""><p>Intenta no estar de pie durante tiempos prolongados.</p></div></div><div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_24.png"" /><div class=""item-text""><p>Controla el estrés y la tensión. Es recomendable practicar técnicas de relajación.</p><div class=""separator""></div></div></div> <div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_25.png"" /><div class=""item-text""><p>Evita el consumo de tabaco.</p><div class=""separator""></div></div></div> <div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_26.png"" /><div class=""item-text""><p>Adopta un programa de ejercicios bajo supervisión médica y camina diariamente al aire libre de 15 a 20 minutos.</p><div class=""separator""></div></div></div> <div class=""item""><img class=""item-image"" src=""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/list_27.png"" /><div class=""item-text""><p>Si tienes un cuadro de colesterol alto, debes tratar de medirlo cada tres a cuatro meses para llevar un adecuado control.</p></div></div></div></article></section>
-             </body>
+            </head> 
+                " & Parametros & "
             </html>"
+
+
+
 
         WV.NavigateToString(recom)
 
     End Sub
 
-
-
-
-
-
-
+    Private Sub Atras_Click(sender As Object, e As RoutedEventArgs) Handles Atras.Click
+        'aqui hay que pasar el id_trabajador por si acaso en este momento se ha copiado alguna nueva
+        Me.Frame.Navigate(GetType(RECOMENDACIONES))
+    End Sub
 End Class

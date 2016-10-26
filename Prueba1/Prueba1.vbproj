@@ -100,6 +100,9 @@
     <None Include="Assets\Windows_7_Product_Guide.pdf" />
     <None Include="My Project\ServiceReferences.Designer.ClientConfig" />
     <None Include="PAGINAS\HTML\fonts\calibri.eot" />
+    <Content Include="PAGINAS\HTML\css\style-mini.css" />
+    <Content Include="PAGINAS\HTML\css\style-miniC.css" />
+    <Content Include="PAGINAS\HTML\css\styleC.css" />
     <Content Include="PAGINAS\HTML\fonts\calibri.otf" />
     <Content Include="PAGINAS\HTML\fonts\calibri.ttf" />
     <None Include="PAGINAS\HTML\fonts\calibri.woff" />
@@ -598,6 +601,9 @@
     <Compile Include="PAGINAS\DET_CENTRO.xaml.vb">
       <DependentUpon>DET_CENTRO.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PAGINAS\DET_OBJETIVO.xaml.vb">
+      <DependentUpon>DET_OBJETIVO.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PAGINAS\DET_PRUEBA.xaml.vb">
       <DependentUpon>DET_PRUEBA.xaml</DependentUpon>
     </Compile>
@@ -917,6 +923,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PAGINAS\DET_CENTRO.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGINAS\DET_OBJETIVO.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

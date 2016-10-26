@@ -173,7 +173,7 @@ Public NotInheritable Class HOME
     End Sub
 
     Private Sub BTN_OBJ_Click(sender As Object, e As RoutedEventArgs) Handles BTN_OBJ.Click
-        Me.Frame.Navigate(GetType(OBJ_CAMP), Me.BTN_OBJ.Content & ",1")
+        Me.Frame.Navigate(GetType(OBJ_CAMP), Me.BTN_OBJ.Content & ";1")
     End Sub
 
     Private Sub BTN_CENTROS_Click(sender As Object, e As RoutedEventArgs) Handles BTN_CENTROS.Click
@@ -194,7 +194,7 @@ Public NotInheritable Class HOME
         Me.Frame.Navigate(GetType(PERFIL))
     End Sub
     Private Sub BTN_CAMPA_Click(sender As Object, e As RoutedEventArgs) Handles BTN_CAMPA.Click
-        Me.Frame.Navigate(GetType(OBJ_CAMP), Me.BTN_CAMPA.Content & ",2")
+        Me.Frame.Navigate(GetType(OBJ_CAMP), Me.BTN_CAMPA.Content & ";2")
     End Sub
 
 

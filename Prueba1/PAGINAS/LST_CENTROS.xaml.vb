@@ -1,4 +1,6 @@
-﻿' La plantilla de elemento Página en blanco está documentada en http://go.microsoft.com/fwlink/?LinkId=234238
+﻿Imports Prueba1.AYUDA
+Imports Prueba1.VAR_GLOBALES
+' La plantilla de elemento Página en blanco está documentada en http://go.microsoft.com/fwlink/?LinkId=234238
 
 ''' <summary>
 ''' Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
@@ -10,7 +12,55 @@ Public NotInheritable Class LST_CENTROS
         Me.Frame.Navigate(GetType(CENTROS))
     End Sub
 
+    Private Sub CMB_Provincias_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles CMB_Provincias.SelectionChanged
+        Dim l_centros As List(Of TCENTROS)
+        l_centros = conn.Query(Of TCENTROS)("SELECT * FROM TCENTROS WHERE PROVINCIA = upper('" & CMB_Provincias.SelectedItem & "')")
+        'POR_SENTIDOS = LS(0).CAN_SENTIDOS
+        'C_Sentidos = AYUDA.CreaColores(listaColores(CInt(LS(0).COD_COL_SENTIDOS) - 1).DES_COLOR)
+        LS_CENTROS.Items.Clear()
 
+        For i = 0 To l_centros.Count - 1
+
+            Dim auxL As Decimal = 0
+            Dim auxLA As Decimal = 0
+
+            If l_centros(i).latitud <> "" Then
+                auxLA = l_centros(i).latitud.ToString.Replace(".", ",")
+            Else
+                auxLA = 0
+            End If
+
+            If l_centros(i).longitud <> "" Then
+                auxL = l_centros(i).longitud.ToString.Replace(".", ",")
+            Else
+                auxL = 0
+            End If
+
+
+
+            Me.LS_CENTROS.Items.Add(New CLASECENTROS With
+                      {.CNT = l_centros(i).calle & " " & l_centros(i).numero,
+                      .DAT = l_centros(i).cod_postal & " " & l_centros(i).provincia,
+                      .IMAG = l_centros(i).des_centro,
+                      .LON = auxL,
+                      .LAT = auxLA
+                                                                  })
+        Next
+
+    End Sub
+
+    Private Sub LS_CENTROS_ItemClick(sender As Object, e As ItemClickEventArgs) Handles LS_CENTROS.ItemClick
+
+    End Sub
+
+    Private Sub LS_CENTROS_Tapped(sender As Object, e As TappedRoutedEventArgs) Handles LS_CENTROS.Tapped
+        Dim lat As Decimal
+        Dim lon As Decimal
+        lat = DirectCast(LS_CENTROS.SelectedItem, Prueba1.CLASECENTROS).LAT
+        lon = DirectCast(LS_CENTROS.SelectedItem, Prueba1.CLASECENTROS).LON
+
+        Frame.Navigate(GetType(DET_CENTRO), lat & ";" & lon)
+    End Sub
 
     Private Sub LST_CENTROS_Loading(sender As FrameworkElement, args As Object) Handles Me.Loading
         CMB_Provincias.Items.Insert(0, "Albacete")
@@ -66,11 +116,39 @@ Public NotInheritable Class LST_CENTROS
         CMB_Provincias.Items.Insert(50, "Ceuta")
         CMB_Provincias.Items.Insert(51, "Melilla")
 
+        Dim l_centros As List(Of TCENTROS)
+        l_centros = conn.Query(Of TCENTROS)("SELECT * FROM TCENTROS")
+        'POR_SENTIDOS = LS(0).CAN_SENTIDOS
+        'C_Sentidos = AYUDA.CreaColores(listaColores(CInt(LS(0).COD_COL_SENTIDOS) - 1).DES_COLOR)
 
-        For i = 0 To 10
+
+        For i = 0 To l_centros.Count - 1
+            Dim auxL As Decimal = 0
+            Dim auxLA As Decimal = 0
+
+            If l_centros(i).latitud <> "" Then
+                auxLA = l_centros(i).latitud.ToString.Replace(".", ",")
+            Else
+                auxLA = 0
+            End If
+
+            If l_centros(i).longitud <> "" Then
+                auxL = l_centros(i).longitud.ToString.Replace(".", ",")
+            Else
+                auxL = 0
+            End If
+
+
             Me.LS_CENTROS.Items.Add(New CLASECENTROS With
-                      {.CNT = "1 " & i.ToString
-                                            })
+                      {.CNT = l_centros(i).calle & " " & l_centros(i).numero,
+                      .DAT = l_centros(i).cod_postal & " " & l_centros(i).provincia,
+                      .IMAG = l_centros(i).des_centro,
+                       .LON = auxL,
+                                  .LAT = auxLA
+                                                                  })
+
+
+            ' ' .LON = If(l_centros(i).longitud = "", .LON = 0, .LON = l_centros(i).longitud),
         Next
 
     End Sub

@@ -10,35 +10,55 @@
     <Page.Resources>
         <SolidColorBrush Color="DarkGray" Opacity=".5" x:Key="fondo"/>
         <SolidColorBrush Color="#FF01B0A8" x:Key="Colapp"></SolidColorBrush>
+        
 
         <DataTemplate x:Name="Lstview" xmlns:DataType="local:CLASECENTROS">
             <Grid>
                 <Grid.RowDefinitions>
 
-                    <RowDefinition Height="65" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="25" />
 
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50"></ColumnDefinition>
+                    <ColumnDefinition Width="75"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="50"></ColumnDefinition>
 
+                    
+                    
                 </Grid.ColumnDefinitions>
-                <Image x:Name="Ima1" Grid.Row="0" Grid.Column="1"  Source="ms-appx:///Assets/atras.png" Stretch="Uniform"  Height="25" Width="25"> 
-                </Image>
 
+
+                <Ellipse Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"  Width="50" Height="50">
+                    <Ellipse.Fill>
+                        <ImageBrush x:Name="Ima1" ImageSource="{Binding IMAG}" Stretch="Uniform"  ></ImageBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+
+
+                <!--<StackPanel Orientation="Vertical">-->
                 <TextBlock x:Name="NomCentro"  Grid.Column="1" Grid.Row="0"
         			Text="{Binding CNT}" 
-        			FontSize="20"
-        			Foreground="{StaticResource Colapp}"
+        			FontSize="18"
+        			Foreground="Black"
+                    TextWrapping="Wrap"
         			HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-                <Image x:Name="Ima" Grid.Row="0" Grid.Column="1"  Source="ms-appx:///Assets/atras.png" Stretch="Uniform" RenderTransformOrigin="0.5,0.5" Height="25" Width="25">
+                    <TextBlock x:Name="DatCentro"  Grid.Column="1" Grid.Row="1"
+                               Text="{Binding DAT}"
+                               FontSize="12"
+                               Foreground="{StaticResource Colapp}"
+                               HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    
+                <!--</StackPanel>-->
+
+                <Image x:Name="Ima" Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" Source="ms-appx:///Assets/atras.png" Stretch="Uniform" RenderTransformOrigin="0.5,0.5" Height="25" Width="25">
                     <Image.RenderTransform>
                         <CompositeTransform ScaleX="-1"/>
                     </Image.RenderTransform>
                 </Image>
-                <Line  Grid.Row="0" Grid.Column="0" Stroke="LightGray"  VerticalAlignment="Bottom" StrokeThickness="1" Width="Auto" X2="1" Stretch="Fill" ></Line>
+                <Line  Grid.Row="1" Grid.ColumnSpan="3" Stroke="LightGray"  VerticalAlignment="Bottom" StrokeThickness="1" Width="Auto" X2="1" Stretch="Fill" ></Line>
 
 
 
@@ -90,6 +110,8 @@
 			VerticalAlignment="Center"
 			HorizontalAlignment="Center"
 			Style="{ThemeResource TitleTextBlockStyle}" 
+             Foreground="{StaticResource Colapp}"
+              FontWeight="SemiBold"
 			 Grid.Row="0" Grid.ColumnSpan="3"/>
 
 
@@ -109,7 +131,7 @@
                               ItemTemplate="{StaticResource Lstview}"  Visibility="Visible"  >
         </ListView>
 
-
+       
 
 
     </Grid>

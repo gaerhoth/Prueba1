@@ -60,6 +60,10 @@
     Public Shared R_IRC As WS_WAH_PRODUCCION.IRCResponse = Nothing
 
 
+
+    Public Shared OBJET As WS_WAH_PRODUCCION.DameObjetivoTrabajResponse = Nothing
+    Public Shared RECOM As WS_WAH_PRODUCCION.DameRecomendacionResponse = Nothing
+    Public Shared CAMPAÑAS As WS_WAH_PRODUCCION.DameCampañaResponse = Nothing
     Public Shared DOCS As WS_WAH_PRODUCCION.DameDocumentosResponse = Nothing
     Public Shared MAVISOS As WS_WAH_PRODUCCION.DameAvisoResponse = Nothing
     Public Shared RES_CARIDIO As WS_WAH_PRODUCCION.DameResCardiosResponse = Nothing

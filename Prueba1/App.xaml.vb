@@ -88,11 +88,11 @@ NotInheritable Class App
         End Sub
 
     Public Async Sub Iniciar(e As Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)
-        Dim rootFrame As Frame = TryCast(Window.Current.Content, Frame)
-        rootFrame.Navigate(GetType(VISTAHTML))
-        Window.Current.Activate()
+        'Dim rootFrame As Frame = TryCast(Window.Current.Content, Frame)
+        'rootFrame.Navigate(GetType(OBJ_CAMP))
+        'Window.Current.Activate()
 
-        'Await CreaBBDD(e)
+        Await CreaBBDD(e)
     End Sub
     Public Async Function CreaBBDD(e As Windows.ApplicationModel.Activation.LaunchActivatedEventArgs) As Task
 
@@ -110,6 +110,7 @@ NotInheritable Class App
         Encoding.RegisterProvider(CodePagesEncodingProvider.Instance)
         Encoding.GetEncoding("UTF-8")
 
+        conn.CreateTable(Of TCAMPANAS)()
 
         conn.CreateTable(Of TDOCUMENTOS2)()
         conn.CreateTable(Of TAVISOS)()

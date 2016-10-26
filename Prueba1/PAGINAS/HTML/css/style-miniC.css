@@ -1,0 +1,14 @@
+.main-list .list-group.onrun .item .item-text p {
+    display: none;
+}
+
+.main-list .list-group.onrun .item img.item-image {
+    width: 20%;
+}
+
+.main-list .list-group.onrun .item .item-text h1 {
+    font-size: 1em;
+}
+.main-list .list-group.onrun .item .item-text {
+    width: 70%;
+}

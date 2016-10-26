@@ -29,9 +29,16 @@ Public NotInheritable Class DET_CENTRO
         mapa.MapElements.Add(mapicon)
 
 
+
         mapicon.NormalizedAnchorPoint = New Point(0.5, 1.0)
 
         mapicon.ZIndex = 0
+
+        mapa.Center = New Geopoint(New BasicGeoposition() With {
+    .Latitude = Parametros(0),
+    .Longitude = Parametros(1)
+})
+        'mapa.ZoomLevel = 9
 
     End Sub
 

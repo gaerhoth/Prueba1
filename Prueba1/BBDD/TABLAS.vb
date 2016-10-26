@@ -589,6 +589,19 @@ Public Class TAVISOS
 
 End Class
 
+
+Public Class TCAMPANAS
+
+    Public Property COD_CAMPANA As String
+    Public Property COD_ESTADO_CAMPANA As String
+    Public Property FEC_FIN_CAMPANA As String
+    Public Property IND_DESTACADO As String
+    Public Property DES_HTML_MINIATURA As String
+    Public Property DES_HTML As String
+
+End Class
+
+
 #End Region
 
 

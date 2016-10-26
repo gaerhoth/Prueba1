@@ -28,6 +28,7 @@
         			Text="{Binding TIT}" 
         			FontSize="20"
         			Foreground="{StaticResource Colapp}"
+                    TextWrapping="Wrap"
         			HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
                     <Image x:Name="Ima" Grid.Row="0" Grid.Column="1"  Source="ms-appx:///Assets/atras.png" Stretch="Uniform" RenderTransformOrigin="0.5,0.5" Height="25" Width="25">

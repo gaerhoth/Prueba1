@@ -10,8 +10,8 @@
     <Page.Resources>
         <SolidColorBrush Color="DarkGray" Opacity=".5" x:Key="fondo"/>
         <SolidColorBrush Color="#FF01B0A8" x:Key="Colapp"></SolidColorBrush>
-</Page.Resources>
-        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
@@ -30,12 +30,12 @@
 
         <ScrollViewer Grid.Row="1" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Hidden">
             <WebView x:Name="WV" >
-                
+
             </WebView>
         </ScrollViewer>
-            
-            
-            
-            
+
+
+
+
     </Grid>
 </Page>

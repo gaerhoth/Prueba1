@@ -1,10 +1,13 @@
-﻿' La plantilla de elemento Página en blanco está documentada en http://go.microsoft.com/fwlink/?LinkId=234238
+﻿Imports Prueba1.AYUDA
+Imports Prueba1.VAR_GLOBALES
+' La plantilla de elemento Página en blanco está documentada en http://go.microsoft.com/fwlink/?LinkId=234238
 
 ''' <summary>
 ''' Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
 ''' </summary>
 Public NotInheritable Class RECOMENDACIONES
     Inherits Page
+
 
 
 #Region "Menu"
@@ -50,13 +53,25 @@ Public NotInheritable Class RECOMENDACIONES
 #End Region
 
 
-    Private Sub RECOMENDACIONES_Loading(sender As FrameworkElement, args As Object) Handles Me.Loading
+    Private Async Sub RECOMENDACIONES_Loading(sender As FrameworkElement, args As Object) Handles Me.Loading
 
-        For i = 0 To 10
+
+        Dim LS_RECOM As List(Of TRECOMENDACIONES)
+        RECOM = Await C_WAH.DameRecomendacionAsync(48)
+        AYUDA.LimpiarJson(RECOM.Body.DameRecomendacionResult, "DameRecomendacion", "TRECOMENDACIONES")
+        LS_RECOM = conn.Query(Of TRECOMENDACIONES)("SELECT * FROM TRECOMENDACIONES")
+
+
+        For i = 0 To LS_RECOM.Count - 1
             Me.PL.Items.Add(New CLASERECOM With
-                      {.TIT = "1 " & i.ToString
+                      {.TIT = LS_RECOM(i).DES_TIPO_RECOM,
+                      .HTML = LS_RECOM(i).DES_PAGINA_ESTANDAR
                                             })
         Next
+    End Sub
+
+    Private Sub PL_Tapped(sender As Object, e As TappedRoutedEventArgs) Handles PL.Tapped
+        Frame.Navigate(GetType(VISTAHTML), DirectCast(PL.SelectedItem, Prueba1.CLASERECOM).HTML)
     End Sub
 End Class
 

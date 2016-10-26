@@ -168,7 +168,7 @@ Public NotInheritable Class CENTROS
     End Function
 
     Private Sub BTNlstCentros_Click(sender As Object, e As RoutedEventArgs) Handles BTNlstCentros.Click
-        Me.Frame.Navigate(GetType(LST_CENTROS))
+        Me.Frame.Navigate(GetType(LST_CENTROS), "")
     End Sub
 
     'Public Function hijos(Nombre As String, lon As Decimal, lat As Decimal) As List(Of PointOfInterest)

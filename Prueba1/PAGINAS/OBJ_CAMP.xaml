@@ -10,6 +10,7 @@
 
     <Page.Resources>
         <SolidColorBrush Color="DarkGray" Opacity=".5" x:Key="fondo"/>
+        <SolidColorBrush Color="#FF01B0A8" x:Key="Colapp"></SolidColorBrush>
 
         <DataTemplate  x:Key="HeaderTemplate1" >
             <Grid Height="36" Background="Transparent" >
@@ -78,62 +79,34 @@
         </DataTemplate>
 
 
-        <DataTemplate x:Name="Lstview" x:DataType="local:CIRCO2">
-            <Grid Width="Auto">
+        <DataTemplate x:Name="Lstview" xmlns:DataType="local:CLASEOBJCAMP">
+            <Grid>
                 <Grid.RowDefinitions>
-                    <!--<RowDefinition Height="75"/>-->
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*"/>
-
-
-
-                </Grid.RowDefinitions>
+                 <RowDefinition Height="75" />
+                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-      
                 </Grid.ColumnDefinitions>
 
-                <!--<Grid Grid.ColumnSpan="2" Grid.Row="0">
-                    <Image x:Name="d" Source="ms-appx:///Assets/general_top_bar.png"></Image>
-                    <TextBlock x:Name="NomTabla1"  
-        			Text="En Curso" 
-        			FontSize="20"
+
+                <Ellipse Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"  Width="50" Height="50">
+                <Ellipse.Fill>
+                    <ImageBrush x:Name="Ima1" ImageSource="{Binding IMAG}" Stretch="Uniform"  ></ImageBrush>
+                </Ellipse.Fill>
+                </Ellipse>
+
+                <TextBlock x:Name="NomCentro"  Grid.Column="1" Grid.Row="0"
+        			Text="{Binding TEXTO}" 
+        			FontSize="18"
         			Foreground="Black"
-        			HorizontalAlignment="Left" VerticalAlignment="Center"
-                     Margin="0,5"     >
-                        
-                    </TextBlock>
-                </Grid>-->
-
-
-                <!--<TextBlock x:Name="NomTabla"  Grid.Column="0" Grid.Row="0"
-        			Text="En Curso" 
-        			FontSize="20"
-        			Foreground="Black"
-        			HorizontalAlignment="Left" VerticalAlignment="Center"/>-->
-
-
-
-                <!--<TextBlock x:Name="DesPrue"  Grid.Column="0" Grid.Row="2"
-        			Text="{Binding NP}" 
-        			FontSize="20"
-        			Foreground="Black"
+                    TextWrapping="Wrap"
         			HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-                <TextBlock x:Name="ValPrue" Grid.Column="1" Grid.Row="2"
-        			Text="{Binding NP}" 
-                    TextWrapping="Wrap"      			
-        			FontSize="20"
-        			Foreground="Black"
-        			HorizontalAlignment="Right" VerticalAlignment="Center"/>
 
-                <Image x:Name="mas" Source="ms-appx:///Assets/general_new_icon.png" HorizontalAlignment="Right" VerticalAlignment="Center" Height="25" Width="25" Grid.Column="2"></Image>-->
 
-                <!--<Line Grid.Row="2" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>-->
+                <Line  Grid.Row="0"  Grid.ColumnSpan="2" Stroke="LightGray"  VerticalAlignment="Bottom" StrokeThickness="1" Width="Auto" X2="1" Stretch="Fill" ></Line>
             </Grid>
-
-
 
 
         </DataTemplate>
@@ -143,64 +116,19 @@
 
 
 
-        <DataTemplate x:Name="Lstview2" x:DataType="local:CIRCO2">
-            <Grid Width="Auto">
+        <DataTemplate x:Name="Lstview2" x:DataType="local:CLASEOBJCAMP">
+            <Grid>
                 <Grid.RowDefinitions>
-                    <!--<RowDefinition Height="75"/>-->
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-
-
-
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-
                 </Grid.ColumnDefinitions>
 
 
-                <!--<Grid Grid.ColumnSpan="2" Grid.Row="0">
-                <Image x:Name="d" Source="ms-appx:///Assets/general_top_bar.png"></Image>
-                    <TextBlock x:Name="NomTabla"  
-        			Text="Disponibles" 
-        			FontSize="20"
-        			Foreground="Black"
-        			HorizontalAlignment="Left" VerticalAlignment="Center"
-                               Margin="0,5">
-                    </TextBlock>
-                </Grid>-->
-                
-                
-                <!--<Border Background="Aquamarine" Grid.ColumnSpan="2" Grid.Row="0">
+                <WebView x:Name="WV2" Grid.Row="0" Source="{Binding MHTML}"></WebView>
+                <Line  Grid.Row="0"  Stroke="LightGray"  VerticalAlignment="Bottom" StrokeThickness="1" Width="Auto" X2="1" Stretch="Fill" ></Line>
 
-                    <TextBlock x:Name="NomTabla"  
-        			Text="Disponibles" 
-        			FontSize="20"
-        			Foreground="Black"
-        			HorizontalAlignment="Left" VerticalAlignment="Center">
-                    </TextBlock>
-                    
-                    </Border>-->
-                
-
-
-                <!--<TextBlock x:Name="DesPrue"  Grid.Column="0" Grid.Row="2"
-        			Text="{Binding NP}" 
-        			FontSize="20"
-        			Foreground="Black"
-        			HorizontalAlignment="Left" VerticalAlignment="Center"/>
-
-                <TextBlock x:Name="ValPrue" Grid.Column="1" Grid.Row="2"
-        			Text="{Binding NP}" 
-                    TextWrapping="Wrap"      			
-        			FontSize="20"
-        			Foreground="Black"
-        			HorizontalAlignment="Right" VerticalAlignment="Center"/>
-
-                <Image x:Name="mas" Source="ms-appx:///Assets/general_new_icon.png" HorizontalAlignment="Right" VerticalAlignment="Center" Height="25" Width="25" Grid.Column="2"></Image>-->
-
-                <!--<Line Grid.Row="2" Grid.ColumnSpan="3" Stroke="Gray" VerticalAlignment="Bottom" StrokeThickness="1" X1="500"  ></Line>-->
             </Grid>
         </DataTemplate>
 
@@ -274,8 +202,8 @@
 
 
                             <RowDefinition Height="Auto"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
            
 
         </Grid.RowDefinitions>

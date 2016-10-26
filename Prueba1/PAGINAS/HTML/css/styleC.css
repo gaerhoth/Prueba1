@@ -1,0 +1,607 @@
+
+body{
+    width:100%;
+    margin: 0px;
+    font-size: 1.2em;
+}
+
+h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.lowerc{
+    text-transform: lowercase;
+}
+.initicalc{
+    text-transform: initial;
+}
+
+/* ++++++++++  Cuerpo Css  ++++++++++ */
+
+header {
+    background: url(bg-darkC.png);
+    padding: 10% 3%;
+    text-align: center;
+    border-bottom: 10px solid #21d2be;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+}
+
+header h1{
+    color: #ffffff;
+    font-family: "Calibri";
+    font-size: 1.2em;
+    letter-spacing: 0;
+    line-height: 25px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+section h1{
+    background: url(bgC.png);
+    background-size: 100% 100%;
+    color: #ffffff;
+    font-family: "Calibri";
+    font-weight: 500;
+    font-size: 1.2em;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10% 3%;
+}
+
+section article.wine{
+    background: #70363C;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+}
+
+section article.wine p{
+    color: #ffffff;
+}
+
+section.alert h1{
+    background: url(bg-alert.png);
+    background-size: 100% 100%;
+    color: #ffffff;
+    font-family: "Calibri";
+    font-weight: 500;
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10% 3%;
+}
+
+section .title{
+    background: url(bg-darkC.png);
+    padding: inherit;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .title h1{
+    color: #ffffff;
+    font-family: "Calibri";
+    font-size: 1.2em;
+    letter-spacing: 0;
+    line-height: 0;
+    margin: 0;
+    text-transform: uppercase;
+    background: none;
+}
+
+section .good h1{
+    background: url(bg-good.png);
+    background-size: 100% 100%;
+    color: #ffffff;
+    font-family: "Calibri";
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 20px;
+    padding: 10% 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .medium h1{
+    background: url(bg-medium.png);
+    background-size: 100% 100%;
+    color: #ffffff;
+    font-family: "Calibri";
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 20px;
+    padding: 10% 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .bad h1{
+    background: url(bg-bad.png);
+    background-size: 100% 100%;
+    color: #ffffff;
+    font-family: "Calibri";
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 20px;
+    padding: 10% 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .comments h1{
+    background: #ffffff;
+    background-size: 100% 100%;
+    color: #404547;
+    font-family: "Calibri";
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .comments{
+    text-align: center;
+    font-family: "Calibri";
+    font-weight: 500;
+    padding: 10% 5%;
+}
+
+section article.red{
+    background: #FA7987;
+    color: #ffffff;
+    font-family: "Calibri";
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 20px;
+    padding: 10% 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section article.green{
+    background: #21D2BE;
+    color: #ffffff;
+    font-family: "Calibri";
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 20px;
+    padding: 10% 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section.red h1{
+    background: url(bg-red.png);
+    background-size: 100% 100%;
+    color: #ffffff;
+    font-family: "Calibri";
+    font-weight: 500;
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10% 3%;
+}
+
+section article{
+    background: #ffffff;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+}
+
+section article.dark{
+    background: url(bg-darkC.png);
+}
+
+section article p{
+    color: #404547;
+    font-family: "Calibri";
+    font-size: 0.9em;
+    line-height: 20px;
+    text-align: justify;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+section article.dark p{
+    font-family: "Calibri";
+    font-size: 0.9em;
+    line-height: 20px;
+    text-align: justify;
+    color: #FFFFFF;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+section article p, section article ul, section article li{
+    color: #404547;
+    font-family: "Cambria-Regular";
+    font-size: 0.9em;
+    line-height: 20px;
+    text-align: justify;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+section article ul{
+    padding-top: 0;
+    margin: 0;
+}
+
+section article li{
+    padding-bottom: 0;
+    padding-top: 0;
+    margin: 0;
+}
+
+section article img{
+    width: 100%;
+    height: auto;
+    margin:auto;
+    max-width: 500px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.separator{
+    width:100%;
+    min-height: 6px;
+    background: url(separatorC.png) no-repeat scroll 0 0 / 100% auto;
+}
+
+section article .list .item{
+    text-align: left;
+}
+
+section article .list .item  img.item-image{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+}
+
+section article .list .item .item-text{
+    display: inline-block;
+    vertical-align: middle;
+    width: 68%;
+}
+
+.main-list .item{
+    text-align: left;
+    padding: 5%;
+}
+
+.main-list .item.objetivo{
+    border-bottom: none;
+    padding-left:0px;
+}
+
+.main-list .list-group.onrun .item .item-text h1{
+    color: #404547;
+    font-family: "Calibri";
+    font-size: 0.85em;
+    line-height: 15px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.main-list .list-group.onrun .item .item-text p{
+    color: #404547;
+    font-family: "Calibri";
+    font-size: 0.85em;
+    line-height: 15px;
+    padding: 5px 0 0;
+    text-transform: initial;
+    text-align: left;
+}
+
+.main-list .list-group.onrun .item  img.item-image{
+    display: inline-block;
+    vertical-align: middle;
+    width: 35%;
+}
+
+.main-list .list-group.onrun .item .item-text{
+    display: inline-block;
+    vertical-align: middle;
+    width: 55%;
+    padding-left: 5%;
+}
+
+.main-list .list-group.offrun .item  img.item-image{
+    display: inline-block;
+    vertical-align: middle;
+    width: 24%;
+}
+
+.main-list .list-group.offrun .item .item-text{
+    display: inline-block;
+    vertical-align: middle;
+    width: 70%;
+}
+
+.main-list .list-group.offrun .item .item-text p{
+    text-transform: uppercase;
+    font-family: "Calibri";
+    font-weight: bold;
+    font-size: 1.0em;
+    color: #404547;
+    line-height: 15px;
+    text-align: left;
+    padding-left: 5%;
+}
+
+.main-list .list-group .title-list-group{
+    background: #404547;
+    padding:2% 5%;
+}
+
+.main-list .list-group .title-list-group.on{
+    background: url(bg-lis-tit-1.png);
+    background-size: 100% 100%;
+}
+
+.main-list .list-group .title-list-group.off{
+    background: url(bg-lis-tit-2.png);
+    background-size: 100% 100%;
+}
+
+.main-list .list-group .title-list-group h1{
+    color: #ffffff;
+    font-family: "Calibri";
+    font-size: 0.9em;
+    letter-spacing: 0.93px;
+    line-height: 15px;
+}
+
+.red{
+    font-family: "Calibri";
+    font-weight: bold;
+    color: #E04657;
+    text-transform: uppercase;
+}
+
+.green{
+    font-family: "Calibri";
+    font-weight: bold;
+    color: #1FAE96;
+    text-transform: uppercase;
+}
+
+.table{
+    width:100%;
+    margin-bottom: 5%;
+}
+
+.table .table-item.cabecera .first-col {
+    font-family: "Calibri";
+    font-weight: bold;
+    font-size: 1.0em;
+    color: #FFFFFF;
+    letter-spacing: 0.93px;
+    line-height: 22px;
+    text-transform: uppercase;
+    background: #404547;
+    display: inline-block;
+    width:28%;
+    margin-right: 2%;
+    line-height: 30px;
+}
+
+.table .table-item.cabecera .second-col {
+    font-family: "Calibri";
+    font-weight: bold;
+    font-size: 1.0em;
+    color: #FFFFFF;
+    letter-spacing: 0.93px;
+    line-height: 22px;
+    text-transform: uppercase;
+    background: #85CAC4;
+    width:65%;
+    padding-left:5%;
+    text-align: center;
+    display: inline-block;
+    line-height: 30px;
+}
+
+.table .table-item .first-col {
+    background: #EEF1F0;
+    display: inline-block;
+    width: 28%;
+    margin-right: 2%;
+    font-family: "Calibri";
+    font-size: 0.8em;
+    line-height: 25px;
+    color: #000000;
+}
+
+.table .table-item .second-col {
+    background: #E4F0EF;
+    width:65%;
+    text-align: left;
+    display: inline-block;
+    font-family: "Calibri";
+    font-size: 0.8em;
+    line-height: 25px;
+    color: #000000;
+    padding-left: 5%;
+}
+
+.detail .detail-title{
+    background: #404547;
+    padding:2% 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.detail .detail-title h1{
+    color: #ffffff;
+    font-family: "Calibri";
+    font-size: 0.9em;
+    letter-spacing: 0.93px;
+    line-height: 15px;
+}
+
+.detail .detail-text{
+    background: #ffffff;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: left;
+}
+
+.detail .detail-text p{
+    color: #404547;
+    font-family: "Calibri";
+    font-size: 0.9em;
+    line-height: 20px;
+    text-align: justify;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.detail .detail-subtitle {
+    background: #EEEEEE;
+    border-bottom: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD;
+}
+
+.detail .detail-subtitle p{
+    color: #404547;
+    display: inline-block;
+    font-family: "Calibri";
+    font-weight: bold;
+    font-size: 0.9em;
+    line-height: 15px;
+    padding: 0 0 0 5%;
+    text-align: left;
+    text-transform: initial;
+    vertical-align: middle;
+    width: 65%;
+}
+
+.detail .detail-subtitle img{
+    display: inline-block;
+    vertical-align: middle;
+    width: 25%;
+}
+
+.main-list .list-group.matrix{
+    margin: auto;
+}
+
+.main-list .list-group.matrix .item{
+    border-bottom: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+    display: inline-block;
+    min-height: 170px;
+    padding: 0;
+    text-align: center;
+    vertical-align: top;
+    width: 32%;
+}
+
+.main-list .list-group.matrix .item .item-text h1{
+    color: #404547;
+    font-family: "Calibri";
+    font-size: 0.85em;
+    line-height: 15px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.main-list .list-group.matrix .item .item-text p{
+    color: #404547;
+    font-family: "Calibri";
+    font-size: 0.85em;
+    line-height: 15px;
+    padding: 5px 0 0;
+    text-transform: initial;
+    text-align: center;
+}
+
+.main-list .list-group.matrix .item  img.item-image{
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+    padding-top: 25%;
+}
+
+.main-list .list-group.matrix .item .item-text{
+    display: inline-block;
+    padding: 5%;
+    text-align: center;
+    vertical-align: middle;
+    width: 85%
+}
+
+.main-list .detail .detail-title{
+    background: #404547;
+    padding:2% 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.main-list .detail .detail-title h1{
+    color: #ffffff;
+    font-family: "Calibri";
+    font-size: 0.9em;
+    letter-spacing: 0.93px;
+    line-height: 15px;
+}
+
+.main-list .detail .detail-text{
+    background: #ffffff;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: left;
+}
+
+.main-list .detail .detail-text p{
+    color: #404547;
+    font-family: "Calibri";
+    font-size: 0.9em;
+    line-height: 20px;
+    text-align: justify;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.main-list .detail .detail-subtitle {
+    background: none !important;
+    border-bottom: 1px solid #ececec;
+    border-top: 1px solid #DDDDDD;
+}
+
+.main-list .detail .detail-subtitle p{
+    color: #404547;
+    display: inline-block;
+    font-family: "Calibri";
+    font-weight: bold;
+    font-size: 0.9em;
+    line-height: 15px;
+    padding: 0px;
+    text-align: left;
+    text-transform: initial;
+    vertical-align: middle;
+    width: 65%;
+}
+
+.main-list .detail .detail-subtitle img{
+    display: inline-block;
+    padding: 3%;
+    vertical-align: middle;
+    width: 22%;
+}

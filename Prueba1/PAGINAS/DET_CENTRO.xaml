@@ -8,7 +8,12 @@
       xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <SolidColorBrush Color="DarkGray" Opacity=".5" x:Key="fondo"/>
+        <SolidColorBrush Color="#FF01B0A8" x:Key="Colapp"></SolidColorBrush>
+     </Page.Resources>
+
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="65"></RowDefinition>
@@ -35,27 +40,28 @@
 			VerticalAlignment="Center"
 			HorizontalAlignment="Center"
 			Style="{ThemeResource TitleTextBlockStyle}" 
+                   Foreground="{StaticResource Colapp}"
 			 Grid.Row="0" Grid.ColumnSpan="3"/>
 
 
 
-        <Border Grid.Row="1"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        <Border Grid.Row="1"  BorderThickness="1" BorderBrush="{StaticResource Colapp}" CornerRadius="0,15,15,0" Padding="2" 
         HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
-            <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="DIRECCIÓN" IsHitTestVisible="False" />
+            <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="DIRECCIÓN" IsHitTestVisible="False" Foreground="{StaticResource Colapp}"/>
         </Border>
 
 
-        <Border Grid.Row="2"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        <Border Grid.Row="2"  BorderThickness="1" BorderBrush="{StaticResource Colapp}" CornerRadius="0,15,15,0" Padding="2" 
         HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
-            <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="HORARIOS" IsHitTestVisible="False" />
+            <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="HORARIOS" IsHitTestVisible="False" Foreground="{StaticResource Colapp}" />
         </Border>
 
-        <Border Grid.Row="3"  BorderThickness="1" BorderBrush="Black" CornerRadius="0,15,15,0" Padding="2" 
+        <Border Grid.Row="3"  BorderThickness="1" BorderBrush="{StaticResource Colapp}" CornerRadius="0,15,15,0" Padding="2" 
         HorizontalAlignment="Left" VerticalAlignment="Center"   Background="White" Width="130">
-            <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="CONTACTO" IsHitTestVisible="False" />
+            <TextBox BorderThickness="1" BorderBrush="Transparent" Margin="0,0" Text="CONTACTO" IsHitTestVisible="False" Foreground="{StaticResource Colapp}" />
         </Border>
 
-        <Maps:MapControl Grid.Row="4" Grid.ColumnSpan="3" x:Name="mapa" HorizontalAlignment="Stretch" MapServiceToken="3EpLCmUEydXGjIEgBIFM~c8G8RFI6JkEImHfKY0vzjw~AuEW7k_rO1NU9eu28csmCBAPyzURzhSUMLx0HrKhm_HpHDe43QL_uBX_420tsuL6" VerticalAlignment="Stretch" />
+        <Maps:MapControl Grid.Row="4" Grid.ColumnSpan="3" x:Name="mapa" ZoomLevel="15" HorizontalAlignment="Stretch" MapServiceToken="3EpLCmUEydXGjIEgBIFM~c8G8RFI6JkEImHfKY0vzjw~AuEW7k_rO1NU9eu28csmCBAPyzURzhSUMLx0HrKhm_HpHDe43QL_uBX_420tsuL6" VerticalAlignment="Stretch" />
 
         <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" PlaceholderText="Dirección del centro" TextAlignment="Center" BorderBrush="Transparent" BorderThickness="0"  IsHitTestVisible="False"></TextBox>
         <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" PlaceholderText="Horario de apertura" BorderBrush="Transparent" BorderThickness="0"  IsHitTestVisible="False"></TextBox>
@@ -66,7 +72,7 @@
             <Image Source="ms-appx:///Assets/centers_mail_icon.png"></Image>
             </Button>
 
-            <TextBlock Text="mail" TextAlignment="Center" FontSize="9" Foreground="#FF01B0A8"></TextBlock>
+            <TextBlock Text="mail" TextAlignment="Center" FontSize="9" Foreground="{StaticResource Colapp}"></TextBlock>
 </StackPanel>
         <Grid Grid.Row="4" Grid.RowSpan="2" Grid.ColumnSpan="3">
             <Grid.RowDefinitions>
@@ -75,10 +81,10 @@
                 <RowDefinition Height="65"></RowDefinition>
             </Grid.RowDefinitions>
 
-            <Button  Grid.Row="1" x:Name="BTN_llegar"   Background="#FF01B0A8"  VerticalAlignment="Center" HorizontalAlignment="center" Padding="2" Height="30" Width="250"  >
+            <Button  Grid.Row="1" x:Name="BTN_llegar"   Background="{StaticResource Colapp}"  VerticalAlignment="Center" HorizontalAlignment="center" Padding="2" Height="30" Width="250"  >
                 <Button.Template>
                     <ControlTemplate>
-                        <Border CornerRadius="15" Background="#FF01B0A8" BorderBrush="Transparent" BorderThickness="1">
+                        <Border CornerRadius="15" Background="{StaticResource Colapp}" BorderBrush="Transparent" BorderThickness="1">
                             <TextBlock Text="Cómo llegar" Foreground="White" 
                                            HorizontalAlignment="Center"   VerticalAlignment="Center"                                       
                                          ></TextBlock>
@@ -88,11 +94,11 @@
             </Button>
 
 
-            <Button  Grid.Row="2" x:Name="BTN_SOL"   Background="#FF01B0A8"  VerticalAlignment="Center" HorizontalAlignment="center" Padding="2" Height="30" Width="250"  >
+            <Button  Grid.Row="2" x:Name="BTN_SOL"   Background="{StaticResource Colapp}"  VerticalAlignment="Center" HorizontalAlignment="center" Padding="2" Height="30" Width="250"  >
                 <Button.Template>
                     <ControlTemplate>
-                        <Border CornerRadius="15" Background="Transparent" BorderBrush="#FF01B0A8" BorderThickness="1">
-                            <TextBlock Text="Solicitar Cita" Foreground="#FF01B0A8" 
+                        <Border CornerRadius="15" Background="Transparent" BorderBrush="{StaticResource Colapp}" BorderThickness="1">
+                            <TextBlock Text="Solicitar Cita" Foreground="{StaticResource Colapp}" 
                                            HorizontalAlignment="Center"   VerticalAlignment="Center"                                       
                                          ></TextBlock>
                         </Border>

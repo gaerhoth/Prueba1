@@ -11,6 +11,11 @@ Public NotInheritable Class AYUDA
     Public Shared Sub LimpiarJson(json As String, funcion As String, TABLA As String)
         Dim JsonOK As String() = Nothing
 
+        If funcion = "DameCampaña" Then
+            json = json.Replace("Ñ", "N")
+        End If
+
+
         If json <> "SIN CAMBIOS" Then
 
             Dim jsonlimpio As String
@@ -220,6 +225,17 @@ Class CLASERECOM
     End Property
     Private m_TIT As String
 
+
+    Public Property HTML() As String
+        Get
+            Return m_HTML
+        End Get
+        Set
+            m_HTML = Value
+        End Set
+    End Property
+    Private m_HTML As String
+
 End Class
 
 Class CLASECENTROS
@@ -232,5 +248,98 @@ Class CLASECENTROS
         End Set
     End Property
     Private m_CNT As String
+
+    Public Property DAT() As String
+        Get
+            Return m_DAT
+        End Get
+        Set
+            m_DAT = Value
+        End Set
+    End Property
+    Private m_DAT As String
+
+    Public Property IMAG() As String
+        Get
+            Return m_IMAG
+        End Get
+        Set
+            m_IMAG = Value
+        End Set
+    End Property
+    Private m_IMAG As String
+
+    Public Property LON() As Decimal
+        Get
+            Return m_LON
+        End Get
+        Set
+            m_LON = Value
+        End Set
+    End Property
+    Private m_LON As Decimal
+
+
+    Public Property LAT() As Decimal
+        Get
+            Return m_LAT
+        End Get
+        Set
+            m_LAT = Value
+        End Set
+    End Property
+    Private m_LAT As Decimal
 End Class
 
+
+Class CLASEOBJCAMP
+
+    Public Property IMAG() As String
+        Get
+            Return m_IMAG
+        End Get
+        Set
+            m_IMAG = Value
+        End Set
+    End Property
+    Private m_IMAG As String
+    Public Property EST() As String
+        Get
+            Return m_EST
+        End Get
+        Set
+            m_EST = Value
+        End Set
+    End Property
+    Private m_EST As String
+
+    Public Property TEXTO() As String
+        Get
+            Return m_TEXTO
+        End Get
+        Set
+            m_TEXTO = Value
+        End Set
+    End Property
+    Private m_TEXTO As String
+
+    Public Property MHTML() As String
+        Get
+            Return m_MHTML
+        End Get
+        Set
+            m_MHTML = Value
+        End Set
+    End Property
+    Private m_MHTML As String
+    Public Property HTML() As String
+        Get
+            Return m_HTML
+        End Get
+        Set
+            m_HTML = Value
+        End Set
+    End Property
+    Private m_HTML As String
+
+End Class
