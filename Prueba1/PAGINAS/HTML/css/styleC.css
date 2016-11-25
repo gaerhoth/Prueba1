@@ -26,7 +26,7 @@ p{
 /* ++++++++++  Cuerpo Css  ++++++++++ */
 
 header {
-    background: url(bg-darkC.png);
+    background: url(../images/bg-darkC.png);
     padding: 10% 3%;
     text-align: center;
     border-bottom: 10px solid #21d2be;
@@ -45,7 +45,7 @@ header h1{
 }
 
 section h1{
-    background: url(bgC.png);
+    background: url(../images/bgC.png);
     background-size: 100% 100%;
     color: #ffffff;
     font-family: "Calibri";
@@ -69,7 +69,7 @@ section article.wine p{
 }
 
 section.alert h1{
-    background: url(bg-alert.png);
+    background: url(../images/bg-alert.png);
     background-size: 100% 100%;
     color: #ffffff;
     font-family: "Calibri";
@@ -83,7 +83,7 @@ section.alert h1{
 }
 
 section .title{
-    background: url(bg-darkC.png);
+    background: url(../images/bg-darkC.png);
     padding: inherit;
     text-align: center;
     text-transform: uppercase;
@@ -101,7 +101,7 @@ section .title h1{
 }
 
 section .good h1{
-    background: url(bg-good.png);
+    background: url(../images/bg-good.png);
     background-size: 100% 100%;
     color: #ffffff;
     font-family: "Calibri";
@@ -114,7 +114,7 @@ section .good h1{
 }
 
 section .medium h1{
-    background: url(bg-medium.png);
+    background: url(../images/bg-medium.png);
     background-size: 100% 100%;
     color: #ffffff;
     font-family: "Calibri";
@@ -127,7 +127,7 @@ section .medium h1{
 }
 
 section .bad h1{
-    background: url(bg-bad.png);
+    background: url(../images/bg-bad.png);
     background-size: 100% 100%;
     color: #ffffff;
     font-family: "Calibri";
@@ -183,7 +183,7 @@ section article.green{
 }
 
 section.red h1{
-    background: url(bg-red.png);
+    background: url(../images/bg-red.png);
     background-size: 100% 100%;
     color: #ffffff;
     font-family: "Calibri";
@@ -204,7 +204,7 @@ section article{
 }
 
 section article.dark{
-    background: url(bg-darkC.png);
+    background: url(../images/bg-darkC.png);
 }
 
 section article p{
@@ -260,7 +260,7 @@ section article img{
 .separator{
     width:100%;
     min-height: 6px;
-    background: url(separatorC.png) no-repeat scroll 0 0 / 100% auto;
+    background: url(../images/separatorC.png) no-repeat scroll 0 0 / 100%;
 }
 
 section article .list .item{
@@ -350,12 +350,12 @@ section article .list .item .item-text{
 }
 
 .main-list .list-group .title-list-group.on{
-    background: url(bg-lis-tit-1.png);
+    background: url(../images/bg-lis-tit-1.png);
     background-size: 100% 100%;
 }
 
 .main-list .list-group .title-list-group.off{
-    background: url(bg-lis-tit-2.png);
+    background: url(../images/bg-lis-tit-2.png);
     background-size: 100% 100%;
 }
 

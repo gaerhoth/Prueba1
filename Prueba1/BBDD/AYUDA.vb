@@ -3,6 +3,7 @@ Imports System.Text
 Imports System.Text.RegularExpressions
 Imports Windows.UI.Xaml.Controls.Maps
 Imports Windows.Devices.Geolocation
+Imports Prueba1.IUD
 'Imports Windows.System.Runtime.CompilerServices.Extension
 Public NotInheritable Class AYUDA
     Private Sub New()
@@ -18,55 +19,69 @@ Public NotInheritable Class AYUDA
 
         If json <> "SIN CAMBIOS" Then
 
+            If TABLA = "TRECOMENDACIONES" Then
+                While json.IndexOf("<body>") <> -1
+                    Dim aux1 As String = ""
+                    Dim aux2 As String = ""
+                    Dim aux3 As String = ""
+                    aux1 = json.Substring(json.IndexOf("<body>"))
+                'En aux2 tendria lo que es el html
+                aux2 = aux1.Substring(0, aux1.IndexOf("</body>") + 7)
+                    aux3 = aux2.Replace("body>", "body.>")
+                    aux3 = aux3.Replace("""", "¨")
+                json = json.Replace(aux2, aux3)
+                End While
+            End If
+
             Dim jsonlimpio As String
-            jsonlimpio = json.Replace(""",""ID_COMUNICACION"":""0""", "")
+                jsonlimpio = json.Replace(""",""ID_COMUNICACION"":""0""", "")
 
-            'jsonlimpio = json
-            If funcion = "Delegaciones" Then
-                jsonlimpio = jsonlimpio.Replace("http://", "$$")
-            End If
-
-            jsonlimpio = jsonlimpio.Replace(""":""", """ç""")
-            jsonlimpio = jsonlimpio.Replace(""",""", """ç""")
-
-            jsonlimpio = jsonlimpio.Replace("""", "")
-
-            If funcion = "Delegaciones" Then
-                jsonlimpio = jsonlimpio.Replace("{datos : [{", "")
-            Else
-                jsonlimpio = jsonlimpio.Replace("{datos:{" & funcion & ":", "")
-            End If
-
-            jsonlimpio = jsonlimpio.Replace("}}", "")
-            jsonlimpio = jsonlimpio.Replace("[", "")
-            jsonlimpio = jsonlimpio.Replace("]", "")
-            If funcion = "Delegaciones" Then
-                jsonlimpio = jsonlimpio.Replace("},{", "^")
-            Else
-                jsonlimpio = jsonlimpio.Replace("},{", "@")
-            End If
-            jsonlimpio = jsonlimpio.Replace("{", "")
-            jsonlimpio = jsonlimpio.Replace("}", "")
-
-            If funcion = "Delegaciones" Then
-                JsonOK = jsonlimpio.Split("^")
-            Else
-                JsonOK = jsonlimpio.Split("@")
-            End If
-
-
-            For i = 0 To JsonOK.Count - 1
+                'jsonlimpio = json
                 If funcion = "Delegaciones" Then
-
-                    JsonOK(i) = JsonOK(i).Replace(",", "ç")
-                    JsonOK(i) = JsonOK(i).Replace(":", "ç")
-                    JsonOK(i) = JsonOK(i).Replace("$$", "http://")
+                    jsonlimpio = jsonlimpio.Replace("http://", "$$")
                 End If
-                CrearInsert(JsonOK(i), TABLA)
-            Next
+
+                jsonlimpio = jsonlimpio.Replace(""":""", """ç""")
+                jsonlimpio = jsonlimpio.Replace(""",""", """ç""")
+
+                jsonlimpio = jsonlimpio.Replace("""", "")
+
+                If funcion = "Delegaciones" Then
+                    jsonlimpio = jsonlimpio.Replace("{datos : [{", "")
+                Else
+                    jsonlimpio = jsonlimpio.Replace("{datos:{" & funcion & ":", "")
+                End If
+
+                jsonlimpio = jsonlimpio.Replace("}}", "")
+                jsonlimpio = jsonlimpio.Replace("[", "")
+                jsonlimpio = jsonlimpio.Replace("]", "")
+                If funcion = "Delegaciones" Then
+                    jsonlimpio = jsonlimpio.Replace("},{", "^")
+                Else
+                    jsonlimpio = jsonlimpio.Replace("},{", "@")
+                End If
+                jsonlimpio = jsonlimpio.Replace("{", "")
+                jsonlimpio = jsonlimpio.Replace("}", "")
+
+                If funcion = "Delegaciones" Then
+                    JsonOK = jsonlimpio.Split("^")
+                Else
+                    JsonOK = jsonlimpio.Split("@")
+                End If
 
 
-        End If
+                For i = 0 To JsonOK.Count - 1
+                    If funcion = "Delegaciones" Then
+
+                        JsonOK(i) = JsonOK(i).Replace(",", "ç")
+                        JsonOK(i) = JsonOK(i).Replace(":", "ç")
+                        JsonOK(i) = JsonOK(i).Replace("$$", "http://")
+                    End If
+                    CrearInsert(JsonOK(i), TABLA)
+                Next
+
+
+            End If
     End Sub
 
 
@@ -77,6 +92,8 @@ Public NotInheritable Class AYUDA
         Dim INSERT_BBDD As String
         Dim CAMPOS As String = ""
         Dim VAL_CAMPOS As String = ""
+
+        Dim stotal As Object = Nothing
 
         Dim rec As String = ""
         Dim ana As String = ""
@@ -105,11 +122,83 @@ Public NotInheritable Class AYUDA
             End If
         Next
 
+        'For i = 0 To ARRi.Count - 1
+
+        '    If i = 0 Then
+        '        stotal = "{." & ARRi(i) & " = '" & ARRi(i + 1) & "', "
+        '        i = i + 1
+        '    ElseIf i + 1 <> ARRi.Count - 1 Then
+        '        stotal = stotal & "." & ARRi(i) & " = '" & ARRi(i + 1) & "', "
+        '            i = i + 1
+        '        Else
+        '            stotal = stotal & "." & ARRi(i) & " = '" & ARRi(i + 1) & "'} "
+        '            i = i + 1
+        '        End If
+        'Next
+
 
         INSERT_BBDD = "INSERT INTO " & Tabla & "(" & CAMPOS & ") VALUES(" & VAL_CAMPOS & ")"
 
         Try
-            conn.Execute(INSERT_BBDD)
+
+            Select Case Tabla
+                Case "TDOCUMENTOS2"
+                    G_TDOCUMENTOS2(ARRi)
+                Case "TRECOMENDACIONES"
+                    G_RECOMENDACIONES(ARRi)
+                Case "TTIPOCAFE"
+                    G_TTIPOCAFE(ARRi)
+                Case "TTIPOSUENO"
+                    G_TTIPOSUENO(ARRi)
+                Case "TTIPOEJER"
+                    G_TTIPOEJER(ARRi)
+                Case "TTIPOALIMENTA"
+                    G_TTIPOALIMENTA(ARRi)
+                Case "TTIPOALCOHOL"
+                    G_TTIPOALCOHOL(ARRi)
+                Case "TTIPOTABACO"
+                    G_TTIPOTABACO(ARRi)
+                Case "TTIPOAGUA"
+                    G_TTIPOAGUA(ARRi)
+                Case "TCAMPANAS"
+                    G_TCAMPANAS(ARRi)
+                Case Else
+
+                    conn.Execute(INSERT_BBDD)
+            End Select
+
+
+
+
+            'conn.Insert(New TAVISOS() With
+            '{.COD_AVISO = "2718632",
+            '.ID_TRABAJADOR = "0",
+            ' .ID_TIPO_AVISO = "1",
+            '.COD_CLAVE_ORIGEN = "5478792",
+            '.FEC_ALTA = "10/06/2016 0:00:00",
+            '.FEC_DESDE = "",
+            ' .FEC_HASTA = "10/06/2017 0:00:00",
+            '.IND_ENVIADO = "N",
+            '.FEC_ENVIADO = "10/06/2016 0:00:00",
+            '.FEC_BAJA = "",
+            '.USUARIO_BAJA = "",
+            '.USUARIO_ALTA = "01/01/2016",
+            '.DES_TITULO = "",
+            '.DES_TEXTO = "",
+            '.DES_IMAGEN = "",
+            '.DES_URL = "",
+            '.IND_DESTACADO = ""})
+
+            'stotal = stotal.Replace("'", """")
+
+            '  Dim stotal2 As Object
+            '  stotal2 = New TAVISOS() With {.COD_AVISO = "2718632", .ID_TRABAJADOR = "0", .ID_TIPO_AVISO = "1", .COD_CLAVE_ORIGEN = "5478792", .FEC_ALTA = "10/06/2016 0:00:00", .FEC_DESDE = "", .FEC_HASTA = "10/06/2017 0:00:00", .IND_ENVIADO = "N", .FEC_ENVIADO = "10/06/2016 0:00:00", .FEC_BAJA = "", .USUARIO_BAJA = "", .USUARIO_ALTA = "01/01/2016", .DES_TITULO = "", .DES_TEXTO = "", .DES_IMAGEN = "", .DES_URL = "", .IND_DESTACADO = ""}
+
+            'G_TAVISOS()
+
+
+            '  conn.Insert(stotal2)
+
         Catch ex As Exception
 
         End Try

@@ -1,5 +1,7 @@
 ﻿Imports Prueba1.AYUDA
 Imports Prueba1.VAR_GLOBALES
+Imports Windows.UI.Xaml.Data
+Imports System.Collections.Generic
 ' La plantilla de elemento Página en blanco está documentada en http://go.microsoft.com/fwlink/?LinkId=234238
 
 ''' <summary>
@@ -7,7 +9,7 @@ Imports Prueba1.VAR_GLOBALES
 ''' </summary>
 Public NotInheritable Class RECOMENDACIONES
     Inherits Page
-
+    '  Dim LS_RECOM As List(Of TRECOMENDACIONES)
 
 
 #Region "Menu"
@@ -56,7 +58,7 @@ Public NotInheritable Class RECOMENDACIONES
     Private Async Sub RECOMENDACIONES_Loading(sender As FrameworkElement, args As Object) Handles Me.Loading
 
 
-        Dim LS_RECOM As List(Of TRECOMENDACIONES)
+
         RECOM = Await C_WAH.DameRecomendacionAsync(48)
         AYUDA.LimpiarJson(RECOM.Body.DameRecomendacionResult, "DameRecomendacion", "TRECOMENDACIONES")
         LS_RECOM = conn.Query(Of TRECOMENDACIONES)("SELECT * FROM TRECOMENDACIONES")
@@ -68,10 +70,51 @@ Public NotInheritable Class RECOMENDACIONES
                       .HTML = LS_RECOM(i).DES_PAGINA_ESTANDAR
                                             })
         Next
+
+
+
+
+
+
+
+        'Dim view As New ObservableCollection(Of CLASERECOM)()
+        'LS_RECOM.
+        'PL.ItemsSource = PL.Items
+        'PL.Items.Clear()
+
+        'PL.Items.Contains("Campa")
+
     End Sub
 
     Private Sub PL_Tapped(sender As Object, e As TappedRoutedEventArgs) Handles PL.Tapped
-        Frame.Navigate(GetType(VISTAHTML), DirectCast(PL.SelectedItem, Prueba1.CLASERECOM).HTML)
+        Frame.Navigate(GetType(VISTAHTML), DirectCast(PL.SelectedItem, Prueba1.CLASERECOM).HTML & "|Recomendaciones")
+    End Sub
+
+    Private Sub filtro_TextChanged(sender As Object, e As TextChangedEventArgs) Handles filtro.TextChanged
+
+        'Dim a As IEnumerable(Of TRECOMENDACIONES) = Nothing
+        Dim lsf As List(Of TRECOMENDACIONES) = Nothing
+        Dim auxlsf As List(Of TRECOMENDACIONES) = Nothing
+
+        'If lsf IsNot Nothing Then
+        '    a = lsf.Where(Function(n) Not auxlsf.Contains(n))
+        'End If
+
+
+        'If a IsNot Nothing Then
+
+
+
+        PL.Items.Clear()
+            lsf = LS_RECOM.Where(Function(x) x.DES_TIPO_RECOM.Contains(filtro.Text.ToUpper)).ToList
+
+            For i = 0 To lsf.Count - 1
+                Me.PL.Items.Add(New CLASERECOM With
+                          {.TIT = lsf(i).DES_TIPO_RECOM,
+                          .HTML = lsf(i).DES_PAGINA_ESTANDAR
+                                                })
+            Next
+        ' End If
     End Sub
 End Class
 

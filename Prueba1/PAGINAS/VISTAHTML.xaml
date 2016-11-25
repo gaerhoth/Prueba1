@@ -23,7 +23,7 @@
 
         </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Name="titulo" Text="Recomendaciones" FontWeight="SemiBold"  Foreground="{StaticResource Colapp}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" x:Name="titulo" Text="" FontWeight="SemiBold"  Foreground="{StaticResource Colapp}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
         <Button Grid.Row="0" Grid.Column="0" x:Name="Atras" HorizontalAlignment="Stretch" Background="Transparent">
             <Image x:Name="IMB" Source="ms-appx:///Assets/atras.png"></Image>
         </Button>

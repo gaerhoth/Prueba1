@@ -114,6 +114,16 @@ Public NotInheritable Class OBJ_CAMP
         'End If
 #End Region
 
+
+        If Me.Parametros(1) = "1" Then
+            PL.Visibility = Visibility.Collapsed
+            PL2.Visibility = Visibility.Collapsed
+            OBJ_PL.Visibility = Visibility.Visible
+            OBJ_PL2.Visibility = Visibility.Visible
+
+        End If
+
+
         If Me.Parametros(1) = "2" Then
             CAMPAÑAS = Await C_WAH.DameCampañaAsync(48, Date.Now)
 
@@ -126,9 +136,19 @@ Public NotInheritable Class OBJ_CAMP
 
                 Select Case LS_CAMPAÑAS(i).COD_ESTADO_CAMPANA
                     Case "1"
-                        'Me.PL2.Items.Add(New CLASEOBJCAMP With
-                        '       {.MHTML = LS_CAMPAÑAS(i).DES_HTML_MINIATURA,
-                        '       .HTML = LS_CAMPAÑAS(i).DES_HTML_MINIATURA})
+                        Dim h As String
+                        h = ActHTML(LS_CAMPAÑAS(i).DES_HTML_MINIATURA)
+
+
+
+                        descompon(h)
+
+                        Me.PL2.Items.Add(New CLASEOBJCAMP With
+                             {.IMAG = ima,
+                             .TEXTO = titulo,
+                             .HTML = LS_CAMPAÑAS(i).DES_HTML,
+                             .MHTML = LS_CAMPAÑAS(i).DES_HTML_MINIATURA})
+
 
                     Case "2"
 
@@ -222,10 +242,10 @@ Public NotInheritable Class OBJ_CAMP
     End Sub
 
     Private Sub PL_Tapped(sender As Object, e As TappedRoutedEventArgs) Handles PL.Tapped
-        If Parametros(1) = 2 Then
+        If Parametros(1) = "2" Then
             Dim p As String
             p = "< body <> header <> h1 Class=""initicalc"">Reducción de Riesgo Cardiovascular</h1></header><section><article><img src=""http://213.0.19.26/Repositorio/documentos/WAH/IMAGENES_WAH/Cardio_shutterstock_147231050_132x132.png""/><p>Las enfermedades cardiovasculares son las que afectan al corazón y los vasos sanguíneos (Of como angina de pecho, infarto de miocardio, infarto cerebral, etc). Estas enfermedades suponen la primera causa de muerte en nuestro país; sin embargo, estas patologías son prevenibles si se actúa a tiempo sobre sus factores de riesgo con unos hábitos de vida saludables.</p><p class=""noSpace"">Los factores de riesgo son:</p><ul><li>La hipertensión arterial</li><li>La diabetes</li><li>El sedentarismo</li><li>El colesterol elevado</li><li>El sobrepeso y la obesidad</li><li>Consumo de tabaco y alcohol</li></ul></article></section><section><h1>OBJETIVO PRINCIPAL <br> <span class=""initicalc"">Mejorar</span> <span class=""initicalc"">su salud </span></h1><article><p>El objetivo es ayudarte mediante esta herramienta informática a tomar el control sobre tu salud y eliminar o controlar el riesgo,  mediante la adquisición de los hábitos de vida sanos para ello periódicamente te informaremos  de los avances que consigas con los objetivos que te marques en la campaña con el asesoramiento del personal sanitario de Correos.</p><p>El programa va dirigido a todas aquellas personas interesadas en mejorar su salud, y especialmente  recomendable en caso de presentar los factores de riesgo: Tensión Arterial elevada, Colesterol elevado, Personas con sobrepeso/obesidad, antecedentes de enfermedad cardiovascular...etc</p></article></section><div Class=""detail""><div Class=""detail-title""><h1>OBJETIVOS ASOCIADOS</h1></div><div Class=""detail-subtitle""><img src=""http: //213.0.19.28:1248/Repositorio/documentos/WAH/Campanas/CORREOS/images/image_objetivo1.png""/><p>ALIMENTACIÓN CARDIOSALUDABLE</p></div><div Class=""detail-text""><p>Una dieta cardiosaludable  da importancia al consumo de alimentos que reducen los factores de riesgo cardiovascular, como la Dieta Mediterránea.</p></div><div Class=""detail-subtitle""><img src=""http://213.0.19.28:1248/Repositorio/documentos/WAH/Campanas/CORREOS/images/image_objetivo2.png""/><p>ACTIVIDAD FÍSICA</p></div><div Class=""detail-text""><p>Cómo realizar actividad física adecuada para combatir el sedentarismo y mejorar y controlar los factores de riesgo cardiovascular y mejorar el estado de salud general.</p></div><div Class=""detail-subtitle""><img src=""http://213.0.19.28:1248/Repositorio/documentos/WAH/Campanas/CORREOS/images/image_objetivo3.png""/><p>CONTROL DE CONSUMO DE TABACO</p></div><div Class=""detail-text""><p>Informando de los efectos  beneficiosos que se obtienen al dejarlo y cómo conseguirlo.</p></div><div Class=""detail-subtitle""><img src=""http://213.0.19.28:1248/Repositorio/documentos/WAH/Campanas/CORREOS/images/image_objetivo4.png""/><p>CONTROL DE LA HIPERTENSIÓN ARTERIAL</p></div><div Class=""detail-text""><p>La hipertensión supone un riesgo de padecer enfermedades cardiovasculares si no está controlada. Te ayudamos a realizar un seguimiento para mejorarla.</p></div><div Class=""detail-subtitle""><img src=""http://213.0.19.28:1248/Repositorio/documentos/WAH/Campanas/CORREOS/images/image_objetivo5.png""/><p>CONTROL DE LA HIPERCOLESTEROLEMIA</p></div><div Class=""detail-text""><p>Para disminuir el daño que puede provocar el exceso de colesterol en tus arterias.</p></div><div Class=""detail-subtitle""><img src=""http://213.0.19.28:1248/Repositorio/documentos/WAH/Campanas/CORREOS/images/image_objetivo6.png""/><p>CONTROL DEL SOBREPESO</p></div><div Class=""detail-text""><p>Con un índice de masa corporal elevado es aconsejable mejorar la dieta y realizar actividad física.</p></div><div Class=""detail-subtitle""><img src=""http://213.0.19.28:1248/Repositorio/documentos/WAH/Campanas/CORREOS/images/image_objetivo7.png""/><p>CONTROL DE GLUCOSA</p></div><div Class=""detail-text""><p>Para evitar la Diabetes recomendamos: dieta equilibrada, actividad física moderada y control de glucosa. Si eres diabético y te cuidas evitarás las complicaciones que puede ocasionar la enfermedad.</p></div></div></body>"
-            Frame.Navigate(GetType(VISTAHTML), p)
+            Frame.Navigate(GetType(VISTAHTML), p & ";" & "Campañas")
 
 
             ' Frame.Navigate(GetType(VISTAHTML), DirectCast(PL.SelectedItem, Prueba1.CLASEOBJCAMP).HTML)

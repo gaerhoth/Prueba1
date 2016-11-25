@@ -14,6 +14,7 @@
     Public Shared LH As List(Of TCALHABITOS) = Nothing
     Public Shared LP As List(Of TCALPULMONAR) = Nothing
 
+    Public Shared LS_RECOM As List(Of TRECOMENDACIONES) = Nothing
     Public Shared LSAV As List(Of TAVISOS) = Nothing
     Public Shared LSR As List(Of TRESSENTIDOS) = Nothing
     Public Shared LMR As List(Of TRESMETAS) = Nothing

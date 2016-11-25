@@ -47,12 +47,12 @@ Namespace WindwsCsharpvsJavascript
 End Namespace
 Public NotInheritable Class VISTAHTML
     Inherits Page
-    Public Parametros As String
+    Public Parametros() As String
 
     Protected Overrides Sub OnNavigatedTo(e As NavigationEventArgs)
         MyBase.OnNavigatedTo(e)
 
-        Parametros = e.Parameter
+        Parametros = e.Parameter.split("|")
 
     End Sub
     Private Sub VISTAHTML_Loading(sender As FrameworkElement, args As Object) Handles Me.Loading
@@ -86,19 +86,44 @@ Public NotInheritable Class VISTAHTML
         '     </body>
         '    </html>"
 
+        'recom2 = "<!DOCTYPE html>
 
-        'Dim recom = "<!DOCTYPE html>
+        '        <html lang=""es"" xmlns=""http://www.w3.org/1999/xhtml"">
+        '        <head>
+        '            <meta charset=""utf-8"" />
+        '            <link rel=""stylesheet"" href=""ms-appx-web:///PAGINAS/HTML/css/EstilosHTML.css"" type=""text/css"" />
+        '            <title></title>
+        '        </head>
+        '        <body><header><h1>CONSEJOS PARA EL ABANDONO DEL TABACO</h1></header><section><h1>TABACO &iquest;SABEMOS LO QUE FUMAMOS&#63;</h1><article><p>El tabaco tiene graves efectos nocivos a nivel cardiovascular, la nicotina es la responsable de la dependencia y de la adicci&oacute;n al tabaco.</p><p>El tabaquismo es, por tanto, una enfermedad adictiva cr&oacute;nica causante de m&aacute;s de <b>54000 muertes al a&ntilde;o en nuestro pa&iacute;s.</b></p></article><section><h1>&iquest;QU&Eacute; ES LO QUE PASA CUANDO ENCIENDO UN CIGARRILLO&#63;</h1></section><article><p><ul><li>La nicotina produce un aumento inmediato de la tensi&oacute;n arterial. Esto, junto con el mon&oacute;xido de carbono, aumenta la probabilidad de desencadenar un episodio card&iacute;aco e ictus.</li><li>Multiplica por 100 la actividad paqueter&iacute;a aumentando as&iacute; el riesgo de trombosis arteriales.</li><li>Aumenta los triglic&eacute;ridos, el colesterol total y el LDL (colesterol malo).</li><li>Las consecuencias del tabaco en personas con diabetes complican el control de la enfermedad.</li><li>Uno de los efectos m&aacute;s nocivos es el c&aacute;ncer (pulm&oacute;n, boca, laringe, es&oacute;fago…).</li><li>Adem&aacute;s hay que a&ntilde;adir: las enfermedades pulmonares y la infertilidad. </li><li>Finalmente, estar&iacute;an las enfermedades periodontales (caries, halitosis).</li></ul></p></article><section><h1>SI DEJO DE FUMAR, &iquest;QU&Eacute; BENEFICIOS OBTENGO&#63;</h1><article><img class=\""audicion\"" src=\""http://213.0.19.28:1248/repositorio/documentos/WAH/Recomendaciones/images/img_50.png\""/></article><section><h1>AHORA QUE YA CONOCES UN POCO M&Aacute;S EL TABACO... &iquest;QUIERES DEJARLO&#63;</h1></section><article><p><ul><li>Lo m&aacute;s importante es tomar la decisi&oacute;n de dejar de fumar: define una fecha.</li><li>Cu&eacute;ntales a tus familiares y amigos que vas a dejar de fumar.</li><li>Elimina aquellas cosas que te incitan a fumar.</li><li>Mantente activo para no distraerte con el deporte.</li><li>Celebra cada logro que consigas.</li><li>Adem&aacute;s de estos consejos debes saber que existen otros recursos para dejar de fumar (programa de deshabituaci&oacute;n tab&aacute;quica, terapia sustitutiva…). </li></ul></p></article><section class=\""red\""><h1>Da el paso alcanza la meta &#161;Abandona el tabaco&#33;</h1></section></body>
+        '        </html>"
 
-        '    <html lang=""es"" xmlns=""http://www.w3.org/1999/xhtml"">
-        '    <head>
-        '        <meta charset=""utf-8"" />
-        '        <link rel=""stylesheet"" href=""ms-appx-web:///PAGINAS/HTML/css/EstilosHTML.css"" type=""text/css"" />
-        '        <title></title>
-        '    </head> 
-        '        " & Parametros & "
-        '    </html>"
+        If Parametros(1) = "Recomendaciones" Then
 
-        Dim recom = "<!DOCTYPE html>
+
+
+            titulo.Text = "Detalles Recomendación"
+
+            Dim recom2 = "<!DOCTYPE html>
+
+            <html lang=""es"" xmlns=""http://www.w3.org/1999/xhtml"">
+            <head>
+                <meta charset=""utf-8"" />
+                <link rel=""stylesheet"" href=""ms-appx-web:///PAGINAS/HTML/css/EstilosHTML.css"" type=""text/css"" />
+                <title></title>
+            </head> 
+                " & Parametros(0).Replace("""", """""") & "
+            </html>"
+
+
+
+            WV.NavigateToString(recom2)
+        End If
+
+
+        If Parametros(1) = "Campañas" Then
+            titulo.Text = "Detalles Capañas"
+
+            Dim recom = "<!DOCTYPE html>
 
             <html lang=""es"" xmlns=""http://www.w3.org/1999/xhtml"">
             <head>
@@ -106,18 +131,46 @@ Public NotInheritable Class VISTAHTML
                 <link rel=""stylesheet"" href=""ms-appx-web:///PAGINAS/HTML/css/styleC.css"" type=""text/css"" />
                 <title></title>
             </head> 
-                " & Parametros & "
+                " & Parametros(0) & "
             </html>"
+            WV.NavigateToString(recom)
+
+        End If
+
+        If Parametros(1) = "Objetivos" Then
+            Dim recom = "<!DOCTYPE html>
+
+            <html lang=""es"" xmlns=""http://www.w3.org/1999/xhtml"">
+            <head>
+                <meta charset=""utf-8"" />
+                <link rel=""stylesheet"" href=""ms-appx-web:///PAGINAS/HTML/css/EstilosHTML.css"" type=""text/css"" />
+                <title></title>
+            </head> 
+                " & Parametros(0) & "
+            </html>"
+            WV.NavigateToString(recom)
+
+        End If
 
 
 
 
-        WV.NavigateToString(recom)
+
 
     End Sub
 
     Private Sub Atras_Click(sender As Object, e As RoutedEventArgs) Handles Atras.Click
         'aqui hay que pasar el id_trabajador por si acaso en este momento se ha copiado alguna nueva
-        Me.Frame.Navigate(GetType(RECOMENDACIONES))
+
+        If Parametros(1) = "Campañas" Then
+            Me.Frame.Navigate(GetType(OBJ_CAMP))
+        End If
+        If Parametros(1) = "Recomendaciones" Then
+            Me.Frame.Navigate(GetType(RECOMENDACIONES))
+        End If
+        If Parametros(1) = "Objetivos" Then
+            Me.Frame.Navigate(GetType(OBJ_CAMP))
+        End If
+
     End Sub
 End Class

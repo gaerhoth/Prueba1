@@ -96,7 +96,7 @@
                 </Ellipse.Fill>
                 </Ellipse>
 
-                <TextBlock x:Name="NomCentro"  Grid.Column="1" Grid.Row="0"
+                <TextBlock x:Name="NomCampo"  Grid.Column="1" Grid.Row="0"
         			Text="{Binding TEXTO}" 
         			FontSize="18"
         			Foreground="Black"
@@ -119,15 +119,30 @@
         <DataTemplate x:Name="Lstview2" x:DataType="local:CLASEOBJCAMP">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
+                    <RowDefinition Height="75" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
 
-                <WebView x:Name="WV2" Grid.Row="0" Source="{Binding MHTML}"></WebView>
-                <Line  Grid.Row="0"  Stroke="LightGray"  VerticalAlignment="Bottom" StrokeThickness="1" Width="Auto" X2="1" Stretch="Fill" ></Line>
+                <Ellipse Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"  Width="50" Height="50">
+                    <Ellipse.Fill>
+                        <ImageBrush x:Name="Ima2" ImageSource="{Binding IMAG}" Stretch="Uniform"  ></ImageBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+
+                <TextBlock x:Name="NomCampo2"  Grid.Column="1" Grid.Row="0"
+        			Text="{Binding TEXTO}" 
+        			FontSize="18"
+        			Foreground="Black"
+                    TextWrapping="Wrap"
+        			HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+
+
+                <Line  Grid.Row="0"  Grid.ColumnSpan="2" Stroke="LightGray"  VerticalAlignment="Bottom" StrokeThickness="1" Width="Auto" X2="1" Stretch="Fill" ></Line>
 
             </Grid>
         </DataTemplate>

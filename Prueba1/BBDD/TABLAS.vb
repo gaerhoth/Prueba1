@@ -122,6 +122,7 @@ Public Class TTIPOALIMENTA
     Public Property USUARIO_BAJA As String
 
 End Class
+
 Public Class TTIPOALCOHOL
     <PrimaryKey>
     Public Property ID_TIPO_ALCOHOL As String
